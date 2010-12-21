@@ -2,6 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
 
+gem "haml", '3.0.25'
+gem "compass", '0.10.6'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -30,6 +33,7 @@ gem 'rails', '3.0.3'
 # end
 
 group :test, :development do
-  gem "rspec-rails", "2.3.1"
+  gem "rspec-rails", '2.3.1'
+  gem "cucumber-rails", '0.3.2'
 end
    
