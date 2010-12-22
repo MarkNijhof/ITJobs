@@ -1,0 +1,191 @@
+
+#header
+  .headerInnerBox
+    #pushpin
+      position: absolute
+      top: 25px
+      left: 920px
+      width: 30px
+      height: 15px
+      z-index: 999
+      background-image: url("/images/layout/header/switch.png")
+      background-position: 0px 0px
+      background-repeat: no-repeat
+      cursor: pointer
+
+.headerFixed
+  position: fixed
+.dropDownFixed
+  position: fixed
+  margin-bottom: 0px
+
+#header
+  .headerInnerBox
+    position: absolute
+    top: 0px
+    z-index: 99
+    width: 960px
+    height: 110px
+    background-image: url("/images/layout/header/header.png")
+    background-position: left top
+    background-repeat: no-repeat
+    .top
+      text-align: right
+      margin-right: 20px
+      height: 20px
+      a
+        color: $gray
+        text-decoration: underline
+      a:hover
+        text-decoration: none
+    #headerGray
+      position: relative
+      width: 740px
+      height: 79px
+      float: left
+      #logo
+        position: absolute
+        top: 9px
+        left: 90px
+        width: 126px
+        height: 55px
+        background-image: url("/images/layout/header/itjobs-logo.png")
+        background-repeat: no-repeat
+
+      .searchBox
+        position: absolute
+        top: 30px
+        left: 230px
+        height: 27px
+        width: 510px
+        .searchStart
+          width: 77px
+          height: 27px
+          background-image: url("/images/layout/header/search-start.png")
+          background-repeat: no-repeat
+          float: left
+        .searchMiddle
+          width: 380px
+          height: 27px
+          background-image: url("/images/layout/header/search-middle.png")
+          background-repeat: x-repeat
+          float: left
+          #search
+            #searchText
+              width: 350px
+              height: 25px
+              border: none
+              margin: 0px
+              padding: 1px 6px 0px 3px 
+              background-color: transparent
+              font-size: 16px
+              color: $green
+        .searchEnd
+          width: 7px
+          height: 27px
+          background-image: url("/images/layout/header/search-end.png")
+          background-repeat: no-repeat
+          float: left
+        #searchButton
+          width: 30px
+          height: 28px
+          background-image: url("/images/layout/header/search-button.png")
+          background-repeat: no-repeat
+          background-position: 0px -28px
+          float: left
+          margin-left: 8px
+        #searchButton:hover
+          background-position: 0px 0px
+          cursor: pointer
+
+      #menu
+        position: absolute
+        top: 7px
+        left: 203px
+        width: 400px
+        +horizontal-list
+        float: left
+        a
+          color: $white
+
+    #headerGreen
+      width: 200px
+      float: left
+      ul
+        float: left
+        position: relative
+        margin: 0px
+        margin-top: 20px
+        padding: 0px
+        padding-left: 80px
+        +no-bullet
+        .whiteArrow
+          float: left
+          margin-top: 2px
+          margin-right: 5px
+          width: 8px
+          height: 14px
+          background-image: url("/images/layout/header/white-arrow.png")
+          background-repeat: no-repeat
+        .grayArrow
+          float: left
+          margin-top: 2px
+          margin-right: 5px
+          width: 8px
+          height: 14px
+          background-image: url("/images/layout/header/gray-arrow.png")
+          background-repeat: no-repeat
+        #signUpLinkWhite
+          color: $white
+        #signUpLinkGray
+          color: $gray
+        #signOutLinkWhite
+          color: $white
+
+#header
+  .dropDownHeader
+    position: relative
+    top: 99px
+    width: 960px
+    margin-bottom: -30px
+    z-index: 98
+    display: none
+    overflow: hidden
+    .innerDropDownHeader
+      position: relative
+      top: -30px
+      #dropDownHeader
+        background-image: url("/images/layout/header/header-drop-down-middle-green.png")
+        background-repeat: y-repeat
+        background-position: center bottom
+        display: none
+        margin: 0px
+        padding: 50px 20px 1px 20px
+      .dropDownHeaderFooter
+        text-align: right
+        background-image: url("/images/layout/header/header-drop-down-bottom-green.png")
+        background-repeat: no-repeat
+        background-position: center bottom
+        margin: 0px
+        padding: 1px 20px 10px 30px
+        a
+          color: $gray
+
+.openIdButton
+  width: 150px
+  height: 50px
+  margin-left: auto
+  margin-right: auto
+  background-image: url("/images/layout/header/open-id-buttons.png")
+  background-repeat: no-repeat
+  background-position: 150px 200px
+.openIdButton:hover
+  cursor: pointer
+.linkedIn
+  background-position: 0px -200px
+.linkedIn:hover
+  background-position: -150px -200px
+.facebook
+  background-position: 0px -50px
+.facebook:hover
+  background-position: -150px -50px

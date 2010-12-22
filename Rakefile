@@ -64,11 +64,6 @@ task :set_development_environment do
 #  ENV['TWITTER_KEY'] = "6b92639d5e752a036e54f4b5ef6ff39c"
 #  ENV['TWITTER_SECRET'] = "307a61a51ee9b3153e7a7e4ee419d80e"
   
-  ENV['MONGODB_PORT'] = "27038"
-  ENV['MONGODB_HOST'] = "flame.mongohq.com"
-  ENV['MONGODB_DATABASE'] = "itjobs-development"
-  ENV['MONGODB_USER_NAME'] = "itjo.bs"
-  ENV['MONGODB_PASSWORD'] = "itjo.bs"
 end
 
 task :set_test_environment do
@@ -81,9 +76,4 @@ task :set_test_environment do
 #  ENV['TWITTER_KEY'] = "6b92639d5e752a036e54f4b5ef6ff39c"
 #  ENV['TWITTER_SECRET'] = "307a61a51ee9b3153e7a7e4ee419d80e"
   
-  ENV['MONGODB_PORT'] = "27039"
-  ENV['MONGODB_HOST'] = "flame.mongohq.com"
-  ENV['MONGODB_DATABASE'] = "itjobs-test"
-  ENV['MONGODB_USER_NAME'] = "itjo.bs"
-  ENV['MONGODB_PASSWORD'] = "itjo.bs"
 end

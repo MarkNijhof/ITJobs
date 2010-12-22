@@ -1,6 +1,12 @@
 ITJobs::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  ENV['MONGODB_PORT'] = "27038"
+  ENV['MONGODB_HOST'] = "flame.mongohq.com"
+  ENV['MONGODB_DATABASE'] = "itjobs-development"
+  ENV['MONGODB_USER_NAME'] = "itjo.bs"
+  ENV['MONGODB_PASSWORD'] = "itjo.bs"
+
   # In the development environment your application's code is reloaded on
   # every request.  This slows down response time but is perfect for development
   # since you don't have to restart the webserver when you make code changes.

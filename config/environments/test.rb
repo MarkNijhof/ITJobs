@@ -4,6 +4,12 @@ ITJobs::Application.configure do
   ENV['AUTOFEATURE'] = "true"
   ENV['RSPEC'] = "true"
 
+  ENV['MONGODB_PORT'] = "27039"
+  ENV['MONGODB_HOST'] = "flame.mongohq.com"
+  ENV['MONGODB_DATABASE'] = "itjobs-test"
+  ENV['MONGODB_USER_NAME'] = "itjo.bs"
+  ENV['MONGODB_PASSWORD'] = "itjo.bs"
+
   # The test environment is used exclusively to run your application's
   # test suite.  You never need to work with it otherwise.  Remember that
   # your test database is "scratch space" for the test suite and is wiped
