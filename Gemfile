@@ -39,6 +39,7 @@ gem "bson_ext", '1.1.5'
 # end
 
 group :test, :development do
+  gem "heroku" ,'1.15.0'
   gem "rails3-generators", '0.17.0'
 
   gem "watchr"

@@ -30,6 +30,7 @@ task :set_heroku_production_environment do
   sh "heroku config:add MONGODB_DATABASE=itjobs-production"
   sh "heroku config:add MONGODB_USER_NAME=itjo.bs"
   sh "heroku config:add MONGODB_PASSWORD=itjo.bs"
+  sh "heroku config:add BUNDLE_WITHOUT='test development'"
   
   sh "heroku config"
 end
@@ -50,6 +51,7 @@ task :set_heroku_development_environment do
   sh "heroku config:add MONGODB_DATABASE=itjobs-development"
   sh "heroku config:add MONGODB_USER_NAME=itjo.bs"
   sh "heroku config:add MONGODB_PASSWORD=itjo.bs"
+  sh "heroku config:add BUNDLE_WITHOUT='test development'"
   
   sh "heroku config"
 end
