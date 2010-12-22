@@ -1483,6 +1483,16 @@ body #container {
   cursor: pointer;
 }
 /* line 101, ../../../app/stylesheets/partials/_header.sass */
+#header .headerInnerBox #headerGray #message {
+  position: absolute;
+  top: 58px;
+  left: 230px;
+  height: 27px;
+  width: 505px;
+  color: white;
+  text-align: center;
+}
+/* line 110, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGray #menu {
   position: absolute;
   top: 7px;
@@ -1515,16 +1525,16 @@ body #container {
 #header .headerInnerBox #headerGray #menu li:last-child, #header .headerInnerBox #headerGray #menu li.last {
   padding-right: 0;
 }
-/* line 108, ../../../app/stylesheets/partials/_header.sass */
+/* line 117, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGray #menu a {
   color: white;
 }
-/* line 111, ../../../app/stylesheets/partials/_header.sass */
+/* line 120, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen {
   width: 200px;
   float: left;
 }
-/* line 114, ../../../app/stylesheets/partials/_header.sass */
+/* line 123, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen ul {
   float: left;
   position: relative;
@@ -1536,7 +1546,7 @@ body #container {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 122, ../../../app/stylesheets/partials/_header.sass */
+/* line 131, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen ul .whiteArrow {
   float: left;
   margin-top: 2px;
@@ -1546,7 +1556,7 @@ body #container {
   background-image: url("/images/layout/header/white-arrow.png");
   background-repeat: no-repeat;
 }
-/* line 130, ../../../app/stylesheets/partials/_header.sass */
+/* line 139, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen ul .grayArrow {
   float: left;
   margin-top: 2px;
@@ -1556,20 +1566,20 @@ body #container {
   background-image: url("/images/layout/header/gray-arrow.png");
   background-repeat: no-repeat;
 }
-/* line 138, ../../../app/stylesheets/partials/_header.sass */
+/* line 147, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen ul #signUpLinkWhite {
   color: white;
 }
-/* line 140, ../../../app/stylesheets/partials/_header.sass */
+/* line 149, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen ul #signUpLinkGray {
   color: #5c5d5e;
 }
-/* line 142, ../../../app/stylesheets/partials/_header.sass */
+/* line 151, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen ul #signOutLinkWhite {
   color: white;
 }
 
-/* line 146, ../../../app/stylesheets/partials/_header.sass */
+/* line 155, ../../../app/stylesheets/partials/_header.sass */
 #header .dropDownHeader {
   position: relative;
   top: 99px;
@@ -1579,12 +1589,12 @@ body #container {
   display: none;
   overflow: hidden;
 }
-/* line 154, ../../../app/stylesheets/partials/_header.sass */
+/* line 163, ../../../app/stylesheets/partials/_header.sass */
 #header .dropDownHeader .innerDropDownHeader {
   position: relative;
   top: -30px;
 }
-/* line 157, ../../../app/stylesheets/partials/_header.sass */
+/* line 166, ../../../app/stylesheets/partials/_header.sass */
 #header .dropDownHeader .innerDropDownHeader #dropDownHeader {
   background-image: url("/images/layout/header/header-drop-down-middle-green.png");
   background-repeat: y-repeat;
@@ -1593,7 +1603,7 @@ body #container {
   margin: 0px;
   padding: 50px 20px 1px 20px;
 }
-/* line 164, ../../../app/stylesheets/partials/_header.sass */
+/* line 173, ../../../app/stylesheets/partials/_header.sass */
 #header .dropDownHeader .innerDropDownHeader .dropDownHeaderFooter {
   text-align: right;
   background-image: url("/images/layout/header/header-drop-down-bottom-green.png");
@@ -1602,12 +1612,12 @@ body #container {
   margin: 0px;
   padding: 1px 20px 10px 30px;
 }
-/* line 171, ../../../app/stylesheets/partials/_header.sass */
+/* line 180, ../../../app/stylesheets/partials/_header.sass */
 #header .dropDownHeader .innerDropDownHeader .dropDownHeaderFooter a {
   color: #5c5d5e;
 }
 
-/* line 174, ../../../app/stylesheets/partials/_header.sass */
+/* line 183, ../../../app/stylesheets/partials/_header.sass */
 .openIdButton {
   width: 150px;
   height: 50px;
@@ -1618,27 +1628,27 @@ body #container {
   background-position: 150px 200px;
 }
 
-/* line 182, ../../../app/stylesheets/partials/_header.sass */
+/* line 191, ../../../app/stylesheets/partials/_header.sass */
 .openIdButton:hover {
   cursor: pointer;
 }
 
-/* line 184, ../../../app/stylesheets/partials/_header.sass */
+/* line 193, ../../../app/stylesheets/partials/_header.sass */
 .linkedIn {
   background-position: 0px -200px;
 }
 
-/* line 186, ../../../app/stylesheets/partials/_header.sass */
+/* line 195, ../../../app/stylesheets/partials/_header.sass */
 .linkedIn:hover {
   background-position: -150px -200px;
 }
 
-/* line 188, ../../../app/stylesheets/partials/_header.sass */
+/* line 197, ../../../app/stylesheets/partials/_header.sass */
 .facebook {
   background-position: 0px -50px;
 }
 
-/* line 190, ../../../app/stylesheets/partials/_header.sass */
+/* line 199, ../../../app/stylesheets/partials/_header.sass */
 .facebook:hover {
   background-position: -150px -50px;
 }
