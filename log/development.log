@@ -3403,3 +3403,99 @@ ActionController::RoutingError (No route matches "/javascripts/lib/jquery.autogr
   
 
 Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-22 01:45:13 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (20.2ms)
+Rendered partials/_footer.haml (1.8ms)
+Rendered home/index.html.haml within layouts/application (33.1ms)
+Completed 200 OK in 39ms (Views: 38.4ms)
+
+
+Started GET "/stylesheets/ceebox.css" for 127.0.0.1 at 2010-12-22 01:45:13 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/ceebox.css"):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/lib/json.js" for 127.0.0.1 at 2010-12-22 01:45:13 +0100
+
+ActionController::RoutingError (No route matches "/javascripts/lib/json.js"):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/lib/jquery.popupWindow.js" for 127.0.0.1 at 2010-12-22 01:45:13 +0100
+
+ActionController::RoutingError (No route matches "/javascripts/lib/jquery.popupWindow.js"):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/hashmap.js" for 127.0.0.1 at 2010-12-22 01:45:13 +0100
+
+ActionController::RoutingError (No route matches "/javascripts/hashmap.js"):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/lib/jquery.autogrow.js" for 127.0.0.1 at 2010-12-22 01:45:13 +0100
+
+ActionController::RoutingError (No route matches "/javascripts/lib/jquery.autogrow.js"):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/template_engine.js" for 127.0.0.1 at 2010-12-22 01:45:14 +0100
+
+ActionController::RoutingError (No route matches "/javascripts/template_engine.js"):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/lib/json.js" for 127.0.0.1 at 2010-12-22 01:45:14 +0100
+
+ActionController::RoutingError (No route matches "/javascripts/lib/json.js"):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/lib/jquery.popupWindow.js" for 127.0.0.1 at 2010-12-22 01:45:14 +0100
+
+ActionController::RoutingError (No route matches "/javascripts/lib/jquery.popupWindow.js"):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/hashmap.js" for 127.0.0.1 at 2010-12-22 01:45:14 +0100
+
+ActionController::RoutingError (No route matches "/javascripts/hashmap.js"):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/template_engine.js" for 127.0.0.1 at 2010-12-22 01:45:14 +0100
+
+ActionController::RoutingError (No route matches "/javascripts/template_engine.js"):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/lib/jquery.autogrow.js" for 127.0.0.1 at 2010-12-22 01:45:14 +0100
+
+ActionController::RoutingError (No route matches "/javascripts/lib/jquery.autogrow.js"):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
