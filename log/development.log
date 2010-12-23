@@ -4475,3 +4475,6 @@ ActionController::RoutingError (No route matches "/images/layout/header/itjobs-l
   
 
 Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({:getnonce=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"511cca1e44997245", "key"=>"741d0f6014ed9f5adee9cc32ee048617"}, {}).limit(-1)
