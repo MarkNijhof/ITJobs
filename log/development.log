@@ -6171,3 +6171,27 @@ Rendered partials/_header.haml (23.7ms)
 Rendered partials/_footer.haml (2.0ms)
 Rendered home/index.html.haml within layouts/application (36.4ms)
 Completed 200 OK in 49ms (Views: 41.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-31 01:44:23 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.2ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (35.7ms)
+Completed 200 OK in 49ms (Views: 40.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-31 01:45:19 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.7ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (36.3ms)
+Completed 200 OK in 41ms (Views: 40.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2010-12-31 01:45:39 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.3ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (35.6ms)
+Completed 200 OK in 48ms (Views: 40.2ms)
