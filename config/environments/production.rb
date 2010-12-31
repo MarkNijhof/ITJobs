@@ -1,7 +1,7 @@
 ITJobs::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
-  ENV['MONGODB_PORT'] = "27038" # <<< change this
+  ENV['MONGODB_PORT'] = "27039"
   ENV['MONGODB_HOST'] = "flame.mongohq.com"
   ENV['MONGODB_DATABASE'] = "itjobs-production"
   ENV['MONGODB_USER_NAME'] = "itjo.bs"
