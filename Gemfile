@@ -11,36 +11,11 @@ gem "mongo_mapper", '0.8.6'
 gem "mongo_ext", '0.19.3'
 gem "bson_ext", '1.1.5'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'linkedin', '0.1.7'
 
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
-# gem 'ruby-debug'
-# gem 'ruby-debug19'
-
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
 
 group :test, :development do
   gem "heroku" ,'1.15.0'
-  gem "rails3-generators", '0.17.0'
 
   gem "watchr"
   gem "rspec-rails", '2.3.1'

@@ -1,4 +1,29 @@
 ITJobs::Application.routes.draw do
+  
+  
+  
+  get "authentication/linkedin(/*url)" => "authentication#linkedin" 
+  get "authentication/linkedin_callback"
+
+  get "authentication/facebook(/*url)" => "authentication#facebook" 
+  get "authentication/facebook_callback"
+
+  get "authentication/twitter(/*url)" => "authentication#twitter" 
+  get "authentication/twitter_callback"
+
+  get "authentication/google(/*url)" => "authentication#google" 
+  get "authentication/google_callback"
+
+  get "authentication/openid(/*url)" => "authentication#openid" 
+  get "authentication/openid_callback"
+
+  get "authentication/itjobs(/*url)" => "authentication#itjobs" 
+  get "authentication/itjobs_callback"
+
+  get "authentication/after_authentication"
+
+  get "authentication/logout"
+
   get "home/index"
 
   # The priority is based upon order of creation:

@@ -1,7 +1,11 @@
 %script{:type => "text/javascript"}
   var beta_user = "#{@beta_user}";
-  var linkedin_url = "linkedin";
-  var facebook_url = "facebook";
+  var linkedin_url = "#{url_for(:controller => :authentication, :action => :linkedin)}";
+  var facebook_url = "#{url_for(:controller => :authentication, :action => :facebook)}";
+  var twitter_url = "#{url_for(:controller => :authentication, :action => :twitter)}";
+  var google_url = "#{url_for(:controller => :authentication, :action => :google)}";
+  var openid_url = "#{url_for(:controller => :authentication, :action => :openid)}";
+  var itjobs_url = "#{url_for(:controller => :authentication, :action => :itjobs)}";
 
 %script{:type => "text/html", :id => "login_template"}
   %table{:border => "0px", :cellpadding => "0", :cellspacing => "0"}
@@ -13,26 +17,20 @@
           %p
             Well currently we don't know who you are, and we would like to change that so we can provide you with a 
             better service. We have chosen an approach which makes this very easy; all you have to do is choose your 
-            preferred account on the right and sign in with it. This will automatically create a profile for you here 
-            on 17Jobs.com.
-          %h3
-            Then what?
-          %p
-            After you have signed in you will be able to create and maintain your CV, and that is only the start, more cool 
-            functionality will be available to you later...
+            preferred account on the right and sign in with it. This will automatically create an empty profile for 
+            you here on ITJo.bs.
         - else
           %h3
             Why should I add more providers?
           %p
-            Adding more different providers to your 17Jobs.com profile will make sure that when you login with another 
+            Adding different providers to your ITJo.bs profile will make sure that when you login with another 
             one that we don't create a new account for you, but instead log you in to your original account.
-          %h3
-            Then what?
-          %p
-            Then you can for example login with LinkedIn and copy your profile into 17Jobs.com.
-            %br
-            %br
         -
+        %h3
+          Your privacy?
+        %p
+          When you use one of these external services to login we will <b>NOT</b> request more information from them 
+          then what is needed to successfully identify you.
       %td.standingSeperatorLine{:width => "7px", :align => "center"}
       %td{:width => "160px"}
         
@@ -73,17 +71,17 @@
     .top.grayText
       - if !@person.nil?
         Welcome 
-        = link_to @person.get_user_name, ItJobsCom.url_for(:my_profile), :id => "my_profile"
+        = link_to @person.get_user_name, 'my_profile'
       -
     #headerGray
       #menu
         %ul
           %li.first
-            = link_to 'home', 'home url', :id => "home"
+            = link_to 'home', :root
           %li
             &nbsp;
           %li
-            = link_to 'add new job posting', 'job posting url', :id => "my_job_positions"
+            = link_to 'add a new job', 'job posting url', :id => "my_job_positions"
           %li
             &nbsp;
           %li.last
@@ -105,7 +103,7 @@
           &nbsp;
       
       #message
-        No more BS
+        ITJobs with a dot before the BS
       
     #headerGreen
       %ul
@@ -121,7 +119,7 @@
         - else
           %li
             .whiteArrow
-            = link_to "Sign Out!", 'sign out url', :id => "signOutLinkWhite"
+            = link_to "Sign Out!", url_for(:controller => :authentication, :action => :logout), :id => :signOutLinkWhite
           %li
             .grayArrow
             %a#signUpLinkGray

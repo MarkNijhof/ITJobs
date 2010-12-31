@@ -61,8 +61,9 @@
         .searchStart
           width: 77px
           height: 27px
-          background-image: url("/images/layout/header/search-start.png")
+          background-image: url("/images/layout/header/search-box.png")
           background-repeat: no-repeat
+          background-position: 0px 0px
           float: left
         .searchMiddle
           width: 380px
@@ -83,8 +84,9 @@
         .searchEnd
           width: 7px
           height: 27px
-          background-image: url("/images/layout/header/search-end.png")
+          background-image: url("/images/layout/header/search-box.png")
           background-repeat: no-repeat
+          background-position: -78px 0px
           float: left
         #searchButton
           width: 30px
@@ -134,22 +136,31 @@
           margin-right: 5px
           width: 8px
           height: 14px
-          background-image: url("/images/layout/header/white-arrow.png")
+          background-image: url("/images/layout/header/arrows.png")
           background-repeat: no-repeat
+          background-position: 0px 0px
         .grayArrow
           float: left
           margin-top: 2px
           margin-right: 5px
           width: 8px
           height: 14px
-          background-image: url("/images/layout/header/gray-arrow.png")
+          background-image: url("/images/layout/header/arrows.png")
           background-repeat: no-repeat
+          background-position: 0px -14px
         #signUpLinkWhite
           color: $white
         #signUpLinkGray
           color: $gray
         #signOutLinkWhite
           color: $white
+
+        a
+          text-decoration: none
+
+        a:hover
+          text-decoration: underline
+          cursor: pointer
 
 #header
   .dropDownHeader
@@ -179,22 +190,3 @@
         padding: 1px 20px 10px 30px
         a
           color: $gray
-
-.openIdButton
-  width: 150px
-  height: 50px
-  margin-left: auto
-  margin-right: auto
-  background-image: url("/images/layout/header/open-id-buttons.png")
-  background-repeat: no-repeat
-  background-position: 150px 200px
-.openIdButton:hover
-  cursor: pointer
-.linkedIn
-  background-position: 0px -200px
-.linkedIn:hover
-  background-position: -150px -200px
-.facebook
-  background-position: 0px -50px
-.facebook:hover
-  background-position: -150px -50px

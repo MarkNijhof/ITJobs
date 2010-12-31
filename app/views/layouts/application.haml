@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title= "IT Jobs"
+    %title= @page_title.nil? ? "ITJo.bs" : "ITJo.bs - #{@page_title}"
 
     = stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection'
     = stylesheet_link_tag 'compiled/print.css', :media => 'print'
@@ -11,17 +11,17 @@
     /[if lt IE 7]
       = javascript_include_tag 'unitpngfix.js'
 
-    = stylesheet_link_tag 'ceebox.css', :media => 'print'
-    
     %link{:href=>"http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css", :rel=>"stylesheet", :type=>"text/css"}
 
     %script{:type => "text/javascript", :src  => "http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"}
     %script{:type => "text/javascript", :src  => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"}
       
-    = javascript_include_tag "application.js", "lib/json.js", "lib/jquery.popupWindow.js", "hashmap.js", "template_engine.js", "lib/jquery.autogrow.js"
+    = javascript_include_tag "lib/json.js", "lib/jquery.popupWindow.js", "hashmap.js", "template_engine.js"
+    = javascript_include_tag "application.js", "header.js"
     
-    %link{:rel => "shortcut icon", :href => "http://17jobs.s3.amazonaws.com/images/favicon.png"}
+    %link{:rel=>"shortcut icon", :type=>"image/x-icon", :href=>"/favicon.ico"}
     
+    = csrf_meta_tag
       
   %body
     #container

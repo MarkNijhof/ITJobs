@@ -1124,7 +1124,7 @@ input.span-24, textarea.span-24, select.span-24 {
 
 /* line 8, ../../../../../../.rvm/gems/ruby-1.9.2-p0@itjobs/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_debug.scss */
 .showgrid {
-  background: url('/images/grid.png?1292935637');
+  background: url('/images/grid.png?1293055221');
 }
 
 /* line 4, ../../../../../../.rvm/gems/ruby-1.9.2-p0@itjobs/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
@@ -1436,11 +1436,12 @@ body #container {
 #header .headerInnerBox #headerGray .searchBox .searchStart {
   width: 77px;
   height: 27px;
-  background-image: url("/images/layout/header/search-start.png");
+  background-image: url("/images/layout/header/search-box.png");
   background-repeat: no-repeat;
+  background-position: 0px 0px;
   float: left;
 }
-/* line 67, ../../../app/stylesheets/partials/_header.sass */
+/* line 68, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGray .searchBox .searchMiddle {
   width: 380px;
   height: 27px;
@@ -1448,7 +1449,7 @@ body #container {
   background-repeat: x-repeat;
   float: left;
 }
-/* line 74, ../../../app/stylesheets/partials/_header.sass */
+/* line 75, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGray .searchBox .searchMiddle #search #searchText {
   width: 350px;
   height: 25px;
@@ -1459,15 +1460,16 @@ body #container {
   font-size: 16px;
   color: #7dbb42;
 }
-/* line 83, ../../../app/stylesheets/partials/_header.sass */
+/* line 84, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGray .searchBox .searchEnd {
   width: 7px;
   height: 27px;
-  background-image: url("/images/layout/header/search-end.png");
+  background-image: url("/images/layout/header/search-box.png");
   background-repeat: no-repeat;
+  background-position: -78px 0px;
   float: left;
 }
-/* line 89, ../../../app/stylesheets/partials/_header.sass */
+/* line 91, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGray .searchBox #searchButton {
   width: 30px;
   height: 28px;
@@ -1477,12 +1479,12 @@ body #container {
   float: left;
   margin-left: 8px;
 }
-/* line 97, ../../../app/stylesheets/partials/_header.sass */
+/* line 99, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGray .searchBox #searchButton:hover {
   background-position: 0px 0px;
   cursor: pointer;
 }
-/* line 101, ../../../app/stylesheets/partials/_header.sass */
+/* line 103, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGray #message {
   position: absolute;
   top: 58px;
@@ -1492,7 +1494,7 @@ body #container {
   color: white;
   text-align: center;
 }
-/* line 110, ../../../app/stylesheets/partials/_header.sass */
+/* line 112, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGray #menu {
   position: absolute;
   top: 7px;
@@ -1525,16 +1527,16 @@ body #container {
 #header .headerInnerBox #headerGray #menu li:last-child, #header .headerInnerBox #headerGray #menu li.last {
   padding-right: 0;
 }
-/* line 117, ../../../app/stylesheets/partials/_header.sass */
+/* line 119, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGray #menu a {
   color: white;
 }
-/* line 120, ../../../app/stylesheets/partials/_header.sass */
+/* line 122, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen {
   width: 200px;
   float: left;
 }
-/* line 123, ../../../app/stylesheets/partials/_header.sass */
+/* line 125, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen ul {
   float: left;
   position: relative;
@@ -1546,40 +1548,51 @@ body #container {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 131, ../../../app/stylesheets/partials/_header.sass */
+/* line 133, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen ul .whiteArrow {
   float: left;
   margin-top: 2px;
   margin-right: 5px;
   width: 8px;
   height: 14px;
-  background-image: url("/images/layout/header/white-arrow.png");
+  background-image: url("/images/layout/header/arrows.png");
   background-repeat: no-repeat;
+  background-position: 0px 0px;
 }
-/* line 139, ../../../app/stylesheets/partials/_header.sass */
+/* line 142, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen ul .grayArrow {
   float: left;
   margin-top: 2px;
   margin-right: 5px;
   width: 8px;
   height: 14px;
-  background-image: url("/images/layout/header/gray-arrow.png");
+  background-image: url("/images/layout/header/arrows.png");
   background-repeat: no-repeat;
+  background-position: 0px -14px;
 }
-/* line 147, ../../../app/stylesheets/partials/_header.sass */
+/* line 151, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen ul #signUpLinkWhite {
   color: white;
 }
-/* line 149, ../../../app/stylesheets/partials/_header.sass */
+/* line 153, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen ul #signUpLinkGray {
   color: #5c5d5e;
 }
-/* line 151, ../../../app/stylesheets/partials/_header.sass */
+/* line 155, ../../../app/stylesheets/partials/_header.sass */
 #header .headerInnerBox #headerGreen ul #signOutLinkWhite {
   color: white;
 }
+/* line 158, ../../../app/stylesheets/partials/_header.sass */
+#header .headerInnerBox #headerGreen ul a {
+  text-decoration: none;
+}
+/* line 161, ../../../app/stylesheets/partials/_header.sass */
+#header .headerInnerBox #headerGreen ul a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
-/* line 155, ../../../app/stylesheets/partials/_header.sass */
+/* line 166, ../../../app/stylesheets/partials/_header.sass */
 #header .dropDownHeader {
   position: relative;
   top: 99px;
@@ -1589,12 +1602,12 @@ body #container {
   display: none;
   overflow: hidden;
 }
-/* line 163, ../../../app/stylesheets/partials/_header.sass */
+/* line 174, ../../../app/stylesheets/partials/_header.sass */
 #header .dropDownHeader .innerDropDownHeader {
   position: relative;
   top: -30px;
 }
-/* line 166, ../../../app/stylesheets/partials/_header.sass */
+/* line 177, ../../../app/stylesheets/partials/_header.sass */
 #header .dropDownHeader .innerDropDownHeader #dropDownHeader {
   background-image: url("/images/layout/header/header-drop-down-middle-green.png");
   background-repeat: y-repeat;
@@ -1603,7 +1616,7 @@ body #container {
   margin: 0px;
   padding: 50px 20px 1px 20px;
 }
-/* line 173, ../../../app/stylesheets/partials/_header.sass */
+/* line 184, ../../../app/stylesheets/partials/_header.sass */
 #header .dropDownHeader .innerDropDownHeader .dropDownHeaderFooter {
   text-align: right;
   background-image: url("/images/layout/header/header-drop-down-bottom-green.png");
@@ -1612,45 +1625,9 @@ body #container {
   margin: 0px;
   padding: 1px 20px 10px 30px;
 }
-/* line 180, ../../../app/stylesheets/partials/_header.sass */
+/* line 191, ../../../app/stylesheets/partials/_header.sass */
 #header .dropDownHeader .innerDropDownHeader .dropDownHeaderFooter a {
   color: #5c5d5e;
-}
-
-/* line 183, ../../../app/stylesheets/partials/_header.sass */
-.openIdButton {
-  width: 150px;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: url("/images/layout/header/open-id-buttons.png");
-  background-repeat: no-repeat;
-  background-position: 150px 200px;
-}
-
-/* line 191, ../../../app/stylesheets/partials/_header.sass */
-.openIdButton:hover {
-  cursor: pointer;
-}
-
-/* line 193, ../../../app/stylesheets/partials/_header.sass */
-.linkedIn {
-  background-position: 0px -200px;
-}
-
-/* line 195, ../../../app/stylesheets/partials/_header.sass */
-.linkedIn:hover {
-  background-position: -150px -200px;
-}
-
-/* line 197, ../../../app/stylesheets/partials/_header.sass */
-.facebook {
-  background-position: 0px -50px;
-}
-
-/* line 199, ../../../app/stylesheets/partials/_header.sass */
-.facebook:hover {
-  background-position: -150px -50px;
 }
 
 /* line 2, ../../../app/stylesheets/partials/_content.sass */
@@ -1778,4 +1755,87 @@ body #container {
 /* line 9, ../../../app/stylesheets/partials/_common.sass */
 .hidden {
   display: none;
+}
+
+/* line 1, ../../../app/stylesheets/partials/_buttons.sass */
+.button {
+  position: relative;
+  width: 156px;
+  height: 40px;
+  float: left;
+  border: none;
+  font-size: 14px;
+  color: #5c5d5e;
+  padding-top: 8px;
+  text-align: center;
+  overflow: hidden;
+  background-image: url("/images/layout/buttons/button-background.png");
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+}
+
+/* line 15, ../../../app/stylesheets/partials/_buttons.sass */
+.button:hover {
+  background-position: 0px -50px;
+  color: #7dbb42;
+  cursor: pointer;
+}
+
+/* line 19, ../../../app/stylesheets/partials/_buttons.sass */
+.button-disabled {
+  position: relative;
+  width: 156px;
+  height: 40px;
+  float: left;
+  border: none;
+  font-size: 14px;
+  color: #d6d6d6;
+  padding-top: 8px;
+  margin: 2px;
+  text-align: center;
+  background-image: url("/images/layout/buttons//button-background.png");
+  background-repeat: no-repeat;
+  background-position: 0px -100px;
+}
+
+/* line 34, ../../../app/stylesheets/partials/_buttons.sass */
+.logoButton {
+  margin: -2px 10px 0px 10px;
+  position: relative;
+  width: 26px;
+  height: 26px;
+  float: left;
+  border: none;
+  background-image: url("/images/layout/buttons//small-logos.png");
+  background-repeat: no-repeat;
+}
+
+/* line 43, ../../../app/stylesheets/partials/_buttons.sass */
+.Linkedin {
+  background-position: 0px -30px;
+}
+
+/* line 45, ../../../app/stylesheets/partials/_buttons.sass */
+.Facebook {
+  background-position: 0px -60px;
+}
+
+/* line 47, ../../../app/stylesheets/partials/_buttons.sass */
+.Google {
+  background-position: 0px -90px;
+}
+
+/* line 49, ../../../app/stylesheets/partials/_buttons.sass */
+.Twitter {
+  background-position: 0px -120px;
+}
+
+/* line 51, ../../../app/stylesheets/partials/_buttons.sass */
+.Openid {
+  background-position: 0px -180px;
+}
+
+/* line 53, ../../../app/stylesheets/partials/_buttons.sass */
+.ITJobs {
+  background-position: 0px -210px;
 }
