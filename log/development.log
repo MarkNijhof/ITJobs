@@ -6195,3 +6195,260 @@ Rendered partials/_header.haml (23.3ms)
 Rendered partials/_footer.haml (1.9ms)
 Rendered home/index.html.haml within layouts/application (35.6ms)
 Completed 200 OK in 48ms (Views: 40.2ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({:getnonce=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"15607e9e60ac1062", "key"=>"5888e576790b52345629c4e8bba1e5d8"}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({:getnonce=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"5d29327641ccbe24", "key"=>"3038bd34b61e735733d8e5d15ba24f28"}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({:getnonce=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"c0ad0acb52d08fb1", "key"=>"90063d8d5a531206ecdc079af60ef180"}, {}).limit(-1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 01:20:15 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (24.2ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (39.1ms)
+Completed 200 OK in 46ms (Views: 45.4ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:20:20 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (23.9ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (36.7ms)
+Completed 200 OK in 43ms (Views: 42.3ms)
+
+
+Started GET "/authentication/facebook/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:20:28 +0100
+  Processing by AuthenticationController#facebook as HTML
+  Parameters: {"url"=>"job posting url"}
+Completed   in 2ms
+
+ActionView::MissingTemplate (Missing template authentication/facebook with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml, :haml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/marknijhof/Development/Development/itjobs/app/views"):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 01:20:36 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (24.5ms)
+Rendered partials/_footer.haml (2.2ms)
+Rendered home/index.html.haml within layouts/application (37.8ms)
+Completed 200 OK in 43ms (Views: 42.4ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:20:37 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (25.3ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered error/handle404.html.haml within layouts/application (78.6ms)
+Completed 200 OK in 84ms (Views: 83.2ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:23:05 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Completed   in 1ms
+
+RuntimeError (#<ActionDispatch::Request:0x0000010362be80 @env={"GATEWAY_INTERFACE"=>"CGI/1.1", "PATH_INFO"=>"/job%20posting%20url", "QUERY_STRING"=>"", "REMOTE_ADDR"=>"127.0.0.1", "REMOTE_HOST"=>"ereg.adobe.com", "REQUEST_METHOD"=>"GET", "REQUEST_URI"=>"http://localhost:3000/job%20posting%20url", "SCRIPT_NAME"=>"", "SERVER_NAME"=>"localhost", "SERVER_PORT"=>"3000", "SERVER_PROTOCOL"=>"HTTP/1.1", "SERVER_SOFTWARE"=>"WEBrick/1.3.1 (Ruby/1.9.2/2010-08-18)", "HTTP_HOST"=>"localhost:3000", "HTTP_USER_AGENT"=>"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.13) Gecko/20101203 Firefox/3.6.13", "HTTP_ACCEPT"=>"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "HTTP_ACCEPT_LANGUAGE"=>"en-us,en;q=0.5", "HTTP_ACCEPT_ENCODING"=>"gzip,deflate", "HTTP_ACCEPT_CHARSET"=>"ISO-8859-1,utf-8;q=0.7,*;q=0.7", "HTTP_KEEP_ALIVE"=>"115", "HTTP_CONNECTION"=>"keep-alive", "HTTP_REFERER"=>"http://localhost:3000/", "HTTP_COOKIE"=>"_ITJobs_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlZWJhMTIzOGM1MTU5YTA3NDY3MjdhNzdlMWNhN2ZmMjFJIhBfY3NyZl90b2tlbgY7AEZJIjE0MHB3MnFyOFdWeDAxYVlwNmpDUUpRRThBaWRZbjIvUkg0cmZFdWtCTjBJPQY7AEY%3D--4ebf981bd5ac46260371a18e7b6d0a7a6c80699a", "HTTP_IF_NONE_MATCH"=>"\"596188902cbee5e08e2b2a10d90c10c6\"", "HTTP_CACHE_CONTROL"=>"max-age=0", "rack.version"=>[1, 1], "rack.input"=>#<StringIO:0x000001036c2740>, "rack.errors"=>#<IO:<STDERR>>, "rack.multithread"=>false, "rack.multiprocess"=>false, "rack.run_once"=>false, "rack.url_scheme"=>"http", "HTTP_VERSION"=>"HTTP/1.1", "REQUEST_PATH"=>"/", "action_dispatch.parameter_filter"=>[:password], "action_dispatch.secret_token"=>"3517075e800714256149961718754e84c5efe2cd00a6c4ec3d24fdd50b5ba85fbd35cd1048dffa8d542a801f387515c2cc39f5d70a1c8ecc28e3919cae053cd4", "action_dispatch.remote_ip"=>127.0.0.1, "rack.session"=>{"session_id"=>"eba1238c5159a0746727a77e1ca7ff21", "_csrf_token"=>"40pw2qr8WVx01aYp6jCQJQE8AidYn2/RH4rfEukBN0I="}, "rack.session.options"=>{:path=>"/", :domain=>nil, :expire_after=>nil, :secure=>false, :httponly=>true, :id=>"eba1238c5159a0746727a77e1ca7ff21"}, "rack.request.cookie_string"=>"_ITJobs_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlZWJhMTIzOGM1MTU5YTA3NDY3MjdhNzdlMWNhN2ZmMjFJIhBfY3NyZl90b2tlbgY7AEZJIjE0MHB3MnFyOFdWeDAxYVlwNmpDUUpRRThBaWRZbjIvUkg0cmZFdWtCTjBJPQY7AEY%3D--4ebf981bd5ac46260371a18e7b6d0a7a6c80699a", "rack.request.cookie_hash"=>{"_ITJobs_session"=>"BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlZWJhMTIzOGM1MTU5YTA3NDY3MjdhNzdlMWNhN2ZmMjFJIhBfY3NyZl90b2tlbgY7AEZJIjE0MHB3MnFyOFdWeDAxYVlwNmpDUUpRRThBaWRZbjIvUkg0cmZFdWtCTjBJPQY7AEY=--4ebf981bd5ac46260371a18e7b6d0a7a6c80699a"}, "action_dispatch.cookies"=>{"_ITJobs_session"=>"BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlZWJhMTIzOGM1MTU5YTA3NDY3MjdhNzdlMWNhN2ZmMjFJIhBfY3NyZl90b2tlbgY7AEZJIjE0MHB3MnFyOFdWeDAxYVlwNmpDUUpRRThBaWRZbjIvUkg0cmZFdWtCTjBJPQY7AEY=--4ebf981bd5ac46260371a18e7b6d0a7a6c80699a"}, "action_dispatch.request.unsigned_session_cookie"=>{"session_id"=>"eba1238c5159a0746727a77e1ca7ff21", "_csrf_token"=>"40pw2qr8WVx01aYp6jCQJQE8AidYn2/RH4rfEukBN0I="}, "action_dispatch.request.path_parameters"=>{:controller=>"error", :action=>"handle404", :path=>"job posting url"}, "action_controller.instance"=>#<ErrorController:0x0000010362bfe8 @action_has_layout=true, @view_context_class=nil, @_headers={"Content-Type"=>"text/html"}, @_status=200, @_response=#<ActionDispatch::Response:0x0000010362be58 @writer=#<Proc:0x0000010362bd68@/Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/http/response.rb:43 (lambda)>, @block=nil, @length=0, @header={}, @status=200, @body=[], @cookie=[], @sending_file=false, @blank=false, @cache_control={}, @etag=nil, @request=#<ActionDispatch::Request:0x0000010362be80 ...>>, @_request=#<ActionDispatch::Request:0x0000010362be80 ...>, @_env={...}, @lookup_context=#<ActionView::LookupContext:0x0000010362b3b8 @details_key=nil, @details={:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml, :haml], :formats=>[:html], :locale=>[:en, :en]}, @skip_default_locale=false, @frozen_formats=false, @view_paths=[/Users/marknijhof/Development/Development/itjobs/app/views]>, @_action_name="handle404", @_response_body=nil, @_config={}, @beta_user="", @person=nil>, "action_dispatch.request.content_type"=>nil, "action_dispatch.request.request_parameters"=>{}, "rack.request.query_string"=>"", "rack.request.query_hash"=>{}, "action_dispatch.request.query_parameters"=>{}, "action_dispatch.request.parameters"=>{"controller"=>"error", "action"=>"handle404", "path"=>"job posting url"}, "action_dispatch.request.formats"=>[text/html]}, @fullpath="/job%20posting%20url", @request_method="GET", @filtered_parameters={"controller"=>"error", "action"=>"handle404", "path"=>"job posting url"}, @method="GET">):
+  app/controllers/error_controller.rb:3:in `handle404'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:25:32 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Completed   in 0ms
+
+TypeError (can't convert Symbol into String):
+  app/controllers/error_controller.rb:3:in `[]'
+  app/controllers/error_controller.rb:3:in `handle404'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:25:55 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (23.2ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (76.6ms)
+Completed 200 OK in 82ms (Views: 81.4ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:26:18 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Completed   in 0ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.[]):
+  app/controllers/error_controller.rb:3:in `handle404'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:26:58 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Completed   in 1ms
+
+RuntimeError ({"TERM_PROGRAM"=>"Apple_Terminal", "rvm_archive_extension"=>"tar.bz2", "GEM_HOME"=>"/Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs", "TERM"=>"xterm-color", "SHELL"=>"/bin/bash", "IRBRC"=>"/Users/marknijhof/.rvm/rubies/ruby-1.9.2-p0/.irbrc", "TMPDIR"=>"/var/folders/Wn/Wn4tHirAGQiyaUZNnhz2xU+++TI/-Tmp-/", "Apple_PubSub_Socket_Render"=>"/tmp/launch-UOZgE5/Render", "TERM_PROGRAM_VERSION"=>"273", "OLDPWD"=>"/Users/marknijhof", "rvm_hook"=>"after_cd", "MY_RUBY_HOME"=>"/Users/marknijhof/.rvm/rubies/ruby-1.9.2-p0", "USER"=>"marknijhof", "__shell_array_start"=>"0", "COMMAND_MODE"=>"unix2003", "rvm_path"=>"/Users/marknijhof/.rvm", "SSH_AUTH_SOCK"=>"/tmp/launch-ezH6tz/Listeners", "__CF_USER_TEXT_ENCODING"=>"0x1F5:0:0", "rvm_ruby_global_gems_path"=>"/Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@global", "rvm_sticky_flag"=>"1", "PATH"=>"/Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/bin:/Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@global/bin:/Users/marknijhof/.rvm/rubies/ruby-1.9.2-p0/bin:/Users/marknijhof/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/marknijhof/bin:/usr/local/sbin:/usr/local/Cellar/node/head/bin:/usr/local/Cellar/macvim/v7.3-53/bin:/usr/local/Cellar/tomcat/6.0.26/bin", "PWD"=>"/Users/marknijhof/Development/Development/itjobs", "EDITOR"=>"vim -f", "rvm_expanding_aliases"=>"0", "PS1"=>"\\W\\[$(tput setaf 5)\\]`if [ \"$(vcprompt)\" != \"\" ]; then echo \" $(vcprompt)\"; fi`\\[$(tput setaf 2)\\]`if [ \"$(~/.rvm/bin/rvm-prompt i v p g)\" != \"\" ]; then echo \" $(~/.rvm/bin/rvm-prompt i v p g)\"; fi` \\[$(tput sgr0)\\]\xE2\x88\xB4 ", "HISTCONTROL"=>"erasedups", "rvm_version"=>"1.1.1", "SHLVL"=>"1", "HOME"=>"/Users/marknijhof", "rvm_default_flag"=>"0", "rvm_ruby_string"=>"ruby-1.9.2-p0", "LOGNAME"=>"marknijhof", "GEM_PATH"=>"/Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs:/Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@global", "LC_CTYPE"=>"UTF-8", "PROMPT_COMMAND"=>"directory_to_titlebar", "DISPLAY"=>"/tmp/launch-PkpCLV/org.x:0", "RUBY_VERSION"=>"ruby-1.9.2-p0", "SECURITYSESSIONID"=>"21b1d1", "_"=>"/Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@global/bin/rake", "BUNDLE_GEMFILE"=>"/Users/marknijhof/Development/Development/itjobs/Gemfile", "BUNDLE_BIN_PATH"=>"/Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/bundler-1.0.7/bin/bundle", "RUBYOPT"=>"-I/Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/bundler-1.0.7/lib -rbundler/setup", "RACK_ENV"=>"development", "RAILS_ENV"=>"development", "MONGODB_PORT"=>"27038", "MONGODB_HOST"=>"flame.mongohq.com", "MONGODB_DATABASE"=>"itjobs-development", "MONGODB_USER_NAME"=>"itjo.bs", "MONGODB_PASSWORD"=>"itjo.bs", "LINKEDIN_KEY"=>"Z0rURAzH7R5yGn5GBXT0iY4Jx5AfKzRwxKeUW0wP8CXKaEOToy1qja0Oo-7-ybZ2", "LINKEDIN_SECRET"=>"jgOtTY25cIB93AuNnN7UiXgjbHZEw4b7wa2boYcWEWRkza1lFWq0g-mUlfjdtb2j"}):
+  app/controllers/error_controller.rb:3:in `handle404'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.7ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:28:19 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Completed   in 1ms
+
+RuntimeError (#<ActionDispatch::Request:0x00000104060888 @env={"GATEWAY_INTERFACE"=>"CGI/1.1", "PATH_INFO"=>"/job%20posting%20url", "QUERY_STRING"=>"", "REMOTE_ADDR"=>"127.0.0.1", "REMOTE_HOST"=>"ereg.adobe.com", "REQUEST_METHOD"=>"GET", "REQUEST_URI"=>"http://localhost:3000/job%20posting%20url", "SCRIPT_NAME"=>"", "SERVER_NAME"=>"localhost", "SERVER_PORT"=>"3000", "SERVER_PROTOCOL"=>"HTTP/1.1", "SERVER_SOFTWARE"=>"WEBrick/1.3.1 (Ruby/1.9.2/2010-08-18)", "HTTP_HOST"=>"localhost:3000", "HTTP_USER_AGENT"=>"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.13) Gecko/20101203 Firefox/3.6.13", "HTTP_ACCEPT"=>"text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8", "HTTP_ACCEPT_LANGUAGE"=>"en-us,en;q=0.5", "HTTP_ACCEPT_ENCODING"=>"gzip,deflate", "HTTP_ACCEPT_CHARSET"=>"ISO-8859-1,utf-8;q=0.7,*;q=0.7", "HTTP_KEEP_ALIVE"=>"115", "HTTP_CONNECTION"=>"keep-alive", "HTTP_REFERER"=>"http://localhost:3000/", "HTTP_COOKIE"=>"_ITJobs_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlZWJhMTIzOGM1MTU5YTA3NDY3MjdhNzdlMWNhN2ZmMjFJIhBfY3NyZl90b2tlbgY7AEZJIjE0MHB3MnFyOFdWeDAxYVlwNmpDUUpRRThBaWRZbjIvUkg0cmZFdWtCTjBJPQY7AEY%3D--4ebf981bd5ac46260371a18e7b6d0a7a6c80699a", "HTTP_CACHE_CONTROL"=>"max-age=0", "rack.version"=>[1, 1], "rack.input"=>#<StringIO:0x000001017ecf50>, "rack.errors"=>#<IO:<STDERR>>, "rack.multithread"=>false, "rack.multiprocess"=>false, "rack.run_once"=>false, "rack.url_scheme"=>"http", "HTTP_VERSION"=>"HTTP/1.1", "REQUEST_PATH"=>"/", "action_dispatch.parameter_filter"=>[:password], "action_dispatch.secret_token"=>"3517075e800714256149961718754e84c5efe2cd00a6c4ec3d24fdd50b5ba85fbd35cd1048dffa8d542a801f387515c2cc39f5d70a1c8ecc28e3919cae053cd4", "action_dispatch.remote_ip"=>127.0.0.1, "rack.session"=>{"session_id"=>"eba1238c5159a0746727a77e1ca7ff21", "_csrf_token"=>"40pw2qr8WVx01aYp6jCQJQE8AidYn2/RH4rfEukBN0I="}, "rack.session.options"=>{:path=>"/", :domain=>nil, :expire_after=>nil, :secure=>false, :httponly=>true, :id=>"eba1238c5159a0746727a77e1ca7ff21"}, "rack.request.cookie_string"=>"_ITJobs_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlZWJhMTIzOGM1MTU5YTA3NDY3MjdhNzdlMWNhN2ZmMjFJIhBfY3NyZl90b2tlbgY7AEZJIjE0MHB3MnFyOFdWeDAxYVlwNmpDUUpRRThBaWRZbjIvUkg0cmZFdWtCTjBJPQY7AEY%3D--4ebf981bd5ac46260371a18e7b6d0a7a6c80699a", "rack.request.cookie_hash"=>{"_ITJobs_session"=>"BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlZWJhMTIzOGM1MTU5YTA3NDY3MjdhNzdlMWNhN2ZmMjFJIhBfY3NyZl90b2tlbgY7AEZJIjE0MHB3MnFyOFdWeDAxYVlwNmpDUUpRRThBaWRZbjIvUkg0cmZFdWtCTjBJPQY7AEY=--4ebf981bd5ac46260371a18e7b6d0a7a6c80699a"}, "action_dispatch.cookies"=>{"_ITJobs_session"=>"BAh7B0kiD3Nlc3Npb25faWQGOgZFRiIlZWJhMTIzOGM1MTU5YTA3NDY3MjdhNzdlMWNhN2ZmMjFJIhBfY3NyZl90b2tlbgY7AEZJIjE0MHB3MnFyOFdWeDAxYVlwNmpDUUpRRThBaWRZbjIvUkg0cmZFdWtCTjBJPQY7AEY=--4ebf981bd5ac46260371a18e7b6d0a7a6c80699a"}, "action_dispatch.request.unsigned_session_cookie"=>{"session_id"=>"eba1238c5159a0746727a77e1ca7ff21", "_csrf_token"=>"40pw2qr8WVx01aYp6jCQJQE8AidYn2/RH4rfEukBN0I="}, "action_dispatch.request.path_parameters"=>{:controller=>"error", :action=>"handle404", :path=>"job posting url"}, "action_controller.instance"=>#<ErrorController:0x000001040609f0 @action_has_layout=true, @view_context_class=nil, @_headers={"Content-Type"=>"text/html"}, @_status=200, @_response=#<ActionDispatch::Response:0x00000104060860 @writer=#<Proc:0x00000104060798@/Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/http/response.rb:43 (lambda)>, @block=nil, @length=0, @header={}, @status=200, @body=[], @cookie=[], @sending_file=false, @blank=false, @cache_control={}, @etag=nil, @request=#<ActionDispatch::Request:0x00000104060888 ...>>, @_request=#<ActionDispatch::Request:0x00000104060888 ...>, @_env={...}, @lookup_context=#<ActionView::LookupContext:0x0000010405fde8 @details_key=nil, @details={:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml, :haml], :formats=>[:html], :locale=>[:en, :en]}, @skip_default_locale=false, @frozen_formats=false, @view_paths=[/Users/marknijhof/Development/Development/itjobs/app/views]>, @_action_name="handle404", @_response_body=nil, @_config={}, @beta_user="", @person=nil>, "action_dispatch.request.content_type"=>nil, "action_dispatch.request.request_parameters"=>{}, "rack.request.query_string"=>"", "rack.request.query_hash"=>{}, "action_dispatch.request.query_parameters"=>{}, "action_dispatch.request.parameters"=>{"controller"=>"error", "action"=>"handle404", "path"=>"job posting url"}, "action_dispatch.request.formats"=>[text/html]}, @fullpath="/job%20posting%20url", @request_method="GET", @filtered_parameters={"controller"=>"error", "action"=>"handle404", "path"=>"job posting url"}, @method="GET">):
+  app/controllers/error_controller.rb:3:in `handle404'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.5ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:30:33 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (23.1ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (36.0ms)
+Completed 200 OK in 41ms (Views: 40.8ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:30:47 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (24.0ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (37.1ms)
+Completed 200 OK in 42ms (Views: 41.8ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:30:50 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (24.2ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered error/handle404.html.haml within layouts/application (37.4ms)
+Completed 200 OK in 42ms (Views: 42.1ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:32:27 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (23.1ms)
+Rendered partials/_footer.haml (2.8ms)
+Rendered error/handle404.html.haml within layouts/application (37.5ms)
+Completed 404 Not Found in 43ms (Views: 42.5ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:32:50 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (24.0ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (37.2ms)
+Completed 404 Not Found in 42ms (Views: 42.0ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:34:03 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (23.1ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (36.2ms)
+Completed 404 Not Found in 41ms (Views: 40.8ms)
+
+
+Started GET "/something" for 127.0.0.1 at 2011-01-04 01:34:19 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"something"}
+Rendered partials/_header.haml (63.0ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (76.2ms)
+Completed 404 Not Found in 81ms (Views: 80.8ms)
+
+
+Started GET "/something" for 127.0.0.1 at 2011-01-04 01:34:39 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"something"}
+Rendered partials/_header.haml (23.1ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (36.1ms)
+Completed 404 Not Found in 41ms (Views: 40.7ms)
+
+
+Started GET "/something" for 127.0.0.1 at 2011-01-04 01:35:21 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"something"}
+Rendered partials/_header.haml (25.0ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (79.9ms)
+Completed 404 Not Found in 85ms (Views: 84.6ms)
+
+
+Started GET "/something" for 127.0.0.1 at 2011-01-04 01:35:42 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"something"}
+Rendered partials/_header.haml (23.2ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (36.4ms)
+Completed 404 Not Found in 41ms (Views: 41.1ms)
+
+
+Started GET "/something" for 127.0.0.1 at 2011-01-04 01:36:14 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"something"}
+Rendered partials/_header.haml (23.4ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (36.8ms)
+Completed 404 Not Found in 42ms (Views: 41.5ms)
+
+
+Started GET "/something" for 127.0.0.1 at 2011-01-04 01:36:34 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"something"}
+Rendered partials/_header.haml (23.5ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (36.7ms)
+Completed 404 Not Found in 42ms (Views: 41.4ms)
+
+
+Started GET "/something" for 127.0.0.1 at 2011-01-04 01:36:46 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"something"}
+Rendered partials/_header.haml (22.9ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (36.0ms)
+Completed 404 Not Found in 41ms (Views: 40.8ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:36:58 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (24.0ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (37.2ms)
+Completed 404 Not Found in 42ms (Views: 41.9ms)
