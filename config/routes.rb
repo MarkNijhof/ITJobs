@@ -4,27 +4,29 @@ ITJobs::Application.routes.draw do
   
   get "error/handle404"
 
-  get "authentication/linkedin(/*url)" => "authentication#linkedin" 
-  get "authentication/linkedin_callback"
+  namespace "authentication" do
+    get "linkedin(/*url)" => "linkedin#index" 
+    get "linkedin_callback" => "linkedin#callback"
 
-  get "authentication/facebook(/*url)" => "authentication#facebook" 
-  get "authentication/facebook_callback"
+    get "facebook(/*url)" => "facebook#index" 
+    get "facebook_callback" => "facebook#callback"
 
-  get "authentication/twitter(/*url)" => "authentication#twitter" 
-  get "authentication/twitter_callback"
+    get "twitter(/*url)" => "twitter#index" 
+    get "twitter_callback" => "twitter#callback"
 
-  get "authentication/google(/*url)" => "authentication#google" 
-  get "authentication/google_callback"
+    get "google(/*url)" => "google#index" 
+    get "google_callback" => "google#callback"
 
-  get "authentication/openid(/*url)" => "authentication#openid" 
-  get "authentication/openid_callback"
+    get "openid(/*url)" => "openid#index" 
+    get "openid_callback" => "openid#callback"
 
-  get "authentication/itjobs(/*url)" => "authentication#itjobs" 
-  get "authentication/itjobs_callback"
+    get "itjobs(/*url)" => "itjobs#index" 
+    get "itjobs_callback" => "itjobs#callback"
 
-  get "authentication/after_authentication"
+    get "after_authentication" => "authentication#after_authentication" 
 
-  get "authentication/logout"
+    get "logout" => "authentication#logout" 
+  end
 
   get "home/index"
 

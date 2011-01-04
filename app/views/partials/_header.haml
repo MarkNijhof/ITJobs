@@ -1,11 +1,11 @@
 %script{:type => "text/javascript"}
   var beta_user = "#{@beta_user}";
-  var linkedin_url = "#{url_for(:controller => :authentication, :action => :linkedin)}";
-  var facebook_url = "#{url_for(:controller => :authentication, :action => :facebook)}";
-  var twitter_url = "#{url_for(:controller => :authentication, :action => :twitter)}";
-  var google_url = "#{url_for(:controller => :authentication, :action => :google)}";
-  var openid_url = "#{url_for(:controller => :authentication, :action => :openid)}";
-  var itjobs_url = "#{url_for(:controller => :authentication, :action => :itjobs)}";
+  var linkedin_url = "#{url_for(:controller => :'authentication/linkedin', :action => :index)}";
+  var facebook_url = "#{url_for(:controller => :'authentication/facebook', :action => :index)}";
+  var twitter_url = "#{url_for(:controller => :'authentication/twitter', :action => :index)}";
+  var google_url = "#{url_for(:controller => :'authentication/google', :action => :index)}";
+  var openid_url = "#{url_for(:controller => :'authentication/openid', :action => :index)}";
+  var itjobs_url = "#{url_for(:controller => :'authentication/itjobs', :action => :index)}";
 
 %script{:type => "text/html", :id => "login_template"}
   %table{:border => "0px", :cellpadding => "0", :cellspacing => "0"}
@@ -119,7 +119,7 @@
         - else
           %li
             .whiteArrow
-            = link_to "Sign Out!", url_for(:controller => :authentication, :action => :logout), :id => :signOutLinkWhite
+            = link_to "Sign Out!", url_for(:controller => :'authentication/authentication', :action => :logout), :id => :signOutLinkWhite
           %li
             .grayArrow
             %a#signUpLinkGray

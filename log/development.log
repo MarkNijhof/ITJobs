@@ -6470,3 +6470,291 @@ Rendered partials/_header.haml (64.2ms)
 Rendered partials/_footer.haml (1.9ms)
 Rendered error/handle404.html.haml within layouts/application (77.2ms)
 Completed 404 Not Found in 83ms (Views: 82.2ms)
+
+
+Started GET "/authentication/linkedin/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:50:27 +0100
+
+ActionController::RoutingError (uninitialized constant AuthenticationController):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/authentication/linkedin/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:51:11 +0100
+
+ActionController::RoutingError (uninitialized constant AuthenticationController):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/authentication/linkedin/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:54:00 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"authentication/linkedin/job posting url"}
+Rendered partials/_header.haml (22.2ms)
+Rendered error/handle404.html.haml within layouts/application (73.9ms)
+Completed   in 79ms
+
+ActionView::Template::Error (No route matches {:controller=>"authentication", :action=>"linkedin"}):
+    1: %script{:type => "text/javascript"}
+    2:   var beta_user = "#{@beta_user}";
+    3:   var linkedin_url = "#{url_for(:controller => :authentication, :action => :linkedin)}";
+    4:   var facebook_url = "#{url_for(:controller => :authentication, :action => :facebook)}";
+    5:   var twitter_url = "#{url_for(:controller => :authentication, :action => :twitter)}";
+    6:   var google_url = "#{url_for(:controller => :authentication, :action => :google)}";
+  app/views/partials/_header.haml:3:in `_app_views_partials__header_haml___4377571345589038619_2181261940__3579258231840578662'
+  app/views/layouts/application.haml:29:in `_app_views_layouts_application_haml___70642794739873150_2157022880__202607363240516993'
+  app/controllers/error_controller.rb:4:in `handle404'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/authentication/linkedin/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:56:15 +0100
+
+LoadError (Expected /Users/marknijhof/Development/Development/itjobs/app/controllers/authentication/authentication_controller.rb to define Authentication::AuthenticationController):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/authentication/linkedin/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:57:47 +0100
+  Processing by Authentication::AuthenticationController#linkedin as HTML
+  Parameters: {"url"=>"job posting url"}
+Completed   in 1ms
+
+ActionController::RoutingError (No route matches {:action=>"linkedin_callback", :controller=>"authentication/authentication"}):
+  app/controllers/authentication/authentication_controller.rb:8:in `linkedin'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/authentication/linkedin/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:59:21 +0100
+
+LoadError (Expected /Users/marknijhof/Development/Development/itjobs/app/controllers/authentication/authentication_controller.rb to define Authentication::AuthenticationController):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/authentication/linkedin/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:59:58 +0100
+  Processing by Authentication::AuthenticationController#linkedin as HTML
+  Parameters: {"url"=>"job posting url"}
+Completed   in 1ms
+
+ActionController::RoutingError (No route matches {:action=>"linkedin_callback", :controller=>"authentication/authentication"}):
+  app/controllers/authentication/authentication_controller.rb:9:in `linkedin'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/authentication/linkedin/job%20posting%20url" for 127.0.0.1 at 2011-01-04 02:04:13 +0100
+
+AbstractController::ActionNotFound (The action 'linkedin' could not be found for Authentication::AuthenticationController):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.8ms)
+
+
+Started GET "/authentication/linkedin/job%20posting%20url" for 127.0.0.1 at 2011-01-04 02:05:19 +0100
+
+ArgumentError (missing :action):
+  config/routes.rb:9:in `block (2 levels) in <top (required)>'
+  config/routes.rb:7:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.7ms)
+
+
+Started GET "/authentication/linkedin/job%20posting%20url" for 127.0.0.1 at 2011-01-04 02:06:08 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"job posting url"}
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=cb98cebe-320f-444a-a5f5-675f07c91d1a
+Completed 302 Found in 947ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=cb98cebe-320f-444a-a5f5-675f07c91d1a&oauth_verifier=04138" for 127.0.0.1 at 2011-01-04 02:06:17 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"cb98cebe-320f-444a-a5f5-675f07c91d1a", "oauth_verifier"=>"04138"}
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 1938ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-04 02:06:19 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+Completed   in 263ms
+
+ActionView::MissingTemplate (Missing template authentication/authentication/after_authentication with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml, :haml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/marknijhof/Development/Development/itjobs/app/views"):
+  
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-04 02:07:02 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+Rendered authentication/after_authentication.html.haml (3.4ms)
+Completed 200 OK in 16ms (Views: 7.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 02:07:37 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (22.2ms)
+Rendered home/index.html.haml within layouts/application (31.6ms)
+Completed   in 44ms
+
+ActionView::Template::Error (No route matches {:controller=>"authentication", :action=>"linkedin"}):
+    1: %script{:type => "text/javascript"}
+    2:   var beta_user = "#{@beta_user}";
+    3:   var linkedin_url = "#{url_for(:controller => :authentication, :action => :linkedin)}";
+    4:   var facebook_url = "#{url_for(:controller => :authentication, :action => :facebook)}";
+    5:   var twitter_url = "#{url_for(:controller => :authentication, :action => :twitter)}";
+    6:   var google_url = "#{url_for(:controller => :authentication, :action => :google)}";
+  app/views/partials/_header.haml:3:in `_app_views_partials__header_haml___4377571345589038619_2175552000__3579258231840578662'
+  app/views/layouts/application.haml:29:in `_app_views_layouts_application_haml___70642794739873150_2175760220__202607363240516993'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 02:08:19 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (22.4ms)
+Rendered home/index.html.haml within layouts/application (32.2ms)
+Completed   in 84ms
+
+ActionView::Template::Error (No route matches {:controller=>"linkedin"}):
+    1: %script{:type => "text/javascript"}
+    2:   var beta_user = "#{@beta_user}";
+    3:   var linkedin_url = "#{url_for(:controller => :linkedin, :action => :index)}";
+    4:   var facebook_url = "#{url_for(:controller => :authentication, :action => :facebook)}";
+    5:   var twitter_url = "#{url_for(:controller => :authentication, :action => :twitter)}";
+    6:   var google_url = "#{url_for(:controller => :authentication, :action => :google)}";
+  app/views/partials/_header.haml:3:in `_app_views_partials__header_haml___4377571345589038619_2181205860__3579258231840578662'
+  app/views/layouts/application.haml:29:in `_app_views_layouts_application_haml___70642794739873150_2173379060__202607363240516993'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 02:08:43 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (22.9ms)
+Rendered home/index.html.haml within layouts/application (32.4ms)
+Completed   in 45ms
+
+ActionView::Template::Error (No route matches {:controller=>"authentication", :action=>"facebook"}):
+    1: %script{:type => "text/javascript"}
+    2:   var beta_user = "#{@beta_user}";
+    3:   var linkedin_url = "#{url_for(:controller => :'authentication/linkedin', :action => :index)}";
+    4:   var facebook_url = "#{url_for(:controller => :authentication, :action => :facebook)}";
+    5:   var twitter_url = "#{url_for(:controller => :authentication, :action => :twitter)}";
+    6:   var google_url = "#{url_for(:controller => :authentication, :action => :google)}";
+    7:   var openid_url = "#{url_for(:controller => :authentication, :action => :openid)}";
+  app/views/partials/_header.haml:4:in `_app_views_partials__header_haml___4377571345589038619_2173860180__3579258231840578662'
+  app/views/layouts/application.haml:29:in `_app_views_layouts_application_haml___70642794739873150_2174266820__202607363240516993'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 02:09:58 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (22.7ms)
+Rendered home/index.html.haml within layouts/application (32.6ms)
+Completed   in 46ms
+
+ActionView::Template::Error (No route matches {:controller=>"authentication/facebook"}):
+    1: %script{:type => "text/javascript"}
+    2:   var beta_user = "#{@beta_user}";
+    3:   var linkedin_url = "#{url_for(:controller => :'authentication/linkedin', :action => :index)}";
+    4:   var facebook_url = "#{url_for(:controller => :'authentication/facebook', :action => :index)}";
+    5:   var twitter_url = "#{url_for(:controller => :'authentication/twitter', :action => :index)}";
+    6:   var google_url = "#{url_for(:controller => :'authentication/google', :action => :index)}";
+    7:   var openid_url = "#{url_for(:controller => :'authentication/openid', :action => :index)}";
+  app/views/partials/_header.haml:4:in `_app_views_partials__header_haml___4377571345589038619_2176192460__3579258231840578662'
+  app/views/layouts/application.haml:29:in `_app_views_layouts_application_haml___70642794739873150_2181259640__202607363240516993'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 02:13:11 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (67.7ms)
+Rendered home/index.html.haml within layouts/application (78.0ms)
+Completed   in 91ms
+
+ActionView::Template::Error (No route matches {:controller=>"authentication/facebook"}):
+    1: %script{:type => "text/javascript"}
+    2:   var beta_user = "#{@beta_user}";
+    3:   var linkedin_url = "#{url_for(:controller => :'authentication/linkedin', :action => :index)}";
+    4:   var facebook_url = "#{url_for(:controller => :'authentication/facebook', :action => :index)}";
+    5:   var twitter_url = "#{url_for(:controller => :'authentication/twitter', :action => :index)}";
+    6:   var google_url = "#{url_for(:controller => :'authentication/google', :action => :index)}";
+    7:   var openid_url = "#{url_for(:controller => :'authentication/openid', :action => :index)}";
+  app/views/partials/_header.haml:4:in `_app_views_partials__header_haml___4377571345589038619_2158217560__3579258231840578662'
+  app/views/layouts/application.haml:29:in `_app_views_layouts_application_haml___70642794739873150_2159874940__202607363240516993'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 02:15:04 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.7ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (36.7ms)
+Completed 200 OK in 50ms (Views: 41.4ms)
+
+
+Started GET "/authentication/logout" for 127.0.0.1 at 2011-01-04 02:15:09 +0100
+  Processing by Authentication::AuthenticationController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 02:15:09 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.2ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (36.2ms)
+Completed 200 OK in 41ms (Views: 40.8ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-04 02:15:18 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=98f03a7b-5e03-4016-8335-22050033e9b9
+Completed 302 Found in 1227ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=98f03a7b-5e03-4016-8335-22050033e9b9&oauth_verifier=26697" for 127.0.0.1 at 2011-01-04 02:15:25 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"98f03a7b-5e03-4016-8335-22050033e9b9", "oauth_verifier"=>"26697"}
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 1855ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-04 02:15:27 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+Rendered authentication/after_authentication.html.haml (3.1ms)
+Completed 200 OK in 13ms (Views: 5.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 02:15:27 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.8ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (38.1ms)
+Completed 200 OK in 103ms (Views: 43.1ms)
