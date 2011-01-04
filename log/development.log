@@ -6452,3 +6452,21 @@ Rendered partials/_header.haml (24.0ms)
 Rendered partials/_footer.haml (2.0ms)
 Rendered error/handle404.html.haml within layouts/application (37.2ms)
 Completed 404 Not Found in 42ms (Views: 41.9ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:41:05 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (22.7ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (35.6ms)
+Completed 404 Not Found in 41ms (Views: 40.3ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-04 01:41:57 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (64.2ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (77.2ms)
+Completed 404 Not Found in 83ms (Views: 82.2ms)
