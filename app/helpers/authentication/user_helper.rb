@@ -1,3 +1,5 @@
+require 'user'
+require 'authenticationprovider'
 
 module Authentication::UserHelper
   class UserManager
