@@ -11,13 +11,8 @@ class ApplicationController < ActionController::Base
   end
 
   def retrieve_current_loggedin_user
-    @beta_user = ""
-    @person = nil
-    user_id = session[:user_id]
-    if !user_id.nil?
-      @person = Person.new
-#      @beta_user = @person.beta_user if !@person.nil?
-    end
+    
+    @user = User.find_using_session_id(session[:user_id]) unless session[:user_id].nil?
   end
 
 end

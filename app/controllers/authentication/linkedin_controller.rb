@@ -32,41 +32,22 @@ module Authentication
       unique_identifier = linked_in_profile.id
       email             = ''
       open_id_name      = "#{linked_in_profile.first_name} #{linked_in_profile.last_name}"
+      
+      user_information = {
+        :user_id => session[:user_id], 
+        :email => email, 
+        :open_id_name => "#{linked_in_profile.first_name} #{linked_in_profile.last_name}", 
+        :first_name => linked_in_profile.first_name, 
+        :last_name => linked_in_profile.last_name, 
+        :provider_id => linked_in_profile.id, 
+        :provider_name => "LinkedIn", 
+        :oauth_token => token, 
+        :oauth_token_secret => secret
+      }
+      
+      user = Authentication::UserHelper::UserManager.new.get_create_or_merge_user user_information
 
-  #    person = AuthenticationModels::Person.get_create_or_merge invite_code, user_id, unique_identifier, email
-
-  #    person.open_id_ids << unique_identifier if !person.open_id_ids.include?(unique_identifier)
-  #    person.open_id_names << open_id_name if !open_id_name.nil? && !person.open_id_names.include?(open_id_name)
-  ##    person.email_addresses << email if !email.nil? && !person.email_addresses.include?(email)
-  #    person.photo_urls << linked_in_profile.picture_url if !linked_in_profile.picture_url.nil? && !person.photo_urls.include?(linked_in_profile.picture_url)
-
-  #    person.first_name = linked_in_profile.first_name
-  #    person.last_name = linked_in_profile.last_name
-  #    person.openid_name = open_id_name
-
-  #    openid_provider = person.OpenidProviders.select{|item| item.provider_name == 'LinkedIn' && item.open_id_id == unique_identifier}.first
-  #    if openid_provider.nil?
-  #      openid_provider = AuthenticationModels::OpenidProvider.new
-  #      openid_provider.provider_name = 'LinkedIn'
-  #      openid_provider.open_id_id = unique_identifier
-  #      person.OpenidProviders << openid_provider
-  #    end
-
-  #    openid_provider.oauth_type = 'OAuth'
-  #    #LinkedIn type=OAuth
-  #    openid_provider.oauth_token = token
-  #    openid_provider.oauth_token_secret = secret
-  #    #Facebook type=Facebook
-  #    # openid_provider.uid = unique_identifier
-  #    # openid_provider.session_key = json['accessCredentials']['sessionKey'] ||= ''
-  #    # openid_provider.expires = json['accessCredentials']['expires'] ||= ''
-  #    #WindowsLive type=WindowsLive
-  #    # openid_provider.eact = json['accessCredentials']['eact'] ||= ''
-
-  #    openid_provider.save
-  #    person.save
-
-      session[:user_id] = unique_identifier #person.id
+      session[:user_id] = user.id
       session[:invite_code] = nil
 
       session[:rtoken] = nil

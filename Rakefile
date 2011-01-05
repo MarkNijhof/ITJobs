@@ -7,7 +7,10 @@ require 'rake'
 ITJobs::Application.load_tasks
 
 task :run => [:set_development_environment] do
-  sh "rails server"
+  # sh "rails server"
+#  sh "shotgun config.ru -s thin -E development" 
+  sh "thin start" # -R config.ru -a local.cre8ivethought.com"
+  # sh "rackup -o local.cre8ivethought.com -p 3000"
 end
 
 task :test => [:set_test_environment] do

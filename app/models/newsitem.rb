@@ -1,5 +1,6 @@
-class Person
+class NewsItem
   include MongoMapper::Document
+  plugin MongoMapper::Plugins::Timestamps
 
   def get_user_name
     "Mark Nijhof"

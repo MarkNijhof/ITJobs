@@ -6758,3 +6758,731 @@ Rendered partials/_header.haml (23.8ms)
 Rendered partials/_footer.haml (1.9ms)
 Rendered home/index.html.haml within layouts/application (38.1ms)
 Completed 200 OK in 103ms (Views: 43.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 02:17:40 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (24.4ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (37.7ms)
+Completed 200 OK in 50ms (Views: 42.3ms)
+
+
+Started GET "/authentication/logout" for 127.0.0.1 at 2011-01-04 02:17:43 +0100
+  Processing by Authentication::AuthenticationController#logout as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 02:17:43 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (22.9ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (36.1ms)
+Completed 200 OK in 41ms (Views: 40.8ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-04 02:17:46 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=ae3f7150-a959-4922-bd3f-0f5e69510c6e
+Completed 302 Found in 877ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=ae3f7150-a959-4922-bd3f-0f5e69510c6e&oauth_verifier=64812" for 127.0.0.1 at 2011-01-04 02:17:52 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"ae3f7150-a959-4922-bd3f-0f5e69510c6e", "oauth_verifier"=>"64812"}
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 1793ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-04 02:17:53 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+Rendered authentication/after_authentication.html.haml (3.1ms)
+Completed 200 OK in 13ms (Views: 5.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-04 02:17:53 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (74.0ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (89.4ms)
+Completed 200 OK in 104ms (Views: 94.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 01:30:33 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (28.8ms)
+Rendered partials/_footer.haml (2.3ms)
+Rendered home/index.html.haml within layouts/application (49.1ms)
+Completed 200 OK in 124ms (Views: 55.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 01:31:23 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.5ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (36.9ms)
+Completed 200 OK in 97ms (Views: 82.3ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({:getnonce=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"640ad4193f396c7a", "key"=>"3e0bf474532725b65eb02dd071ecb00a"}, {}).limit(-1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 01:31:47 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.8ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (72.5ms)
+Completed 200 OK in 331ms (Views: 78.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 01:41:46 +0100
+  Processing by HomeController#index as HTML
+Completed   in 51ms
+
+BSON::InvalidObjectId (illegal ObjectId format):
+  app/controllers/application_controller.rb:18:in `retrieve_current_loggedin_user'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 01:43:24 +0100
+  Processing by HomeController#index as HTML
+Completed   in 11ms
+
+BSON::InvalidObjectId (illegal ObjectId format):
+  app/controllers/application_controller.rb:17:in `retrieve_current_loggedin_user'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (40.5ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 01:44:47 +0100
+  Processing by HomeController#index as HTML
+Completed   in 10ms
+
+BSON::InvalidObjectId (illegal ObjectId format):
+  app/controllers/application_controller.rb:15:in `retrieve_current_loggedin_user'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 01:46:01 +0100
+  Processing by HomeController#index as HTML
+Completed   in 11ms
+
+BSON::InvalidObjectId (illegal ObjectId format):
+  app/controllers/application_controller.rb:14:in `retrieve_current_loggedin_user'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 01:47:06 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.7ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (37.0ms)
+Completed 200 OK in 42ms (Views: 41.8ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 01:47:13 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=67fb3f4c-5d59-4c57-8a25-376434349566
+Completed 302 Found in 956ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=67fb3f4c-5d59-4c57-8a25-376434349566&oauth_verifier=84378" for 127.0.0.1 at 2011-01-05 01:47:22 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"67fb3f4c-5d59-4c57-8a25-376434349566", "oauth_verifier"=>"84378"}
+Completed   in 1949ms
+
+NameError (uninitialized constant Authentication::LinkedinController::UserManager):
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.1ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 01:49:48 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=d6e85685-8825-44df-932f-7652a9136205
+Completed 302 Found in 896ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=d6e85685-8825-44df-932f-7652a9136205&oauth_verifier=08037" for 127.0.0.1 at 2011-01-05 01:49:54 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"d6e85685-8825-44df-932f-7652a9136205", "oauth_verifier"=>"08037"}
+Completed   in 1801ms
+
+NoMethodError (undefined method `user_manager' for #<Authentication::UserHelper::UserManager:0x00000101fe1148>):
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (44.4ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (50.0ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 01:50:20 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=52321b8f-f2b0-4848-b8ae-8cb097428394
+Completed 302 Found in 846ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=52321b8f-f2b0-4848-b8ae-8cb097428394&oauth_verifier=73926" for 127.0.0.1 at 2011-01-05 01:50:26 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"52321b8f-f2b0-4848-b8ae-8cb097428394", "oauth_verifier"=>"73926"}
+Completed   in 1801ms
+
+BSON::InvalidObjectId (illegal ObjectId format):
+  app/helpers/authentication/user_helper.rb:21:in `retrieve_and_update_existing_user_with_additional_provider'
+  app/helpers/authentication/user_helper.rb:7:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=52321b8f-f2b0-4848-b8ae-8cb097428394&oauth_verifier=73926" for 127.0.0.1 at 2011-01-05 01:57:10 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"52321b8f-f2b0-4848-b8ae-8cb097428394", "oauth_verifier"=>"73926"}
+Completed   in 1220ms
+
+OAuth::Problem (token_rejected):
+  app/controllers/authentication/linkedin_controller.rb:22:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 01:57:17 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.9ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (37.6ms)
+Completed 200 OK in 54ms (Views: 43.1ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 01:57:24 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=b50deca8-ea35-4beb-8f72-47ec2b8386b2
+Completed 302 Found in 859ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=b50deca8-ea35-4beb-8f72-47ec2b8386b2&oauth_verifier=02593" for 127.0.0.1 at 2011-01-05 01:57:33 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"b50deca8-ea35-4beb-8f72-47ec2b8386b2", "oauth_verifier"=>"02593"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 1926ms
+
+NameError (uninitialized constant AuthenticationProvider):
+  app/helpers/authentication/user_helper.rb:60:in `create_new_user'
+  app/helpers/authentication/user_helper.rb:13:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (42.9ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.5ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({:getnonce=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"d4ee7b35a0862969", "key"=>"85e9f042602fe646cae5115ed4ab93db"}, {}).limit(-1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 02:00:29 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (26.0ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered home/index.html.haml within layouts/application (40.2ms)
+Completed 200 OK in 417ms (Views: 45.8ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 02:00:48 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=7f27f875-4ddb-4d6b-88d3-5fbdac588197
+Completed 302 Found in 987ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=7f27f875-4ddb-4d6b-88d3-5fbdac588197&oauth_verifier=65238" for 127.0.0.1 at 2011-01-05 02:00:54 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"7f27f875-4ddb-4d6b-88d3-5fbdac588197", "oauth_verifier"=>"65238"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 1954ms
+
+NameError (uninitialized constant AuthenticationProvider):
+  app/helpers/authentication/user_helper.rb:60:in `create_new_user'
+  app/helpers/authentication/user_helper.rb:13:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 02:10:21 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.6ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (37.5ms)
+Completed 200 OK in 54ms (Views: 43.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 02:10:23 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.2ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (36.3ms)
+Completed 200 OK in 52ms (Views: 41.0ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({:getnonce=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"3b7387a1f0d5cf31", "key"=>"15e8688fe43fe12ead7e5e3f29502dc4"}, {}).limit(-1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 02:11:23 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.5ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (37.5ms)
+Completed 200 OK in 377ms (Views: 43.3ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 02:11:28 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=33607f8a-f71a-4730-9c2e-1a8d0f58e9cc
+Completed 302 Found in 1291ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=33607f8a-f71a-4730-9c2e-1a8d0f58e9cc&oauth_verifier=07771" for 127.0.0.1 at 2011-01-05 02:11:35 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"33607f8a-f71a-4730-9c2e-1a8d0f58e9cc", "oauth_verifier"=>"07771"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 2026ms
+
+NameError (uninitialized constant AuthenticationProvider):
+  app/helpers/authentication/user_helper.rb:60:in `create_new_user'
+  app/helpers/authentication/user_helper.rb:13:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 02:28:25 +0100
+  Processing by HomeController#index as HTML
+Completed   in 10ms
+
+TypeError (exception class/object expected):
+  app/controllers/home_controller.rb:3:in `raise'
+  app/controllers/home_controller.rb:3:in `index'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 02:28:34 +0100
+  Processing by HomeController#index as HTML
+Completed   in 11ms
+
+RuntimeError (["/Users/marknijhof/Development/Development/itjobs/app/models", "/Users/marknijhof/Development/Development/itjobs/app/controllers", "/Users/marknijhof/Development/Development/itjobs/app/helpers", "/Users/marknijhof/Development/Development/itjobs/app/stylesheets"]):
+  app/controllers/home_controller.rb:3:in `index'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 02:30:07 +0100
+  Processing by HomeController#index as HTML
+Completed   in 13ms
+
+RuntimeError ([]):
+  app/controllers/home_controller.rb:3:in `index'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 02:30:13 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (69.1ms)
+Rendered partials/_footer.haml (2.2ms)
+Rendered home/index.html.haml within layouts/application (84.7ms)
+Completed 200 OK in 102ms (Views: 90.9ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 02:31:19 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=1ef3261f-0ed0-4d45-a21f-cc840bf06349
+Completed 302 Found in 1372ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=1ef3261f-0ed0-4d45-a21f-cc840bf06349&oauth_verifier=53814" for 127.0.0.1 at 2011-01-05 02:31:26 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"1ef3261f-0ed0-4d45-a21f-cc840bf06349", "oauth_verifier"=>"53814"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 2113ms
+
+NameError (uninitialized constant AuthenticationProvider):
+  app/helpers/authentication/user_helper.rb:60:in `create_new_user'
+  app/helpers/authentication/user_helper.rb:13:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=1ef3261f-0ed0-4d45-a21f-cc840bf06349&oauth_verifier=53814" for 127.0.0.1 at 2011-01-05 02:33:01 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"1ef3261f-0ed0-4d45-a21f-cc840bf06349", "oauth_verifier"=>"53814"}
+Completed   in 869ms
+
+OAuth::Problem (token_rejected):
+  app/controllers/authentication/linkedin_controller.rb:22:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 02:33:07 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=51bc0c43-873b-401e-89f1-a7ac1adc32a4
+Completed 302 Found in 839ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=51bc0c43-873b-401e-89f1-a7ac1adc32a4&oauth_verifier=54885" for 127.0.0.1 at 2011-01-05 02:33:13 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"51bc0c43-873b-401e-89f1-a7ac1adc32a4", "oauth_verifier"=>"54885"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 2206ms
+
+NameError (uninitialized constant AuthenticationProvider):
+  app/helpers/authentication/user_helper.rb:61:in `create_new_user'
+  app/helpers/authentication/user_helper.rb:13:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.1ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 02:33:47 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=0dd4d015-bb56-4389-ae2d-c896d86ddcb5
+Completed 302 Found in 1025ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=0dd4d015-bb56-4389-ae2d-c896d86ddcb5&oauth_verifier=03484" for 127.0.0.1 at 2011-01-05 02:33:53 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"0dd4d015-bb56-4389-ae2d-c896d86ddcb5", "oauth_verifier"=>"03484"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 1960ms
+
+NameError (uninitialized constant AuthenticationProvider):
+  app/helpers/authentication/user_helper.rb:60:in `create_new_user'
+  app/helpers/authentication/user_helper.rb:13:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 02:35:00 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=4252ddaa-1c88-4f0b-a348-b72056c5d41a
+Completed 302 Found in 943ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=4252ddaa-1c88-4f0b-a348-b72056c5d41a&oauth_verifier=69016" for 127.0.0.1 at 2011-01-05 02:35:05 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"4252ddaa-1c88-4f0b-a348-b72056c5d41a", "oauth_verifier"=>"69016"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 2072ms
+
+NameError (uninitialized constant AuthenticationProvider):
+  app/helpers/authentication/user_helper.rb:60:in `create_new_user'
+  app/helpers/authentication/user_helper.rb:13:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.7ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 02:35:33 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=cef7e60b-28f8-40ff-ba69-af1b876dee9f
+Completed 302 Found in 903ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=cef7e60b-28f8-40ff-ba69-af1b876dee9f&oauth_verifier=34907" for 127.0.0.1 at 2011-01-05 02:35:38 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"cef7e60b-28f8-40ff-ba69-af1b876dee9f", "oauth_verifier"=>"34907"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 1955ms
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/authentication/linkedin_controller.rb:50:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.5ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 02:37:40 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=cbfd4f31-e3e0-4735-99d2-471ad5d64657
+Completed 302 Found in 1363ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=cbfd4f31-e3e0-4735-99d2-471ad5d64657&oauth_verifier=83589" for 127.0.0.1 at 2011-01-05 02:37:46 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"cbfd4f31-e3e0-4735-99d2-471ad5d64657", "oauth_verifier"=>"83589"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 1960ms
+
+NameError (uninitialized constant AuthenticationProvider):
+  app/helpers/authentication/user_helper.rb:60:in `create_new_user'
+  app/helpers/authentication/user_helper.rb:13:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.4ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 02:38:51 +0100
+
+SyntaxError (/Users/marknijhof/Development/Development/itjobs/app/helpers/authentication/user_helper.rb:61: syntax error, unexpected tASSOC, expecting keyword_end
+      new_user.provider_ids => Array.new,
+                              ^
+/Users/marknijhof/Development/Development/itjobs/app/helpers/authentication/user_helper.rb:62: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+      new_user.provider_names => Array.new, 
+                                ^
+/Users/marknijhof/Development/Development/itjobs/app/helpers/authentication/user_helper.rb:63: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+      new_user.email_addresses => Array.new
+                                 ^):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/authentication/linkedin_controller.rb:4:in `<module:Authentication>'
+  app/controllers/authentication/linkedin_controller.rb:3:in `<top (required)>'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 02:39:19 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=2a9512d8-fadd-4111-87a3-373024383561
+Completed 302 Found in 885ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=2a9512d8-fadd-4111-87a3-373024383561&oauth_verifier=58913" for 127.0.0.1 at 2011-01-05 02:39:25 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"2a9512d8-fadd-4111-87a3-373024383561", "oauth_verifier"=>"58913"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 1959ms
+
+NameError (uninitialized constant Authentication::UserHelper::UserManager::AuthenticationProvider):
+  app/helpers/authentication/user_helper.rb:85:in `create_authentication_provider'
+  app/helpers/authentication/user_helper.rb:75:in `create_new_user'
+  app/helpers/authentication/user_helper.rb:13:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.9ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 03:05:05 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=41749cdf-666a-4c1f-b931-bd5b19042e4d
+Completed 302 Found in 1294ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=41749cdf-666a-4c1f-b931-bd5b19042e4d&oauth_verifier=29707" for 127.0.0.1 at 2011-01-05 03:05:15 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"41749cdf-666a-4c1f-b931-bd5b19042e4d", "oauth_verifier"=>"29707"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 2134ms
+
+NameError (uninitialized constant Authentication::UserHelper::UserManager::AuthenticationProvider):
+  app/helpers/authentication/user_helper.rb:85:in `create_authentication_provider'
+  app/helpers/authentication/user_helper.rb:75:in `create_new_user'
+  app/helpers/authentication/user_helper.rb:13:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (42.8ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.9ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({:getnonce=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"7934293eed8cf95f", "key"=>"7b1d21b71f3c86397f9def281ac9b337"}, {}).limit(-1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 03:12:41 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.9ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (38.3ms)
+Completed 200 OK in 386ms (Views: 44.0ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 03:12:49 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=8329fff4-f28d-4cf0-b4e6-17252eccd13f
+Completed 302 Found in 1244ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=8329fff4-f28d-4cf0-b4e6-17252eccd13f&oauth_verifier=51474" for 127.0.0.1 at 2011-01-05 03:12:55 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"8329fff4-f28d-4cf0-b4e6-17252eccd13f", "oauth_verifier"=>"51474"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 2008ms
+
+NameError (uninitialized constant Authentication::UserHelper::UserManager::AuthenticationProvider):
+  app/helpers/authentication/user_helper.rb:85:in `create_authentication_provider'
+  app/helpers/authentication/user_helper.rb:75:in `create_new_user'
+  app/helpers/authentication/user_helper.rb:13:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 03:14:21 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.8ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (37.0ms)
+Completed 200 OK in 53ms (Views: 41.6ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({:getnonce=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"29f13a6da04edbbc", "key"=>"3a53260db08867695efc15d41971451d"}, {}).limit(-1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 03:15:47 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (25.0ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered home/index.html.haml within layouts/application (39.5ms)
+Completed 200 OK in 419ms (Views: 45.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 03:16:21 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (24.6ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered home/index.html.haml within layouts/application (38.4ms)
+Completed 200 OK in 54ms (Views: 43.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 03:16:57 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.8ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered home/index.html.haml within layouts/application (37.1ms)
+Completed 200 OK in 52ms (Views: 41.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 03:17:25 +0100
+  Processing by HomeController#index as HTML
+Completed   in 11ms
+
+RuntimeError (User):
+  app/models/user.rb:27:in `find_using_session_id'
+  app/controllers/application_controller.rb:15:in `retrieve_current_loggedin_user'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (42.1ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 03:17:34 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.4ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (36.5ms)
+Completed 200 OK in 52ms (Views: 41.2ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({:getnonce=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"21b0a2c1c866141c", "key"=>"c16a3edb67fcaa1c7a97747659e725f2"}, {}).limit(-1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 03:47:26 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (24.3ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered home/index.html.haml within layouts/application (38.6ms)
+Completed 200 OK in 393ms (Views: 44.2ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 03:47:30 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=abe19ec5-4b33-4225-8a4a-505f35ed8f76
+Completed 302 Found in 1280ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=abe19ec5-4b33-4225-8a4a-505f35ed8f76&oauth_verifier=39196" for 127.0.0.1 at 2011-01-05 03:47:36 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"abe19ec5-4b33-4225-8a4a-505f35ed8f76", "oauth_verifier"=>"39196"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 2172ms
+
+NameError (uninitialized constant Authentication::UserHelper::UserManager::AuthenticationProvider):
+  app/helpers/authentication/user_helper.rb:85:in `create_authentication_provider'
+  app/helpers/authentication/user_helper.rb:75:in `create_new_user'
+  app/helpers/authentication/user_helper.rb:13:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.1ms)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({:getnonce=>1}, {}).limit(-1)
+itjobs-development['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"3c3af9cf2310824b", "key"=>"cf0e10891bbb88f9757a73dadea1e371"}, {}).limit(-1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 03:51:43 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (26.1ms)
+Rendered partials/_footer.haml (2.4ms)
+Rendered home/index.html.haml within layouts/application (41.8ms)
+Completed 200 OK in 451ms (Views: 48.0ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 03:51:48 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=4eeb9a5a-57db-4104-9d14-7082dbb6b202
+Completed 302 Found in 890ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=4eeb9a5a-57db-4104-9d14-7082dbb6b202&oauth_verifier=37175" for 127.0.0.1 at 2011-01-05 03:51:57 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"4eeb9a5a-57db-4104-9d14-7082dbb6b202", "oauth_verifier"=>"37175"}
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+Completed   in 2007ms
+
+NameError (uninitialized constant Authentication::UserHelper::UserManager::AuthenticationProvider):
+  app/helpers/authentication/user_helper.rb:85:in `create_authentication_provider'
+  app/helpers/authentication/user_helper.rb:75:in `create_new_user'
+  app/helpers/authentication/user_helper.rb:13:in `get_create_or_merge_user'
+  app/controllers/authentication/linkedin_controller.rb:48:in `callback'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (41.0ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.2ms)
