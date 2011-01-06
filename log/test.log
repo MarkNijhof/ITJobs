@@ -1507,3 +1507,6 @@ itjobs-test['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"34dc2a
 admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
 itjobs-test['$cmd'].find({:getnonce=>1}, {}).limit(-1)
 itjobs-test['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"5cdd5f1c979fefe3", "key"=>"dddeec8c1d59f257e758bb5e2f8a82a2"}, {}).limit(-1)
+admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+itjobs-test['$cmd'].find({:getnonce=>1}, {}).limit(-1)
+itjobs-test['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"ebfb919ed3de690e", "key"=>"5e04acd0e408f88b2c17a3769df7fc5b"}, {}).limit(-1)

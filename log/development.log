@@ -8775,3 +8775,12 @@ Rendered partials/_header.haml (24.4ms)
 Rendered partials/_footer.haml (2.0ms)
 Rendered home/index.html.haml within layouts/application (40.5ms)
 Completed 200 OK in 188ms (Views: 46.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:33:55 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (24.5ms)
+Rendered partials/_footer.haml (2.4ms)
+Rendered home/index.html.haml within layouts/application (41.1ms)
+Completed 200 OK in 185ms (Views: 49.9ms)
