@@ -1632,81 +1632,88 @@ body #container {
 
 /* line 2, ../../../app/stylesheets/partials/_content.sass */
 .standingSeperatorLine {
-  background-image: url("http://17jobs.s3.amazonaws.com/images/standing-seperator-line-login.png");
+  background-image: url("/images/layout/content/standing-seperator-line-login.png");
   background-repeat: no-repeat;
   background-position: top center;
 }
 
 /* line 7, ../../../app/stylesheets/partials/_content.sass */
-#pageContent {
+#content {
   overflow: visible;
 }
 /* line 9, ../../../app/stylesheets/partials/_content.sass */
-#pageContent .partial-1-4-box {
-  background-image: url("http://17jobs.s3.amazonaws.com/images/partial-1-4-box.png");
+#content .partial-1-4-box {
+  background-image: url("/images/layout/content/partial-1-4-box.png");
   background-repeat: no-repeat;
   background-position: top center;
   width: 222px;
   float: left;
-  margin: 5px 10px 5px 5px;
+  margin: 15px 10px 5px 5px;
 }
 /* line 16, ../../../app/stylesheets/partials/_content.sass */
-#pageContent .partial-2-4-box {
-  background-image: url("http://17jobs.s3.amazonaws.com/images/partial-2-4-box.png");
+#content .partial-2-4-box {
+  background-image: url("/images/layout/content/partial-2-4-box.png");
   background-repeat: no-repeat;
   background-position: top center;
   width: 459px;
   float: left;
-  margin: 5px 10px 5px 5px;
+  margin: 15px 10px 5px 5px;
 }
 /* line 23, ../../../app/stylesheets/partials/_content.sass */
-#pageContent .partial-3-4-box {
-  background-image: url("http://17jobs.s3.amazonaws.com/images/partial-3-4-box.png");
+#content .partial-3-4-box {
+  background-image: url("/images/layout/content/partial-3-4-box.png");
   background-repeat: no-repeat;
   background-position: top center;
   width: 696px;
   float: left;
-  margin: 5px 10px 5px 5px;
+  margin: 15px 10px 5px 5px;
 }
 /* line 30, ../../../app/stylesheets/partials/_content.sass */
-#pageContent .partial-4-4-box {
-  background-image: url("http://17jobs.s3.amazonaws.com/images/partial-4-4-box.png");
+#content .partial-4-4-box {
+  background-image: url("/images/layout/content/partial-4-4-box.png");
   background-repeat: no-repeat;
   background-position: top center;
   width: 933px;
   float: left;
-  margin: 5px 10px 5px 5px;
+  margin: 15px 10px 5px 5px;
 }
 /* line 37, ../../../app/stylesheets/partials/_content.sass */
-#pageContent h2 {
-  font-size: 16px;
+#content h1 {
+  font-size: 20px;
   font-weight: bold;
   color: #7dbb42;
   margin: 10px;
 }
 /* line 42, ../../../app/stylesheets/partials/_content.sass */
-#pageContent h3 {
-  font-size: 14px;
+#content h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #7dbb42;
+  margin: 10px;
+}
+/* line 47, ../../../app/stylesheets/partials/_content.sass */
+#content h3 {
+  font-size: 16px;
   font-weight: bold;
   color: #5c5d5e;
   margin: 10px;
 }
-/* line 47, ../../../app/stylesheets/partials/_content.sass */
-#pageContent h4 {
-  font-size: 12px;
+/* line 52, ../../../app/stylesheets/partials/_content.sass */
+#content h4 {
+  font-size: 16px;
   font-weight: normal;
   color: #7dbb42;
   margin: 10px;
 }
-/* line 52, ../../../app/stylesheets/partials/_content.sass */
-#pageContent p {
-  font-size: 12px;
+/* line 57, ../../../app/stylesheets/partials/_content.sass */
+#content p {
+  font-size: 16px;
   color: #5c5d5e;
   margin: 20px 10px 10px 10px;
   word-wrap: break-word;
 }
 
-/* line 58, ../../../app/stylesheets/partials/_content.sass */
+/* line 63, ../../../app/stylesheets/partials/_content.sass */
 .form_box {
   padding: 0px 0px 0px 20px;
 }
@@ -1738,6 +1745,94 @@ body #container {
 /* line 19, ../../../app/stylesheets/partials/_footer.sass */
 #copyright {
   text-align: center;
+}
+
+/* line 2, ../../../app/stylesheets/partials/_content.sass */
+.standingSeperatorLine {
+  background-image: url("/images/layout/content/standing-seperator-line-login.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+/* line 7, ../../../app/stylesheets/partials/_content.sass */
+#content {
+  overflow: visible;
+}
+/* line 9, ../../../app/stylesheets/partials/_content.sass */
+#content .partial-1-4-box {
+  background-image: url("/images/layout/content/partial-1-4-box.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 222px;
+  float: left;
+  margin: 15px 10px 5px 5px;
+}
+/* line 16, ../../../app/stylesheets/partials/_content.sass */
+#content .partial-2-4-box {
+  background-image: url("/images/layout/content/partial-2-4-box.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 459px;
+  float: left;
+  margin: 15px 10px 5px 5px;
+}
+/* line 23, ../../../app/stylesheets/partials/_content.sass */
+#content .partial-3-4-box {
+  background-image: url("/images/layout/content/partial-3-4-box.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 696px;
+  float: left;
+  margin: 15px 10px 5px 5px;
+}
+/* line 30, ../../../app/stylesheets/partials/_content.sass */
+#content .partial-4-4-box {
+  background-image: url("/images/layout/content/partial-4-4-box.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 933px;
+  float: left;
+  margin: 15px 10px 5px 5px;
+}
+/* line 37, ../../../app/stylesheets/partials/_content.sass */
+#content h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #7dbb42;
+  margin: 10px;
+}
+/* line 42, ../../../app/stylesheets/partials/_content.sass */
+#content h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #7dbb42;
+  margin: 10px;
+}
+/* line 47, ../../../app/stylesheets/partials/_content.sass */
+#content h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #5c5d5e;
+  margin: 10px;
+}
+/* line 52, ../../../app/stylesheets/partials/_content.sass */
+#content h4 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #7dbb42;
+  margin: 10px;
+}
+/* line 57, ../../../app/stylesheets/partials/_content.sass */
+#content p {
+  font-size: 16px;
+  color: #5c5d5e;
+  margin: 20px 10px 10px 10px;
+  word-wrap: break-word;
+}
+
+/* line 63, ../../../app/stylesheets/partials/_content.sass */
+.form_box {
+  padding: 0px 0px 0px 20px;
 }
 
 /* line 1, ../../../app/stylesheets/partials/_common.sass */

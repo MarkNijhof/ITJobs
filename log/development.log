@@ -8570,3 +8570,208 @@ Rendered partials/_header.haml (23.2ms)
 Rendered partials/_footer.haml (1.9ms)
 Rendered error/handle404.html.haml within layouts/application (37.5ms)
 Completed 404 Not Found in 192ms (Views: 43.8ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:51:32 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (68.8ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (82.9ms)
+Completed 404 Not Found in 221ms (Views: 87.8ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:51:36 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (29.3ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered error/handle404.html.haml within layouts/application (43.5ms)
+Completed 404 Not Found in 184ms (Views: 49.6ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:51:36 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.4ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (36.7ms)
+Completed 404 Not Found in 204ms (Views: 41.5ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:52:02 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.9ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (38.0ms)
+Completed 404 Not Found in 178ms (Views: 44.3ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:52:05 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (69.5ms)
+Rendered partials/_footer.haml (2.2ms)
+Rendered error/handle404.html.haml within layouts/application (83.3ms)
+Completed 404 Not Found in 226ms (Views: 88.9ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:52:47 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.6ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (37.1ms)
+Completed 404 Not Found in 178ms (Views: 42.0ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:53:32 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.8ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (38.5ms)
+Completed 404 Not Found in 188ms (Views: 44.7ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 02:02:04 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (62.9ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (77.2ms)
+Completed 404 Not Found in 217ms (Views: 84.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:02:06 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed   in 139ms
+
+ActionView::Template::Error (Illegal element: classes and ids must have values.):
+    1: 
+    2: #.partial-4-4-box
+    3:   %h1 test
+  app/views/home/index.html.haml:2
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:02:29 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (26.6ms)
+Rendered partials/_footer.haml (2.2ms)
+Rendered home/index.html.haml within layouts/application (44.4ms)
+Completed 200 OK in 186ms (Views: 49.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:03:14 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (24.2ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered home/index.html.haml within layouts/application (39.7ms)
+Completed 200 OK in 184ms (Views: 46.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:09:24 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (25.2ms)
+Rendered partials/_footer.haml (2.3ms)
+Rendered home/index.html.haml within layouts/application (42.6ms)
+Completed 200 OK in 188ms (Views: 49.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:10:00 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (24.1ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (38.9ms)
+Completed 200 OK in 186ms (Views: 44.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:10:28 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (77.7ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (95.6ms)
+Completed 200 OK in 235ms (Views: 100.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:10:36 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (24.9ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered home/index.html.haml within layouts/application (39.8ms)
+Completed 200 OK in 182ms (Views: 45.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:11:14 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.7ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (77.8ms)
+Completed 200 OK in 219ms (Views: 84.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:12:32 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (24.8ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (39.3ms)
+Completed 200 OK in 179ms (Views: 44.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:13:27 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.4ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (39.1ms)
+Completed 200 OK in 181ms (Views: 45.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:18:50 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (26.4ms)
+Rendered partials/_footer.haml (2.2ms)
+Rendered home/index.html.haml within layouts/application (41.7ms)
+Completed 200 OK in 182ms (Views: 47.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:23:58 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (25.4ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered home/index.html.haml within layouts/application (41.2ms)
+Completed 200 OK in 181ms (Views: 47.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 02:24:25 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (24.4ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (40.5ms)
+Completed 200 OK in 188ms (Views: 46.9ms)
