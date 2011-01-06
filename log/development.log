@@ -7705,3 +7705,868 @@ Rendered partials/_header.haml (23.2ms)
 Rendered partials/_footer.haml (2.0ms)
 Rendered home/index.html.haml within layouts/application (37.4ms)
 Completed 200 OK in 178ms (Views: 43.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 23:19:51 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.7ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (39.6ms)
+Completed 200 OK in 181ms (Views: 47.0ms)
+
+
+Started GET "/authentication/logout" for 127.0.0.1 at 2011-01-05 23:19:56 +0100
+  Processing by Authentication::AuthenticationController#logout as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 155ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 23:19:57 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.9ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (36.8ms)
+Completed 200 OK in 42ms (Views: 41.3ms)
+
+
+Started GET "/authentication/linkedin/" for 127.0.0.1 at 2011-01-05 23:20:04 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=9bd1b689-a658-41c7-8df7-94f8a43354ab
+Completed 302 Found in 1276ms
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-05 23:20:09 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (66.8ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (80.0ms)
+Completed 404 Not Found in 89ms (Views: 88.1ms)
+
+
+Started GET "/authentication/linkedin/job%20posting%20url" for 127.0.0.1 at 2011-01-05 23:21:10 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"job posting url"}
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=243ebc8f-fce0-4e63-9412-dc6c602bc49d
+Completed 302 Found in 911ms
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-05 23:21:27 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (23.6ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (36.7ms)
+Completed 404 Not Found in 42ms (Views: 41.5ms)
+
+
+Started GET "/authentication/linkedin//job%20posting%20url" for 127.0.0.1 at 2011-01-05 23:21:34 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"job posting url"}
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=2ab27dbb-0506-4020-a3ec-97c043558ad2
+Completed 302 Found in 887ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=2ab27dbb-0506-4020-a3ec-97c043558ad2&oauth_verifier=04482" for 127.0.0.1 at 2011-01-05 23:21:39 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"2ab27dbb-0506-4020-a3ec-97c043558ad2", "oauth_verifier"=>"04482"}
+itjobs-development['users'].find({:_id=>nil}, {}).limit(-1)
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2216ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-05 23:21:41 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (4.1ms)
+Completed 200 OK in 142ms (Views: 7.4ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-05 23:22:57 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (65.2ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered error/handle404.html.haml within layouts/application (80.9ms)
+Completed 404 Not Found in 221ms (Views: 87.3ms)
+
+
+Started GET "/authentication/logout" for 127.0.0.1 at 2011-01-05 23:23:06 +0100
+  Processing by Authentication::AuthenticationController#logout as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 137ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 23:23:06 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.0ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (36.4ms)
+Completed 200 OK in 41ms (Views: 41.0ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-05 23:23:10 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (23.4ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (36.4ms)
+Completed 404 Not Found in 41ms (Views: 41.1ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/job%20posting%20url" for 127.0.0.1 at 2011-01-05 23:23:25 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000/job posting url"}
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=3e2e87e8-fc67-4741-b9e2-0e5dee796dfd
+Completed 302 Found in 1028ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=3e2e87e8-fc67-4741-b9e2-0e5dee796dfd&oauth_verifier=55750" for 127.0.0.1 at 2011-01-05 23:23:33 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"3e2e87e8-fc67-4741-b9e2-0e5dee796dfd", "oauth_verifier"=>"55750"}
+itjobs-development['users'].find({:_id=>nil}, {}).limit(-1)
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2121ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-05 23:23:36 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (3.6ms)
+Completed 200 OK in 144ms (Views: 6.0ms)
+
+
+Started GET "/localhost:3000/job%20posting%20url/" for 127.0.0.1 at 2011-01-05 23:23:36 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"localhost:3000/job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (25.0ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered error/handle404.html.haml within layouts/application (39.5ms)
+Completed 404 Not Found in 188ms (Views: 45.8ms)
+
+
+Started GET "/authentication/logout" for 127.0.0.1 at 2011-01-05 23:25:57 +0100
+  Processing by Authentication::AuthenticationController#logout as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 137ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 23:25:57 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.0ms)
+Rendered partials/_footer.haml (2.3ms)
+Rendered home/index.html.haml within layouts/application (36.4ms)
+Completed 200 OK in 41ms (Views: 41.1ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-05 23:26:01 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (23.5ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (36.7ms)
+Completed 404 Not Found in 42ms (Views: 41.4ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/job%20posting%20url" for 127.0.0.1 at 2011-01-05 23:26:08 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000/job posting url"}
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=cca77c2c-797a-4330-a9ce-7cbc59611923
+Completed 302 Found in 930ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=cca77c2c-797a-4330-a9ce-7cbc59611923&oauth_verifier=44751" for 127.0.0.1 at 2011-01-05 23:26:15 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"cca77c2c-797a-4330-a9ce-7cbc59611923", "oauth_verifier"=>"44751"}
+itjobs-development['users'].find({:_id=>nil}, {}).limit(-1)
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2109ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-05 23:26:17 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (4.1ms)
+Completed 200 OK in 140ms (Views: 6.9ms)
+
+
+Started GET "/localhost:3000/job%20posting%20url/" for 127.0.0.1 at 2011-01-05 23:26:18 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"localhost:3000/job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.7ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (37.1ms)
+Completed 404 Not Found in 188ms (Views: 41.9ms)
+
+
+Started GET "/authentication/logout" for 127.0.0.1 at 2011-01-05 23:26:58 +0100
+  Processing by Authentication::AuthenticationController#logout as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 150ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 23:26:58 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.4ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (36.2ms)
+Completed 200 OK in 41ms (Views: 40.8ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/" for 127.0.0.1 at 2011-01-05 23:27:04 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000"}
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=c77af3da-b8c8-4c60-aced-766564d44b1d
+Completed 302 Found in 1238ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=c77af3da-b8c8-4c60-aced-766564d44b1d&oauth_verifier=79899" for 127.0.0.1 at 2011-01-05 23:27:10 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"c77af3da-b8c8-4c60-aced-766564d44b1d", "oauth_verifier"=>"79899"}
+itjobs-development['users'].find({:_id=>nil}, {}).limit(-1)
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2088ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-05 23:27:12 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (1.8ms)
+Completed   in 141ms
+
+ActionView::Template::Error (Illegal nesting: nesting within a tag that already has content is illegal.):
+    6:   %script{:type => "text/javascript"}    
+    7:     if (window.opener == null){
+    8: //    location.href = "#{@initiating_url}";
+    9:     } else {
+    10: //    window.opener.location.href = "#{@initiating_url}";
+    11: //    window.close();
+    12:     }
+  app/views/authentication/after_authentication.html.haml:9
+  app/controllers/authentication/authentication_controller.rb:18:in `after_authentication'
+
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/marknijhof/.rvm/gems/ruby-1.9.2-p0@itjobs/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.8ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/" for 127.0.0.1 at 2011-01-05 23:27:50 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=7c4bf0c2-daed-43d0-9229-7f42870b4d06
+Completed 302 Found in 1032ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=7c4bf0c2-daed-43d0-9229-7f42870b4d06&oauth_verifier=71987" for 127.0.0.1 at 2011-01-05 23:27:57 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"7c4bf0c2-daed-43d0-9229-7f42870b4d06", "oauth_verifier"=>"71987"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2105ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-05 23:27:59 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (3.0ms)
+Completed 200 OK in 139ms (Views: 5.5ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/" for 127.0.0.1 at 2011-01-05 23:29:04 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=c62fc039-e744-4012-b083-0035e97c274b
+Completed 302 Found in 1009ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=c62fc039-e744-4012-b083-0035e97c274b&oauth_verifier=69042" for 127.0.0.1 at 2011-01-05 23:29:10 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"c62fc039-e744-4012-b083-0035e97c274b", "oauth_verifier"=>"69042"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2075ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-05 23:29:12 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (3.6ms)
+Completed 200 OK in 139ms (Views: 6.4ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-05 23:29:31 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (24.2ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (38.8ms)
+Completed 404 Not Found in 179ms (Views: 45.1ms)
+
+
+Started GET "/authentication/logout" for 127.0.0.1 at 2011-01-05 23:29:34 +0100
+  Processing by Authentication::AuthenticationController#logout as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 149ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 23:29:34 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.3ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (36.1ms)
+Completed 200 OK in 41ms (Views: 40.7ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-05 23:29:37 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (22.8ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (36.0ms)
+Completed 404 Not Found in 41ms (Views: 40.6ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/job%20posting%20url" for 127.0.0.1 at 2011-01-05 23:29:42 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000/job posting url"}
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=60e217dd-54ea-4d29-bdbf-f3edc9424bdb
+Completed 302 Found in 952ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=60e217dd-54ea-4d29-bdbf-f3edc9424bdb&oauth_verifier=39392" for 127.0.0.1 at 2011-01-05 23:29:48 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"60e217dd-54ea-4d29-bdbf-f3edc9424bdb", "oauth_verifier"=>"39392"}
+itjobs-development['users'].find({:_id=>nil}, {}).limit(-1)
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2111ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-05 23:29:50 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (3.5ms)
+Completed 200 OK in 138ms (Views: 6.0ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/job%20posting%20url" for 127.0.0.1 at 2011-01-05 23:30:52 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000/job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=2711a3b3-dc16-429f-a1f4-ca84b8441b76
+Completed 302 Found in 1021ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=2711a3b3-dc16-429f-a1f4-ca84b8441b76&oauth_verifier=48362" for 127.0.0.1 at 2011-01-05 23:30:59 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"2711a3b3-dc16-429f-a1f4-ca84b8441b76", "oauth_verifier"=>"48362"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2066ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-05 23:31:01 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (4.0ms)
+Completed 200 OK in 151ms (Views: 6.8ms)
+
+
+Started GET "/localhost:3000/job%20posting%20url/" for 127.0.0.1 at 2011-01-05 23:31:01 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"localhost:3000/job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (65.0ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (78.6ms)
+Completed 404 Not Found in 218ms (Views: 84.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-05 23:34:38 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.7ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (37.4ms)
+Completed 200 OK in 182ms (Views: 43.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 00:56:12 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (24.3ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered home/index.html.haml within layouts/application (39.7ms)
+Completed 200 OK in 180ms (Views: 46.0ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 00:56:19 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.5ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (38.3ms)
+Completed 404 Not Found in 395ms (Views: 44.7ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 00:58:49 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.2ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (37.1ms)
+Completed 404 Not Found in 202ms (Views: 42.9ms)
+
+
+Started GET "/authentication/logout" for 127.0.0.1 at 2011-01-06 00:58:55 +0100
+  Processing by Authentication::AuthenticationController#logout as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 152ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 00:58:55 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (25.5ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (38.4ms)
+Completed 200 OK in 43ms (Views: 42.9ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 00:59:00 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (23.3ms)
+Rendered partials/_footer.haml (2.2ms)
+Rendered error/handle404.html.haml within layouts/application (36.7ms)
+Completed 404 Not Found in 42ms (Views: 41.3ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/job%20posting%20url" for 127.0.0.1 at 2011-01-06 00:59:03 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000/job posting url"}
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=97fb6b3e-4fe9-45cb-bd50-da930f4fce7a
+Completed 302 Found in 951ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=97fb6b3e-4fe9-45cb-bd50-da930f4fce7a&oauth_verifier=49599" for 127.0.0.1 at 2011-01-06 00:59:11 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"97fb6b3e-4fe9-45cb-bd50-da930f4fce7a", "oauth_verifier"=>"49599"}
+itjobs-development['users'].find({:_id=>nil}, {}).limit(-1)
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2274ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-06 00:59:13 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (3.5ms)
+Completed 200 OK in 142ms (Views: 6.4ms)
+
+
+Started GET "/localhost:3000/job%20posting%20url/" for 127.0.0.1 at 2011-01-06 00:59:13 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"localhost:3000/job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.7ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (38.0ms)
+Completed 404 Not Found in 176ms (Views: 44.1ms)
+
+
+Started GET "/localhost:3000/job%20posting%20url/" for 127.0.0.1 at 2011-01-06 01:00:19 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"localhost:3000/job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.3ms)
+Rendered partials/_footer.haml (2.6ms)
+Rendered error/handle404.html.haml within layouts/application (38.9ms)
+Completed 404 Not Found in 428ms (Views: 45.2ms)
+
+
+Started GET "/authentication/logout" for 127.0.0.1 at 2011-01-06 01:00:26 +0100
+  Processing by Authentication::AuthenticationController#logout as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 143ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 01:00:26 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.2ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (36.1ms)
+Completed 200 OK in 41ms (Views: 40.7ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:00:31 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (23.0ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (36.3ms)
+Completed 404 Not Found in 41ms (Views: 40.9ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:00:34 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000/job posting url"}
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=ae915a0c-4688-4254-b498-c5f9575075ba
+Completed 302 Found in 925ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=ae915a0c-4688-4254-b498-c5f9575075ba&oauth_verifier=26051" for 127.0.0.1 at 2011-01-06 01:00:40 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"ae915a0c-4688-4254-b498-c5f9575075ba", "oauth_verifier"=>"26051"}
+itjobs-development['users'].find({:_id=>nil}, {}).limit(-1)
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2161ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-06 01:00:42 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (4.0ms)
+Completed 200 OK in 143ms (Views: 6.8ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:01:13 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000/job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=44ddf3f7-0682-493b-82dd-8c06c083da74
+Completed 302 Found in 982ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=44ddf3f7-0682-493b-82dd-8c06c083da74&oauth_verifier=63678" for 127.0.0.1 at 2011-01-06 01:01:18 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"44ddf3f7-0682-493b-82dd-8c06c083da74", "oauth_verifier"=>"63678"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2097ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-06 01:01:20 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (3.7ms)
+Completed 200 OK in 142ms (Views: 6.6ms)
+
+
+Started GET "/localhost:3000/job%20posting%20url/" for 127.0.0.1 at 2011-01-06 01:01:20 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"localhost:3000/job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (66.4ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered error/handle404.html.haml within layouts/application (81.2ms)
+Completed 404 Not Found in 221ms (Views: 87.5ms)
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-06 01:01:50 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (4.0ms)
+Completed 200 OK in 139ms (Views: 6.8ms)
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-06 01:01:51 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (3.5ms)
+Completed 200 OK in 147ms (Views: 6.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 01:05:39 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.6ms)
+Rendered partials/_footer.haml (43.6ms)
+Rendered home/index.html.haml within layouts/application (79.1ms)
+Completed 200 OK in 237ms (Views: 84.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 01:15:16 +0100
+  Processing by HomeController#index as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.9ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (38.0ms)
+Completed 200 OK in 176ms (Views: 44.3ms)
+
+
+Started GET "/authentication/logout" for 127.0.0.1 at 2011-01-06 01:15:45 +0100
+  Processing by Authentication::AuthenticationController#logout as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 139ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 01:15:45 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (22.8ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (75.9ms)
+Completed 200 OK in 81ms (Views: 80.5ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/" for 127.0.0.1 at 2011-01-06 01:17:14 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000"}
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=2258b4f8-4ab8-45bf-806d-011433b497b3
+Completed 302 Found in 948ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=2258b4f8-4ab8-45bf-806d-011433b497b3&oauth_verifier=94580" for 127.0.0.1 at 2011-01-06 01:17:21 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"2258b4f8-4ab8-45bf-806d-011433b497b3", "oauth_verifier"=>"94580"}
+itjobs-development['users'].find({:_id=>nil}, {}).limit(-1)
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2106ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-06 01:17:23 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (4.1ms)
+Completed 200 OK in 152ms (Views: 6.9ms)
+
+
+Started GET "/localhost:3000/" for 127.0.0.1 at 2011-01-06 01:17:23 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"localhost:3000"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.5ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (36.6ms)
+Completed 404 Not Found in 182ms (Views: 41.5ms)
+
+
+Started GET "/localhost:3000/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:18:18 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"localhost:3000/job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (27.5ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered error/handle404.html.haml within layouts/application (40.8ms)
+Completed 404 Not Found in 178ms (Views: 45.6ms)
+
+
+Started GET "/authentication/logout" for 127.0.0.1 at 2011-01-06 01:18:26 +0100
+  Processing by Authentication::AuthenticationController#logout as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 163ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 01:18:26 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.3ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered home/index.html.haml within layouts/application (36.8ms)
+Completed 200 OK in 42ms (Views: 41.4ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:31:18 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (22.7ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (35.9ms)
+Completed 404 Not Found in 83ms (Views: 40.7ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:31:23 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000/job posting url"}
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=fdda05af-d356-44ab-a12d-498cb34a90b5
+Completed 302 Found in 932ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=fdda05af-d356-44ab-a12d-498cb34a90b5&oauth_verifier=33459" for 127.0.0.1 at 2011-01-06 01:31:32 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"fdda05af-d356-44ab-a12d-498cb34a90b5", "oauth_verifier"=>"33459"}
+itjobs-development['users'].find({:_id=>nil}, {}).limit(-1)
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2362ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-06 01:31:34 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (4.0ms)
+Completed 200 OK in 149ms (Views: 6.8ms)
+
+
+Started GET "/localhost:3000/job%20posting%20url/" for 127.0.0.1 at 2011-01-06 01:31:34 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"localhost:3000/job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (24.3ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered error/handle404.html.haml within layouts/application (38.3ms)
+Completed 404 Not Found in 177ms (Views: 44.2ms)
+
+
+Started GET "/localhost:3000/job%20posting%20url/" for 127.0.0.1 at 2011-01-06 01:33:45 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"localhost:3000/job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (24.5ms)
+Rendered partials/_footer.haml (2.1ms)
+Rendered error/handle404.html.haml within layouts/application (38.8ms)
+Completed 404 Not Found in 181ms (Views: 44.4ms)
+
+
+Started GET "/authentication/logout" for 127.0.0.1 at 2011-01-06 01:33:49 +0100
+  Processing by Authentication::AuthenticationController#logout as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to http://localhost:3000/
+Completed 302 Found in 135ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-01-06 01:33:49 +0100
+  Processing by HomeController#index as HTML
+Rendered partials/_header.haml (23.2ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered home/index.html.haml within layouts/application (36.0ms)
+Completed 200 OK in 41ms (Views: 40.6ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:33:53 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+Rendered partials/_header.haml (66.4ms)
+Rendered partials/_footer.haml (2.0ms)
+Rendered error/handle404.html.haml within layouts/application (79.6ms)
+Completed 404 Not Found in 85ms (Views: 84.2ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:33:58 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000/job posting url"}
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=809af312-d1b4-4a83-a579-88cc2af12826
+Completed 302 Found in 899ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=809af312-d1b4-4a83-a579-88cc2af12826&oauth_verifier=02152" for 127.0.0.1 at 2011-01-06 01:34:04 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"809af312-d1b4-4a83-a579-88cc2af12826", "oauth_verifier"=>"02152"}
+itjobs-development['users'].find({:_id=>nil}, {}).limit(-1)
+itjobs-development['users'].find({:"AuthenticationProviders.id"=>"BA_Vmiihds"}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2062ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-06 01:34:06 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (3.0ms)
+Completed 200 OK in 140ms (Views: 5.2ms)
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-06 01:34:44 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (4.1ms)
+Completed 200 OK in 160ms (Views: 6.9ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:34:56 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000/job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=36585118-bdf2-4f3c-931d-55b4b87a47fe
+Completed 302 Found in 1022ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=36585118-bdf2-4f3c-931d-55b4b87a47fe&oauth_verifier=82478" for 127.0.0.1 at 2011-01-06 01:35:07 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"36585118-bdf2-4f3c-931d-55b4b87a47fe", "oauth_verifier"=>"82478"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2099ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-06 01:35:09 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (4.0ms)
+Completed 200 OK in 139ms (Views: 6.7ms)
+
+
+Started GET "/authentication/linkedin/http://localhost:3000/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:35:30 +0100
+  Processing by Authentication::LinkedinController#index as HTML
+  Parameters: {"url"=>"http:/localhost:3000/job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Redirected to https://api.linkedin.com/uas/oauth/authorize?oauth_token=aceb715f-8cf2-450d-831a-05657365354b
+Completed 302 Found in 976ms
+
+
+Started GET "/authentication/linkedin_callback?oauth_token=aceb715f-8cf2-450d-831a-05657365354b&oauth_verifier=52829" for 127.0.0.1 at 2011-01-06 01:35:36 +0100
+  Processing by Authentication::LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"aceb715f-8cf2-450d-831a-05657365354b", "oauth_verifier"=>"52829"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+MONGODB itjobs-development['users'].update({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000002'), "first_name"=>"Mark", "last_name"=>"Nijhof", "friendly_name"=>nil, "openid_name"=>"Mark Nijhof", "address"=>nil, "postal_code"=>nil, "city"=>nil, "email_address"=>"", "provider_ids"=>["BA_Vmiihds"], "provider_names"=>["LinkedIn"], "email_addresses"=>[], "AuthenticationProviders"=>[{"_id"=>BSON::ObjectId('4d24e9b9e828242c7f000003'), "provider_name"=>"LinkedIn", "id"=>"BA_Vmiihds", "token"=>nil, "oauth_type"=>nil, "oauth_token"=>"21c076da-a12f-45c8-a28a-2e2e274e3497", "oauth_token_secret"=>"b9a25a64-c71e-426c-adbc-b5e2be4854e3", "uid"=>nil, "session_key"=>nil, "expires"=>nil}]})
+Redirected to http://localhost:3000/authentication/after_authentication
+Completed 302 Found in 2062ms
+
+
+Started GET "/authentication/after_authentication" for 127.0.0.1 at 2011-01-06 01:35:39 +0100
+  Processing by Authentication::AuthenticationController#after_authentication as HTML
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered authentication/after_authentication.html.haml (4.0ms)
+Completed 200 OK in 146ms (Views: 7.3ms)
+
+
+Started GET "/job%20posting%20url" for 127.0.0.1 at 2011-01-06 01:35:39 +0100
+  Processing by ErrorController#handle404 as HTML
+  Parameters: {"path"=>"job posting url"}
+itjobs-development['users'].find({:_id=>BSON::ObjectId('4d24e9b9e828242c7f000002')}, {}).limit(-1)
+Rendered partials/_header.haml (23.2ms)
+Rendered partials/_footer.haml (1.9ms)
+Rendered error/handle404.html.haml within layouts/application (37.5ms)
+Completed 404 Not Found in 192ms (Views: 43.8ms)

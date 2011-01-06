@@ -25,7 +25,7 @@ ITJobs::Application.routes.draw do
 
     get "after_authentication" => "authentication#after_authentication" 
 
-    get "logout" => "authentication#logout" 
+    get "logout(/*url)" => "authentication#logout" 
   end
 
   get "home/index"

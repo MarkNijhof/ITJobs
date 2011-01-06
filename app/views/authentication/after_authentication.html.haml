@@ -4,10 +4,11 @@
     %title= "ITJo.bs"
 
   %script{:type => "text/javascript"}    
+    var url = "#{@initiating_url}";
     if (window.opener == null){
-    location.href = "#{@initiating_url}";
+    location.reload();
     } else {
-    window.opener.location.href = "#{@initiating_url}";
+    window.opener.location.reload();
     window.close();
     }
     

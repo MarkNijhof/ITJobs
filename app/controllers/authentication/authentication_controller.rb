@@ -13,12 +13,13 @@ module Authentication
   #  end
     
     def after_authentication
-      @initiating_url = request.scheme + '://' + request.host_with_port + session[:initiating_url]
+      @initiating_url = session[:initiating_url]
       session[:initiating_url] = nil
       render :'authentication/after_authentication'
     end
 
     def logout
+      #params[:url]
       session[:user_id] = nil
       redirect_to "/"
     end

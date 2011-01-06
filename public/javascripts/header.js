@@ -54,7 +54,9 @@ $(document).ready(function() {
 		$('#searchStart').click(function(){ 
 			$('#searchText').focus();
 		 });
-		$('#searchButton').click(function(){ if ($('#searchText').val() == "") $('#searchText').focus(); });
+		$('#searchButton').click(function(){ 
+			if ($('#searchText').val() == "") $('#searchText').focus(); 
+		});
 	}
 	
 	function setup_login_link() {
@@ -65,16 +67,16 @@ $(document).ready(function() {
 			$.fn.openHeaderDropDownPanel({template: "#login_template", callBack: function() {setup_button_links(); }});
 		});
 		
-		$('.signOutLinkWhite').attr('href', $('.signOutLinkWhite').attr('href') + "/" + get_current_location());
+		$('.signOutLinkWhite').attr('href', append_current_location($('#signOutLinkWhite').attr('href')));
 	}
 	
 	function setup_button_links() {
 		
 		$('#loginWithLinkedin').click(function(){
-			load_url_in_popup_window(linkedin_url + '/' + get_current_location(), 'ITJo.bs - LinkedIn', 500, 400);
+			load_url_in_popup_window(append_current_location(linkedin_url), 'ITJo.bs - LinkedIn', 500, 400);
 		});
 		$('#loginWithFacebook').click(function(){
-			load_url_in_popup_window(facebook_url + '/' + get_current_location(), 'ITJo.bs - Facebook', 960, 400);
+			load_url_in_popup_window(append_current_location(facebook_url), 'ITJo.bs - Facebook', 960, 400);
 		});
 
 	}
@@ -93,7 +95,6 @@ $(document).ready(function() {
 	}
 });
 
-function get_current_location() {
-  var hostname = "http://"+ window.location.hostname + ((window.location.port != "") ? ":"+ window.location.port : "") + '/';
-  return window.location.href.replace(hostname, "");
+function append_current_location(url) {
+  return url + '/' + window.location.href;
 }
