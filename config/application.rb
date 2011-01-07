@@ -43,5 +43,9 @@ module ITJobs
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    config.generators do |g|
+      g.orm :mongomapper
+    end
   end
 end

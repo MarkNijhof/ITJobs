@@ -15,6 +15,8 @@ gem 'linkedin', '0.1.7'
 
 
 group :test, :development do
+  gem "rails3-generators"
+
   gem "heroku" ,'1.15.0'
 
   gem "watchr"
