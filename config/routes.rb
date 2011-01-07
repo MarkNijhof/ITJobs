@@ -1,9 +1,27 @@
 ITJobs::Application.routes.draw do
-  
-  
-  
-  get "error/handle404"
 
+  namespace "jobs" do  
+    get "job/index"
+
+    get "job/show"
+
+    get "job/latests"
+
+    get "job/search"
+  end
+
+  namespace "employer" do
+    get "job/index"
+
+    get "job/show"
+
+    get "job/new"
+
+    get "job/edit"
+
+    get "job/delete"
+  end
+  
   namespace "authentication" do
     get "linkedin(/*url)" => "linkedin#index" 
     get "linkedin_callback" => "linkedin#callback"
