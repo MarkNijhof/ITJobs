@@ -79,11 +79,9 @@
           %li.first
             = link_to 'home', :root
           %li
-            &nbsp;
-          %li
             = link_to 'add a new job', 'job posting url', :id => "my_job_positions"
           %li
-            &nbsp;
+            = link_to 'feedback', 'feedback url', :id => "feedback"
           %li.last
             &nbsp;
 
@@ -110,19 +108,19 @@
         - if @user.nil?
           %li
             .whiteArrow
-            %a#signUpLinkWhite
+            %a#signUpLinkWhite.signUpLink
               Sign Up!
           %li
             .grayArrow
-            %a#signUpLinkGray
+            %a#signUpLinkGray.signUpLink
               Sign In!
         - else
           %li
             .whiteArrow
-            = link_to "Sign Out!", url_for(:controller => :'authentication/authentication', :action => :logout), :id => :signOutLinkWhite
+            = link_to "Sign Out!", url_for(:controller => :'authentication/authentication', :action => :logout), :id => :signOutLinkWhite, :class => :signOutLink
           %li
             .grayArrow
-            %a#signUpLinkGray
+            %a#signUpLinkGray.signUpLink
               Add Provider!
         -
     #pushpin

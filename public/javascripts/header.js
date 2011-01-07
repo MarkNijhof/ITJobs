@@ -60,14 +60,14 @@ $(document).ready(function() {
 	}
 	
 	function setup_login_link() {
-		$('#signUpLinkWhite').click(function(){
+		$('.signUpLink').click(function(){
 			$.fn.openHeaderDropDownPanel({template: "#login_template", callBack: function() {setup_button_links(); }}); 
 		});
-		$('#signUpLinkGray').click(function(){
-			$.fn.openHeaderDropDownPanel({template: "#login_template", callBack: function() {setup_button_links(); }});
-		});
+//		$('#signUpLinkGray').click(function(){
+//			$.fn.openHeaderDropDownPanel({template: "#login_template", callBack: function() {setup_button_links(); }});
+//		});
 		
-		$('.signOutLinkWhite').attr('href', append_current_location($('#signOutLinkWhite').attr('href')));
+		$('.signOutLink').attr('href', append_current_location($('#signOutLinkWhite').attr('href')));
 	}
 	
 	function setup_button_links() {
