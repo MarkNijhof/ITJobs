@@ -8,4 +8,10 @@
   Try it and hopefully you are pleasantly surprised, now I'll stop wasting your time go find your new job!
 
 #latest_jobs.partial-4-4-box
-  %h2 Latest listed jobs
+  .left-of-h2
+    %span.text employer?
+    %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
+    = link_to 'add a new job', 'job posting url', :class => "text"
+
+  %h2 
+    Latest listed jobs

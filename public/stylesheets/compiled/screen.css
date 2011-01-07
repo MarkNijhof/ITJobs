@@ -1706,14 +1706,30 @@ body #container {
   margin: 10px;
 }
 /* line 57, ../../../app/stylesheets/partials/_content.sass */
-#content p {
+#content p, #content .text {
+  font-face: helvetica;
   font-size: 16px;
   color: #5c5d5e;
   margin: 20px 10px 10px 10px;
   word-wrap: break-word;
 }
-
 /* line 63, ../../../app/stylesheets/partials/_content.sass */
+#content .left-of-h2 {
+  position: relative;
+  top: 10px;
+  float: right;
+}
+/* line 67, ../../../app/stylesheets/partials/_content.sass */
+#content .left-of-h2 a {
+  text-decoration: none;
+}
+/* line 69, ../../../app/stylesheets/partials/_content.sass */
+#content .left-of-h2 a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* line 74, ../../../app/stylesheets/partials/_content.sass */
 .form_box {
   padding: 0px 0px 0px 20px;
 }
@@ -1823,14 +1839,30 @@ body #container {
   margin: 10px;
 }
 /* line 57, ../../../app/stylesheets/partials/_content.sass */
-#content p {
+#content p, #content .text {
+  font-face: helvetica;
   font-size: 16px;
   color: #5c5d5e;
   margin: 20px 10px 10px 10px;
   word-wrap: break-word;
 }
-
 /* line 63, ../../../app/stylesheets/partials/_content.sass */
+#content .left-of-h2 {
+  position: relative;
+  top: 10px;
+  float: right;
+}
+/* line 67, ../../../app/stylesheets/partials/_content.sass */
+#content .left-of-h2 a {
+  text-decoration: none;
+}
+/* line 69, ../../../app/stylesheets/partials/_content.sass */
+#content .left-of-h2 a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* line 74, ../../../app/stylesheets/partials/_content.sass */
 .form_box {
   padding: 0px 0px 0px 20px;
 }
