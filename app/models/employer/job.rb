@@ -2,6 +2,7 @@
 class Employer::Job
   include MongoMapper::Document         
   plugin MongoMapper::Plugins::Timestamps
+  set_collection_name 'jobs'
 
 # Validations :::::::::::::::::::::::::::::::::::::::::::::::::::::
 # validates_presence_of :attribute
