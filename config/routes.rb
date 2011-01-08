@@ -1,4 +1,7 @@
 ITJobs::Application.routes.draw do
+  
+  namespace :employer do resources :jobs end
+
   # See how all your routes lay out with "rake routes"
 
   namespace "authentication" do

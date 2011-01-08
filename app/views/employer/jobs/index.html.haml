@@ -1,0 +1,23 @@
+%h1 Listing employer_jobs
+
+%table
+  %tr
+    %th Title
+    %th Text
+    %th Keywords
+    %th
+    %th
+    %th
+
+  - @employer_jobs.each do |employer_job|
+    %tr
+      %td= employer_job.title
+      %td= employer_job.text
+      %td= employer_job.keywords
+      %td= link_to 'Show', employer_job
+      %td= link_to 'Edit', edit_employer_job_path(employer_job)
+      %td= link_to 'Destroy', employer_job, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Job', new_employer_job_path
