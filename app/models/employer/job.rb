@@ -32,4 +32,5 @@ class Employer::Job
   key :title, String
   key :text, String
   key :keywords, Array
+  key :published_date, DateTime
 end

@@ -16,6 +16,8 @@ class User
   key :provider_ids, Array
   key :provider_names, Array
   key :email_addresses, Array
+  
+  key :is_employer, Boolean
 
   many :AuthenticationProviders
 

@@ -1,23 +1,54 @@
-%h1 Listing employer_jobs
+%h1 Manage your job postings
 
-%table
-  %tr
-    %th Title
-    %th Text
-    %th Keywords
-    %th
-    %th
-    %th
 
-  - @employer_jobs.each do |employer_job|
+#latest_jobs.partial-4-4-box
+  .left-of-h2
+    %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
+    = link_to 'add a new Job', new_employer_job_path, :class => "text"
+
+  %h2 
+    Your drafts
+
+  %table
     %tr
-      %td= employer_job.title
-      %td= employer_job.text
-      %td= employer_job.keywords
-      %td= link_to 'Show', employer_job
-      %td= link_to 'Edit', edit_employer_job_path(employer_job)
-      %td= link_to 'Destroy', employer_job, :confirm => 'Are you sure?', :method => :delete
+      %th Title
+      %th Keywords
+      %th
+      %th
+      %th
 
-%br
+    - @employer_jobs.each do |employer_job|
+      %tr
+        %td= employer_job.title
+        %td= employer_job.keywords
+        %td= link_to 'Show', employer_job
+        %td= link_to 'Edit', edit_employer_job_path(employer_job)
+        %td= link_to 'Destroy', employer_job, :confirm => 'Are you sure?', :method => :delete
 
-= link_to 'New Job', new_employer_job_path
+
+#latest_jobs.partial-4-4-box
+  .left-of-h2
+    %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
+    = link_to 'add a new Job', new_employer_job_path, :class => "text"
+
+  %h2 
+    Your published job postings
+
+  %table
+    %tr
+      %th Title
+      %th Keywords
+      %th Published
+      %th
+      %th
+
+    - @employer_jobs.each do |employer_job|
+      %tr
+        %td= employer_job.title
+        %td= employer_job.keywords
+        %td= employer_job.published_date
+        %td= link_to 'Show', employer_job
+        %td= link_to 'Un-publish', edit_employer_job_path(employer_job)
+
+
+
