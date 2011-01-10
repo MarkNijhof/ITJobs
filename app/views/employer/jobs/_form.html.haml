@@ -1,15 +1,4 @@
 
-
-%script{:type => 'text/javascript', :src => '/aloha/plugins/com.gentics.aloha.plugins.Format/plugin.js' }
-
-= javascript_include_tag 'aloha.js'
-%script{:type => "text/javascript"}
-  (function($) {
-  $(document).ready(function() {
-  $('#employer_job_text').aloha();
-  });
-  })(jQuery);
-
 = form_for @employer_job do |f|
   -if @employer_job.errors.any?
     #error_explanation
