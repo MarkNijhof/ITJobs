@@ -1,3 +1,15 @@
+
+
+%script{:type => 'text/javascript', :src => '/aloha/plugins/com.gentics.aloha.plugins.Format/plugin.js' }
+
+= javascript_include_tag 'aloha.js'
+%script{:type => "text/javascript"}
+  (function($) {
+  $(document).ready(function() {
+  $('#employer_job_text').aloha();
+  });
+  })(jQuery);
+
 = form_for @employer_job do |f|
   -if @employer_job.errors.any?
     #error_explanation
@@ -11,7 +23,10 @@
     = f.text_field :title
   .field
     = f.label :text
-    = f.text_field :text
+    -if @employer_job.text.nil?
+      = f.text_area :text, :value => "<p>click here to start editing the job position</p>"
+    -else
+      = f.text_area :text
   .field
     = f.label :keywords
     = f.text_field :keywords
