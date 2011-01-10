@@ -1,3 +1,5 @@
+GENTICS.Aloha.FloatingMenu.floatTo({top: 120, left: 500})
+
 GENTICS.Aloha.settings = {
 	logLevels: {'error': true, 'warn': true, 'info': true, 'debug': true},
 	errorhandling : false,
