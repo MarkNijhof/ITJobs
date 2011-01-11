@@ -12,7 +12,7 @@ gem "mongo_ext", '0.19.3'
 gem "bson_ext", '1.1.5'
 
 gem 'linkedin', '0.1.7'
-
+gem 'ckeditor', '3.4.2.pre'
 
 group :test, :development do
   gem "rails3-generators"

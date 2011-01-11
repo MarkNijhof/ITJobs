@@ -1,15 +1,16 @@
 %p#notice= notice
 
-%p
-  %b Title:
-  = @employer_job.title
-%p
-  %b Text:
-  = @employer_job.text
+.partial-4-4-box
+  %p
+    %b Title:
+    = @employer_job.title
+  %p
+    %b Text:
+    = @employer_job.text
 
-%p
-  %b Keywords:
-  = @employer_job.keywords
+  %p
+    %b Keywords:
+    = @employer_job.keywords
 
 = link_to 'Edit', edit_employer_job_path(@employer_job)
 \|

@@ -1,4 +1,12 @@
 
+= javascript_include_tag :ckeditor
+
+/
+  %script{:src=>"http://js.nicedit.com/nicEdit-latest.js", :type=>"text/javascript"}
+  %script{:type=>"text/javascript"}
+
+#editorToolBar
+
 = form_for @employer_job do |f|
   -if @employer_job.errors.any?
     #error_explanation
@@ -7,15 +15,9 @@
         - @employer_job.errors.full_messages.each do |msg|
           %li= msg
 
+  %br
   .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :text
-    -if @employer_job.text.nil?
-      = f.text_area :text, :value => "<p>click here to start editing the job position</p>"
-    -else
-      = f.text_area :text
+    = f.cktext_area :text, :toolbar=>'Full', :width=>'920px', :height=>'200px', :toolbar=>'Easy'
   .field
     = f.label :keywords
     = f.text_field :keywords
