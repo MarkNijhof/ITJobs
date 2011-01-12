@@ -1,16 +1,7 @@
 %p#notice= notice
 
 .partial-4-4-box
-  %p
-    %b Title:
-    = @employer_job.title
-  %p
-    %b Text:
-    = @employer_job.text
-
-  %p
-    %b Keywords:
-    = @employer_job.keywords
+  != @employer_job.text
 
 = link_to 'Edit', edit_employer_job_path(@employer_job)
 \|
