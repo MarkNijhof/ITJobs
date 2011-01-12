@@ -17,7 +17,3 @@ end
 task :test => [:set_test_environment] do
   sh "bundle exec watchr"
 end
-
-
-task :set_development_environment do
-end
