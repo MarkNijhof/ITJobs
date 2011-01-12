@@ -51,12 +51,16 @@ CKEDITOR.editorConfig = function( config )
   }
 };
 
-var name = "#topSpace";  
   
 $(document).ready(function(){  
-	var currentTop = parseInt($('#topSpace').css('top').replace('px', '')) - 2;
+	if($.browser.safari){ 
+		bodyelem = $("body") 
+	} else{ 
+		bodyelem = $("html,body") 
+	}
+	
     $(window).scroll(function () {  
-		if ($(window).scrollTop() > currentTop) {
+		if ($(window).scrollTop() > 148) {
 			$('#topSpace').css('position', 'fixed');
 			$('#topSpace').css('top', '2px');			
 		} else {
