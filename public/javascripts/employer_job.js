@@ -1,15 +1,17 @@
 
 $(document).ready(function(){  
-	if($.browser.safari){ 
-		bodyelem = $("body") 
-	} else{ 
-		bodyelem = $("html,body") 
-	}
 	
     $(window).scroll(function () {  
-		if ($(window).scrollTop() > 148) {
+		var scrollTop = 148;
+		var topSpaceTop = '2px'
+	    if ($('.headerInnerBox').css('position') != 'absolute') {
+			scrollTop = 47;
+			topSpaceTop = '99px'
+		}
+
+		if ($(window).scrollTop() > scrollTop) {
 			$('#topSpace').css('position', 'fixed');
-			$('#topSpace').css('top', '2px');			
+			$('#topSpace').css('top', topSpaceTop);			
 		} else {
 			$('#topSpace').css('position', 'absolute');
 			$('#topSpace').css('top', '');			
