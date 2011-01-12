@@ -12,10 +12,11 @@ CKEDITOR.editorConfig = function( config )
 
   //config.ContextMenu = ['Generic','Anchor','Flash','Select','Textarea','Checkbox','Radio','TextField','HiddenField','ImageButton','Button','BulletedList','NumberedList','Table','Form'] ; 
   
-  config.height = '400px';
-  config.width = '600px';
+  //config.height = '400px';
+  //config.width = '100%';
   
-  //config.resize_enabled = true;
+  config.resize_enabled = false;
+  config.toolbarCanCollapse = false;
   //config.resize_maxHeight = 2000;
   //config.resize_maxWidth = 750;
   
@@ -23,8 +24,11 @@ CKEDITOR.editorConfig = function( config )
   
   // works only with en, ru, uk languages
   config.extraPlugins = "autogrow";
+  config.removePlugins = 'elementspath';
+  config.removePlugins = 'resize';
   
   config.toolbar = 'Easy';
+  //config.editor.mode = 'wysiwyg';
   
   config.toolbar_Easy =
     [
@@ -32,15 +36,32 @@ CKEDITOR.editorConfig = function( config )
         ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
         ['Cut','Copy','Paste','PasteText','PasteFromWord',],
-        ['Maximize'],
         ['Undo','Redo','RemoveFormat'],
         ['Format'],
         ['Link','Unlink','Anchor'],
         ['HorizontalRule','SpecialChar']
     ];
   config.contentsCss = '/stylesheets/compiled/screen.css';
-  config.bodyClass = 'content';
+  config.bodyClass = 'content-no-overflow';
 //  config.skin = 'itjobs';
   config.format_tags = 'p;h1;h2;h3';
+  config.sharedSpaces = {
+	top: "topSpace",
+	bottom: "bottomSpace"
+  }
 };
 
+var name = "#topSpace";  
+  
+$(document).ready(function(){  
+	var currentTop = parseInt($('#topSpace').css('top').replace('px', '')) - 2;
+    $(window).scroll(function () {  
+		if ($(window).scrollTop() > currentTop) {
+			$('#topSpace').css('position', 'fixed');
+			$('#topSpace').css('top', '2px');			
+		} else {
+			$('#topSpace').css('position', 'absolute');
+			$('#topSpace').css('top', '');			
+		}
+    });  
+});

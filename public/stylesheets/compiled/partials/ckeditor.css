@@ -1,0 +1,19 @@
+/* line 2, ../../../../app/stylesheets/partials/ckeditor.sass */
+#topSpace {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #d3d3d3;
+  background-image: url(images/sprites.png);
+  background-repeat: repeat-x;
+  background-position: 0 -1950px;
+  display: block;
+  /* IE Quirks: editor chrome overflow horizontally without an explicit width. */
+  _display: inline-block;
+  padding: 5px;
+}
+
+/* line 16, ../../../../app/stylesheets/partials/ckeditor.sass */
+#bottomSpace {
+  display: none;
+}

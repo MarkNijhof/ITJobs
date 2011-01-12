@@ -1,25 +1,25 @@
 
 = javascript_include_tag :ckeditor
 
-/
-  %script{:src=>"http://js.nicedit.com/nicEdit-latest.js", :type=>"text/javascript"}
-  %script{:type=>"text/javascript"}
+#topSpace
 
-#editorToolBar
+%br
+%br
 
-= form_for @employer_job do |f|
-  -if @employer_job.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@employer_job.errors.count, "error")} prohibited this employer_job from being saved:"
-      %ul
-        - @employer_job.errors.full_messages.each do |msg|
-          %li= msg
+.partial-4-4-box
+  = form_for @employer_job do |f|
+    -if @employer_job.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@employer_job.errors.count, "error")} prohibited this employer_job from being saved:"
+        %ul
+          - @employer_job.errors.full_messages.each do |msg|
+            %li= msg
 
-  %br
-  .field
-    = f.cktext_area :text, :toolbar=>'Full', :width=>'920px', :height=>'200px', :toolbar=>'Easy'
-  .field
-    = f.label :keywords
-    = f.text_field :keywords
-  .actions
-    = f.submit 'Save'
+    %br
+    .field
+      = f.cktext_area :text, :width=>'930px'
+
+    .actions
+      = f.submit 'Save'
+
+#bottomSpace

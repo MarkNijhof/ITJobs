@@ -4,8 +4,8 @@
   background-repeat: no-repeat
   background-position: top center
 
-.content
-  overflow: visible
+.content, content-no-overflow
+  overflow: hidden
   .partial-1-4-box
     background-image: url("/images/layout/content/partial-1-4-box.png")
     background-repeat: no-repeat
@@ -80,6 +80,10 @@
       color: $gray
       text-decoration: underline
       cursor: pointer
+
+.content-no-overflow
+  overflow: visible
+
 
 #editorToolBar
   position: absolute
