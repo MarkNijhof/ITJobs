@@ -1,18 +1,6 @@
 ITJobs::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
-  ENV['AUTOFEATURE'] = "true"
-  ENV['RSPEC'] = "true"
-
-  ENV['MONGODB_PORT'] = "27039"
-  ENV['MONGODB_HOST'] = "flame.mongohq.com"
-  ENV['MONGODB_DATABASE'] = "itjobs-test"
-  ENV['MONGODB_USER_NAME'] = "itjo.bs"
-  ENV['MONGODB_PASSWORD'] = "itjo.bs"
-
-  ENV['LINKEDIN_KEY'] = "Z0rURAzH7R5yGn5GBXT0iY4Jx5AfKzRwxKeUW0wP8CXKaEOToy1qja0Oo-7-ybZ2"
-  ENV['LINKEDIN_SECRET'] = "jgOtTY25cIB93AuNnN7UiXgjbHZEw4b7wa2boYcWEWRkza1lFWq0g-mUlfjdtb2j"
-
   # The test environment is used exclusively to run your application's
   # test suite.  You never need to work with it otherwise.  Remember that
   # your test database is "scratch space" for the test suite and is wiped
