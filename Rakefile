@@ -3,7 +3,7 @@
 
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
-require '../secret_stuff/itjobs/Rakefile'
+require '../secret_stuff/itjobs/Rakefile' if FileTest.exists?('../secret_stuff/itjobs/Rakefile')
 
 ITJobs::Application.load_tasks
 
