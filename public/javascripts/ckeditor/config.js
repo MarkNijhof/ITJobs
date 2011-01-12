@@ -42,7 +42,7 @@ CKEDITOR.editorConfig = function( config )
         ['HorizontalRule','SpecialChar']
     ];
   config.contentsCss = '/stylesheets/compiled/screen.css';
-  config.bodyClass = 'content-no-overflow';
+  config.bodyClass = 'content';
 //  config.skin = 'itjobs';
   config.format_tags = 'p;h1;h2;h3';
   config.sharedSpaces = {
