@@ -2042,9 +2042,9 @@ body #container {
   /* IE Quirks: editor chrome overflow horizontally without an explicit width. */
   _display: inline-block;
   padding-top: 6px;
-  padding-left: 6px;
+  padding-left: 2px;
   margin-left: 5px;
-  width: 927px;
+  width: 693px;
   position: absolute;
 }
 

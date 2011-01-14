@@ -7,7 +7,7 @@
 %br
 %br
 
-.partial-4-4-box
+.partial-3-4-box
   = form_for @employer_job do |f|
     -if @employer_job.errors.any?
       #error_explanation
@@ -16,11 +16,15 @@
           - @employer_job.errors.full_messages.each do |msg|
             %li= msg
 
-    %br
     .field
-      = f.cktext_area :text, :width=>'930px'
+      = f.cktext_area :text, :width=>'696px'
 
     .actions
       = f.submit 'Save'
+
+
+.partial-1-4-box
+  This is where the buttons should be
+
 
 #bottomSpace

@@ -1,8 +1,9 @@
 %p#notice= notice
 
-.partial-4-4-box
+.partial-3-4-box
   != @employer_job.text
 
-= link_to 'Edit', edit_employer_job_path(@employer_job)
-\|
-= link_to 'Back', employer_jobs_path
+.partial-1-4-box
+  = link_to 'Edit', edit_employer_job_path(@employer_job)
+  \|
+  = link_to 'Back', employer_jobs_path

@@ -24,11 +24,10 @@ CKEDITOR.editorConfig = function( config )
     	['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
         ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
-        ['Cut','Copy','Paste','PasteText','PasteFromWord',],
         ['Undo','Redo','RemoveFormat'],
         ['Format'],
-        ['Link','Unlink','Anchor'],
-        ['HorizontalRule','SpecialChar']
+        ['Link','Unlink'],
+        ['HorizontalRule']
     ];
   config.contentsCss = '/stylesheets/compiled/screen.css';
   config.bodyClass = 'content';
