@@ -1,11 +1,8 @@
 ITJobs::Application.routes.draw do
   
   namespace :employer do 
-    resources :jobs 
-    
-    get "information/not_logged_in"
-
-    get "information/not_an_employer"    
+    get "jobs" => "jobs#index"
+    get "jobs/edit(/:id)" => "jobs#edit"
   end
 
   # See how all your routes lay out with "rake routes"

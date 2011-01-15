@@ -19,3 +19,15 @@
 
   %h2 
     Latest listed jobs
+
+  %table
+    %tr
+      %th Title
+      %th Keywords
+      %th Published
+
+    - @jobs.select{ |item| item.published }.each do |employer_job|
+      %tr
+        %td= employer_job.title
+        %td= employer_job.keywords
+        %td= employer_job.published_date

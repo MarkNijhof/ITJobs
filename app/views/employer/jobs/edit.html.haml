@@ -1,8 +1,7 @@
-%h1 Edit job position
+%h1 New job position
 
 = render 'form'
 
 .partial-1-4-box
-  = link_to 'Show', @employer_job
-  \|
-  = link_to 'Back', employer_jobs_path
+  .padding
+    = link_to 'Back', url_for(:controller => :'employer/jobs', :action => :index)

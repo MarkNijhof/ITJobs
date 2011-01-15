@@ -10,11 +10,11 @@ $(document).ready(function(){
 		}
 
 		if ($(window).scrollTop() > scrollTop) {
-			$('#topSpace').css('position', 'fixed');
-			$('#topSpace').css('top', topSpaceTop);			
+			$('.toolBar').css('position', 'fixed');
+			$('.toolBar').css('top', topSpaceTop);			
 		} else {
-			$('#topSpace').css('position', 'absolute');
-			$('#topSpace').css('top', '');			
+			$('.toolBar').css('position', 'absolute');
+			$('.toolBar').css('top', '');			
 		}
     });  
 });

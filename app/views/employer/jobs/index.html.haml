@@ -4,7 +4,7 @@
 #drafts_jobs.partial-4-4-box
   .left-of-h2
     %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
-    = link_to 'add a new Job', new_employer_job_path, :class => "text"
+    = link_to 'add a new Job', url_for(:controller => :'employer/jobs', :action => :edit), :class => :text
 
   %h2 
     Your drafts
@@ -17,20 +17,14 @@
       %th
       %th
 
-    - @employer_jobs.each do |employer_job|
+    - @employer_jobs.select{ |item| !item.published }.each do |employer_job|
       %tr
         %td= employer_job.title
         %td= employer_job.keywords
-        %td= link_to 'Show', employer_job
-        %td= link_to 'Edit', edit_employer_job_path(employer_job)
-        %td= link_to 'Destroy', employer_job, :confirm => 'Are you sure?', :method => :delete
+        %td= link_to 'Edit', :controller => :'employer/jobs', :action => :edit, :id => employer_job.id
 
 
 #latest_jobs.partial-4-4-box
-  .left-of-h2
-    %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
-    = link_to 'add a new Job', new_employer_job_path, :class => "text"
-
   %h2 
     Your published job postings
 
@@ -42,13 +36,12 @@
       %th
       %th
 
-    - @employer_jobs.each do |employer_job|
+    - @employer_jobs.select{ |item| item.published }.each do |employer_job|
       %tr
         %td= employer_job.title
         %td= employer_job.keywords
         %td= employer_job.published_date
-        %td= link_to 'Show', employer_job
-        %td= link_to 'Un-publish', edit_employer_job_path(employer_job)
+        %td= link_to 'Edit', url_for(:controller => :'employer/jobs', :action => :edit, :id =>employer_job)
 
 
 

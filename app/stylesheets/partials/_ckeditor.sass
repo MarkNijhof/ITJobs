@@ -1,12 +1,9 @@
 
-#topSpace
+.toolBar
   -moz-border-radius: 5px
   -webkit-border-radius: 5px
   border-radius: 5px
   background-color: $gray
-  background-image: url(images/sprites.png)
-  background-repeat: repeat-x
-  background-position: 0 -1950px
   display: block
   /* IE Quirks: editor chrome overflow horizontally without an explicit width. */
   _display: inline-block
@@ -15,9 +12,21 @@
     left: 2px
   margin:
     left: 5px
-  width: 693px
+  width: 931px
   position: absolute
+  z-index: 500
+  height: 44px
   
+  #topSpace
+    width: 700px
+    display: block
+    float: left
+
+  .button
+    margin:
+      left: 14px
+    float: left
+    display: block
 
 #bottomSpace
   display: none

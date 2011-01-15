@@ -2,13 +2,18 @@
 = javascript_include_tag :ckeditor
 = javascript_include_tag 'employer_job.js'
 
-#topSpace
+.toolBar
+  #topSpace
+  .button
+    Save draft
 
-%br
-%br
+%div{:style=>"height: 45px"} &nbsp;
 
-.partial-3-4-box
-  = form_for @employer_job do |f|
+%form{:method=>"post", :id=>"new_employer_job", :action=>"/employer/jobs", :'accept-charset'=>"UTF-8"}
+  %input{:type=>"hidden", :value=>"✓", :name=>"utf8"}
+  %input{:type=>"hidden", :value=>"", :name=>"authenticity_token"}
+
+  .partial-3-4-box
     -if @employer_job.errors.any?
       #error_explanation
         %h2= "#{pluralize(@employer_job.errors.count, "error")} prohibited this employer_job from being saved:"
@@ -17,14 +22,19 @@
             %li= msg
 
     .field
-      = f.cktext_area :text, :width=>'696px'
+      = ckeditor_textarea :employer_job, :text, :width=>'696px'
 
-    .actions
-      = f.submit 'Save'
+  .partial-1-4-box
+    .padding
 
+      .button
+        Publish
 
-.partial-1-4-box
-  This is where the buttons should be
+      .button
+        Preview
+
+      .button
+        Back
 
 
 #bottomSpace

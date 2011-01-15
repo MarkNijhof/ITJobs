@@ -33,4 +33,5 @@ class Employer::Job
   key :text, String
   key :keywords, Array
   key :published_date, DateTime
+  key :published, Boolean
 end
