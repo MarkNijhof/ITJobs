@@ -1747,24 +1747,29 @@ body #container {
   cursor: pointer;
 }
 
-/* line 87, ../../../app/stylesheets/partials/_content.sass */
+/* line 86, ../../../app/stylesheets/partials/_content.sass */
+.sidebar-label {
+  font-weight: bold;
+}
+
+/* line 91, ../../../app/stylesheets/partials/_content.sass */
 #editorToolBar {
   position: absolute;
   top: 138px;
   left: 300px;
 }
 
-/* line 92, ../../../app/stylesheets/partials/_content.sass */
+/* line 96, ../../../app/stylesheets/partials/_content.sass */
 .nicEdit-selected {
   border: 0px none !important;
 }
 
-/* line 95, ../../../app/stylesheets/partials/_content.sass */
+/* line 99, ../../../app/stylesheets/partials/_content.sass */
 .nicEdit-panel {
   border: 0px none !important;
 }
 
-/* line 98, ../../../app/stylesheets/partials/_content.sass */
+/* line 102, ../../../app/stylesheets/partials/_content.sass */
 .form_box {
   padding: 0px 0px 0px 20px;
 }
@@ -1915,24 +1920,29 @@ body #container {
   cursor: pointer;
 }
 
-/* line 87, ../../../app/stylesheets/partials/_content.sass */
+/* line 86, ../../../app/stylesheets/partials/_content.sass */
+.sidebar-label {
+  font-weight: bold;
+}
+
+/* line 91, ../../../app/stylesheets/partials/_content.sass */
 #editorToolBar {
   position: absolute;
   top: 138px;
   left: 300px;
 }
 
-/* line 92, ../../../app/stylesheets/partials/_content.sass */
+/* line 96, ../../../app/stylesheets/partials/_content.sass */
 .nicEdit-selected {
   border: 0px none !important;
 }
 
-/* line 95, ../../../app/stylesheets/partials/_content.sass */
+/* line 99, ../../../app/stylesheets/partials/_content.sass */
 .nicEdit-panel {
   border: 0px none !important;
 }
 
-/* line 98, ../../../app/stylesheets/partials/_content.sass */
+/* line 102, ../../../app/stylesheets/partials/_content.sass */
 .form_box {
   padding: 0px 0px 0px 20px;
 }
