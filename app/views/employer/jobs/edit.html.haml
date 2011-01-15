@@ -28,16 +28,25 @@
       = ckeditor_textarea :employer_job, :text, :width=>'696px'
 
   .partial-1-4-box
-    .padding
+    .padding.sidebar-menu
 
       .button
         Publish
 
-      .button
-        Preview
+      %br
+      %br
+      %br
 
-      .button
-        Back
+      %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
+      = link_to 'preview', url_for(:controller => :'employer/jobs', :action => :edit), :class => :text
+      %br
+
+      %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
+      = link_to 'edit company profile', url_for(:controller => :'employer/jobs', :action => :edit), :class => :text
+      %br
+
+      %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
+      = link_to 'back', url_for(:controller => :'employer/jobs', :action => :index), :class => :text
 
 
 
