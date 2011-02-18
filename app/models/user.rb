@@ -29,8 +29,7 @@ class User
     
     def get_authentication_providers id, provider_name = nil
       entity = get id
-#      entity.outgoing(:authentication_providers).filter("position.startNode().hasProperty('provider_name') && position.startNode().getProperty('provider_name')=='#{name}';") and return unless provider_name.nil?
-      entity.outgoing(:authentication_providers).filter("position.node().getProperty('provider_name')=='#{provider_name}';") and return unless provider_name.nil?
+      return entity.outgoing(:authentication_providers).filter("position.endNode().hasProperty('provider_name') && position.endNode().getProperty('provider_name')=='#{provider_name}';") unless provider_name.nil?
       entity.outgoing(:authentication_providers)
     end
     
