@@ -6,6 +6,7 @@ gem "haml", '3.0.25'
 gem "haml-rails", '0.3.4'
 
 gem "compass", '0.10.6'
+gem "neography", '0.0.10'
 
 gem "mongo_mapper", '0.8.6'
 gem "mongo_ext", '0.19.3'
