@@ -1,13 +1,7 @@
 require 'spec_helper'
 
-describe "Authentication::UserHelper::UserManager" do
+describe "Authentication::UserHelper::UserManager", :neo4j => true do
   
-  before do
-    MongoMapper.database.collections.each do |coll|
-      coll.remove if not coll.name.match /^system\./
-    end
-  end
-
   describe "get_create_or_merge_user" do
     it "will return a fully initialized and saved person after a user logs in with a provider for the first time" do
       user_manager = Authentication::UserHelper::UserManager.new
@@ -35,8 +29,11 @@ describe "Authentication::UserHelper::UserManager" do
       user.provider_names.should =~ ["LinkedIn"]
       user.email_addresses.should =~ ["mark.nijhof@gmail.com"]
       
-      user.AuthenticationProviders.count.should == 1
-      ap = user.AuthenticationProviders[0]
+      authentication_providers = User.get_authentication_providers(user.neo_id)
+      authentication_providers.count.should == 1
+      
+      # user.AuthenticationProviders.count.should == 1
+      ap = authentication_providers[0]
       ap.id.should == "12345"
       ap.provider_name.should == "LinkedIn"
       ap.oauth_token.should == "some_token"

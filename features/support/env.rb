@@ -39,11 +39,11 @@ ActionController::Base.allow_rescue = false
 #  end
 #end
 
-require 'mongo_mapper'
-Before do
-  MongoMapper.database.collections.each do |coll|
-    coll.remove if not coll.name.match /^system\./
-  end
-  # Mongoid.master.collections.each(&:drop)
-  # MongoMapper.database.collections.select { |c| !c.name.match /^system\./ }.each(&:drop)  
-end
+# require 'mongo_mapper'
+# Before do
+#   MongoMapper.database.collections.each do |coll|
+#     coll.remove if not coll.name.match /^system\./
+#   end
+#   # Mongoid.master.collections.each(&:drop)
+#   # MongoMapper.database.collections.select { |c| !c.name.match /^system\./ }.each(&:drop)  
+# end

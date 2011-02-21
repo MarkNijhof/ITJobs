@@ -11,6 +11,6 @@ class ApplicationController < ActionController::Base
   end
 
   def retrieve_current_loggedin_user
-    @user = Neography::Node.load(session[:user_id]) unless session[:user_id].nil?
+    @user = User.get(session[:user_id]) unless session[:user_id].nil?
   end
 end

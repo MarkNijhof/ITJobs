@@ -17,3 +17,13 @@ end
 task :test => [:set_test_environment] do
   sh "bundle exec watchr"
 end
+
+task :neo_stop do
+  sh "~/neo4j-server-dev/bin/neo4j stop"
+  sh "~/neo4j-server/bin/neo4j stop"
+end
+
+task :neo_start do
+  sh "~/neo4j-server-dev/bin/neo4j start"
+  sh "~/neo4j-server/bin/neo4j start"
+end

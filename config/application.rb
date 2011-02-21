@@ -47,7 +47,7 @@ module ITJobs
     config.filter_parameters += [:password]
     
     config.generators do |g|
-      g.orm :mongomapper
+      # g.orm :mongomapper
       g.template_engine :haml
       g.test_framework  :rspec
     end
