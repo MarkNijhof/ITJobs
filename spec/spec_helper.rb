@@ -20,9 +20,9 @@ RSpec.configure do |config|
   
   config.before(:each, :neo4j => true) do
     puts "Neo4j Before Filter"
-#    sh "~/neo4j-server/bin/neo4j stop"
+   sh "~/neo4j-server/bin/neo4j stop"
     sh "rm -rf ~/neo4j-server/data/graph.db"
-    sh "~/neo4j-server/bin/neo4j restart"
+    sh "~/neo4j-server/bin/neo4j start"
     sleep 2
     
 #    neo = Neography::Rest.new 

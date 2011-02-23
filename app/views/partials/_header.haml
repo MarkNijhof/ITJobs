@@ -1,134 +1,21 @@
-%script{:type => "text/javascript"}
-  var beta_user = "#{@beta_user}";
-  var linkedin_url = "#{url_for(:controller => :'authentication/linkedin', :action => :index)}";
-  var facebook_url = "#{url_for(:controller => :'authentication/facebook', :action => :index)}";
-  var twitter_url = "#{url_for(:controller => :'authentication/twitter', :action => :index)}";
-  var google_url = "#{url_for(:controller => :'authentication/google', :action => :index)}";
-  var openid_url = "#{url_for(:controller => :'authentication/openid', :action => :index)}";
-  var itjobs_url = "#{url_for(:controller => :'authentication/itjobs', :action => :index)}";
-
-%script{:type => "text/html", :id => "login_template"}
-  %table{:border => "0px", :cellpadding => "0", :cellspacing => "0"}
-    %tr
-      %td{:width => "*", :style => "vertical-align:top;margin;0px"}
-        - if @user.nil?
-          %h3
-            Why sign up?
-          %p
-            Well currently we don't know who you are, and we would like to change that so we can provide you with a 
-            better service. We have chosen an approach which makes this very easy; all you have to do is choose your 
-            preferred account on the right and sign in with it. This will automatically create an empty profile for 
-            you here on ITJo.bs.
-        - else
-          %h3
-            Why should I add more providers?
-          %p
-            Adding different providers to your ITJo.bs profile will make sure that when you login with another 
-            one that we don't create a new account for you, but instead log you in to your original account.
-        -
-        %h3
-          Your privacy?
-        %p
-          When you use one of these external services to login we will <b>NOT</b> request more information from them 
-          then what is needed to successfully identify you.
-      %td.standingSeperatorLine{:width => "7px", :align => "center"}
-      %td{:width => "160px"}
-        
-        #loginWithLinkedin.button.center.textAlignLeft
-          .logoButton.Linkedin
-            &nbsp;
-          LinkedIn
-
-        #loginWithTwitter.button-disabled.center.textAlignLeft
-          .logoButton.Twitter
-            &nbsp;
-          Twitter
-
-        #loginWithOpenid.button-disabled.center.textAlignLeft
-          .logoButton.Openid
-            &nbsp;
-          Open ID
-          
-      %td{:width => "160px"}
-
-        #loginWithFacebook.button-disabled.center.textAlignLeft
-          .logoButton.Facebook
-            &nbsp;
-          Facebook
-
-        #loginWithGoogle.button-disabled.center.textAlignLeft
-          .logoButton.Google
-            &nbsp;
-          Google
-
-        #loginWith17Jobs.button-disabled.center.textAlignLeft
-          .logoButton.ITJobs
-            &nbsp;
-          17Jobs.com
           
 #header
-  .headerInnerBox
-    .top.grayText
-      - if !@user.nil?
-        Welcome 
-        = link_to @user.get_user_name, 'my_profile'
-      -
-    #headerGray
-      #menu
-        %ul
-          %li.first
-            = link_to 'home', :root
-          %li
-            = link_to 'add a new job', url_for(:controller => :'employer/jobs', :action => :index), :id => "my_job_positions"
-          %li
-            = link_to 'feedback', 'feedback url', :id => "feedback"
-          %li.last
-            &nbsp;
+  .left
+  .right
+    %a{:href => ''}
+      #add-button
+        #add-button-link
+          add a job
+  .middle
+    #logo
 
-
-      #logo
-        &nbsp;
-      
-      .searchBox
-        .searchStart
-          &nbsp;
-        .searchMiddle
-          %form#search
-            %input#searchText
-        .searchEnd
-          &nbsp;
-        #searchButton
-          &nbsp;
-      
-      #message
-        ITJobs with a dot before the BS
-      
-    #headerGreen
-      %ul
-        - if @user.nil?
-          %li
-            .whiteArrow
-            %a#signUpLinkWhite.signUpLink
-              Sign Up!
-          %li
-            .grayArrow
-            %a#signUpLinkGray.signUpLink
-              Sign In!
-        - else
-          %li
-            .whiteArrow
-            = link_to "Sign Out!", url_for(:controller => :'authentication/authentication', :action => :logout), :id => :signOutLinkWhite, :class => :signOutLink
-          %li
-            .grayArrow
-            %a#signUpLinkGray.signUpLink
-              Add Provider!
-        -
-    #pushpin
-
-  .dropDownHeader
-    .innerDropDownHeader
-      #dropDownHeader
-        #dropDownHeaderContent
-      .dropDownHeaderFooter
-        %a#dropDownHeaderCloseButton{:href => "#", :onclick => "$.fn.closeHeaderDropDownPanel(); return false;"}
-          close
+:javascript
+  $(document).ready(function(){  
+    setInterval(function(){
+      if ($('#add-button-link').text() == 'add a job') {
+        $('#add-button-link').text('$100/month');
+      } else {
+        $('#add-button-link').text('add a job');
+      }
+    }, 10000);
+  });

@@ -1,10 +1,21 @@
 
-.standingSeperatorLine
-  background-image: url("/images/layout/content/standing-seperator-line-login.png")
-  background-repeat: no-repeat
-  background-position: top center
+#content
+  position: relative
+  margin:
+    top: 90px
+    right: auto
+    button: 10px
+    left: auto
+  width: 950px
+  z-index: 200
+
+  .standingSeperatorLine
+    background-image: url("/images/layout/content/standing-seperator-line-login.png")
+    background-repeat: no-repeat
+    background-position: top center
 
 .content
+  z-index: 200
   overflow: hidden
   .partial-1-4-box
     background-image: url("/images/layout/content/partial-1-4-box.png")
@@ -27,13 +38,15 @@
     width: 696px
     float: left
     margin: 15px 10px 5px 5px
-  .partial-4-4-box
-    background-image: url("/images/layout/content/partial-4-4-box.png")
-    background-repeat: no-repeat
-    background-position: top center
+  .partial-4-4-box 
     width: 933px
     float: left
     margin: 15px 10px 5px 5px
+    border:
+      width: 1px
+      style: solid
+      color: $lightgray
+    background-image: url("/images/layout/content/transparant-background.png")
   .padding
     padding: 5px
   h1

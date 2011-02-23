@@ -25,11 +25,13 @@
     = csrf_meta_tag
       
   %body
-    #container
-      
-      = render 'partials/header'
+    #background-img
+      %img{:alt=>"", :src=>"/images/layout/background.jpg", :style=>"width: 100%; left: 0px; height: auto;"}
 
-      #content.content
-        = yield
+    = render 'partials/header'
+  
+    #content.content
+      = yield
       
       = render 'partials/footer'
+
