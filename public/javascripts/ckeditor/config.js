@@ -21,13 +21,12 @@ CKEDITOR.editorConfig = function( config )
   
   config.toolbar_Easy =
     [
-    	['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
+    	['Bold','Italic','Underline','Strike','-',],
         ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
         ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
-        ['Undo','Redo','RemoveFormat'],
-        ['Format'],
-        ['Link','Unlink'],
-        ['HorizontalRule']
+        ['HorizontalRule'],
+        ['Undo','Redo'],
+        ['Format','RemoveFormat']
     ];
   config.contentsCss = '/stylesheets/compiled/screen.css';
   config.bodyClass = 'content';
