@@ -1,3 +1,4 @@
+require File.expand_path(File.dirname(__FILE__) + '../../../app/models/neo_rest')
 
 host = ENV['NEO4J_HOST']
 port = ENV['NEO4J_PORT']

@@ -1,4 +1,5 @@
 
-require 'NeoRest/Config'
-require 'NeoRest/Node'
-require 'NeoRest/Relationship'
+require 'NeoRest/config'
+require 'NeoRest/node'
+require 'NeoRest/relationship'
+require 'NeoRest/index'
