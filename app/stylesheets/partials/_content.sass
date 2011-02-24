@@ -7,7 +7,6 @@
     button: 10px
     left: auto
   width: 950px
-  z-index: 200
 
   .standingSeperatorLine
     background-image: url("/images/layout/content/standing-seperator-line-login.png")
@@ -15,30 +14,63 @@
     background-position: top center
 
 .content
-  z-index: 200
+  position: relative
   overflow: hidden
+  font-face: helvetica
+  font-size: 16px
+  color: $gray
+  margin: 20px 10px 10px 10px
+  word-wrap: break-word
+  text-align: justify
+  a
+    color: $gray
+    text-decoration: underline
+  a:hover
+    color: $gray
+    text-decoration: none
+    cursor: pointer
+
+
   .partial-1-4-box
-    background-image: url("/images/layout/content/partial-1-4-box.png")
-    background-repeat: no-repeat
-    background-position: top center
-    width: 222px
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    border-radius: 5px
+    border:
+      width: 1px
+      style: solid
+      color: $lightgray
+    background-image: url("/images/layout/content/transparant-background.png")
+    width: 220px
     float: left
     margin: 15px 10px 5px 5px
   .partial-2-4-box
-    background-image: url("/images/layout/content/partial-2-4-box.png")
-    background-repeat: no-repeat
-    background-position: top center
-    width: 459px
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    border-radius: 5px
+    border:
+      width: 1px
+      style: solid
+      color: $lightgray
+    background-image: url("/images/layout/content/transparant-background.png")
+    width: 457px
     float: left
     margin: 15px 10px 5px 5px
   .partial-3-4-box
-    background-image: url("/images/layout/content/partial-3-4-box.png")
-    background-repeat: no-repeat
-    background-position: top center
-    width: 696px
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    border-radius: 5px
+    border:
+      width: 1px
+      style: solid
+      color: $lightgray
+    background-image: url("/images/layout/content/transparant-background.png")
+    width: 694px
     float: left
     margin: 15px 10px 5px 5px
   .partial-4-4-box 
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    border-radius: 5px
     width: 933px
     float: left
     margin: 15px 10px 5px 5px
@@ -69,20 +101,6 @@
     font-weight: normal
     color: $green
     margin: 10px
-  p, .text
-    font-face: helvetica
-    font-size: 16px
-    color: $gray
-    margin: 20px 10px 10px 10px
-    word-wrap: break-word
-    text-align: justify
-    a
-      color: $gray
-      text-decoration: underline
-    a:hover
-      color: $gray
-      text-decoration: none
-      cursor: pointer
 
   .left-of-h2
     position: relative

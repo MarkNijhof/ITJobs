@@ -1,14 +1,42 @@
 %h1 New job position
 
-= javascript_include_tag :ckeditor
 = javascript_include_tag 'employer_job.js'
 
 .toolBar
-  #topSpace
+  #toolBar
+    %span.toolgroup
+      %span.editor_button
+        %a.editor_button_bold{}
+          %span.editor_icon
+      %span.editor_button
+        %a.editor_button_italic{}
+          %span.editor_icon
+      %span.editor_button
+        %a.editor_button_underline{}
+          %span.editor_icon
+      %span.editor_button
+        %a.editor_button_strike{}
+          %span.editor_icon
+
+    %span.toolgroup
+      %span.editor_button
+        %a.editor_button_numberedlist{}
+          %span.editor_icon
+      %span.editor_button
+        %a.editor_button_bulletedlist{}
+          %span.editor_icon
+
+    %span.toolgroup
+      %span.editor_button
+        %a.editor_button_link{}
+          %span.editor_icon
+      %span.editor_button
+        %a.editor_button_unlink.editor_disabled{}
+          %span.editor_icon
+		
   .button
     Save draft
 
-#bottomSpace
 
 %div{:style=>"height: 45px"} &nbsp;
 
@@ -17,15 +45,16 @@
   %input{:type=>"hidden", :value=>"", :name=>"authenticity_token"}
 
   .partial-3-4-box
-    -if @employer_job.errors.any?
+    -if not @employer_job.nil? || @employer_job.errors.any?
       #error_explanation
         %h2= "#{pluralize(@employer_job.errors.count, "error")} prohibited this employer_job from being saved:"
         %ul
           - @employer_job.errors.full_messages.each do |msg|
             %li= msg
 
+
     .field
-      = ckeditor_textarea :employer_job, :text, :width=>'696px'
+      %textarea#employer_job{:width=>'696px'}
 
   .partial-1-4-box
     .padding.sidebar-menu

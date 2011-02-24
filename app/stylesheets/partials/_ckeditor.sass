@@ -4,6 +4,11 @@
   -webkit-border-radius: 5px
   border-radius: 5px
   background-color: $gray
+  border:
+    color: $lightgray
+    style: solid
+    width: 1px
+
   display: block
   /* IE Quirks: editor chrome overflow horizontally without an explicit width. */
   _display: inline-block
@@ -14,13 +19,15 @@
     left: 5px
   width: 931px
   position: absolute
-  z-index: 500
+  z-index: 1500
   height: 44px
   
-  #topSpace
-    width: 700px
+  #toolBar
+    position: relative
+    width: 690px
     display: block
     float: left
+    padding: 5px 4px
 
   .button
     margin:
@@ -30,3 +37,100 @@
 
 #bottomSpace
   display: none
+
+
+.toolgroup
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+  border-radius: 5px
+  background-image: url("/images/layout/editor/sprites.png")
+  _background-image: url("/images/layout/editor/sprites_ie6.png")
+  background-repeat: repeat-x
+  background-position: 0 -500px
+  float: left
+  padding: 2px
+  margin: 0px 2px
+  display: inline
+  overflow: hidden
+  height: 22px
+
+  .editor_button 
+    border:
+      style: none
+      width: 0px
+    outline: none
+    display: inline-block
+    cursor: default
+    margin: 0px
+    padding: 0px
+
+    a
+      -moz-border-radius: 3px
+      -webkit-border-radius: 3px
+      border-radius: 3px
+      outline: none
+      padding: 2px 4px
+      display: inline-block
+      cursor: default
+    a:hover,
+    a:focus,
+    a:active
+      background-color: #dff1ff
+      filter: alpha(opacity=70)
+      opacity: 0.70
+
+    a.editor_on
+      background-color: #86caff
+      filter: alpha(opacity=70)
+      opacity: 0.70
+
+    a:hover.editor_on,
+    a:focus.editor_on,
+    a:active.editor_on
+      background-color: #86caff
+      filter: alpha(opacity=100)
+      opacity: 1
+
+    a.editor_disabled,
+    a:hover.editor_disabled,
+    a:focus.editor_disabled,
+    a:active.editor_disabled
+      background-color: $lightgray
+      filter: alpha(opacity=30)
+      opacity: 0.30
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale'), alpha(opacity=30)
+
+.editor_icon
+  background-image: url("/images/layout/editor/icons.png")
+  background-position: 100px
+  background-repeat: no-repeat
+  margin-top: 1px
+  width: 16px
+  height: 16px
+  display: inline-block
+  float: left
+  cursor: default
+
+.editor_button_bold .editor_icon
+  background-position: 0 -304px
+
+.editor_button_italic .editor_icon
+  background-position: 0 -320px
+
+.editor_button_underline .editor_icon
+  background-position: 0 -336px
+
+.editor_button_strike .editor_icon
+  background-position: 0 -352px
+
+.editor_button_numberedlist .editor_icon
+  background-position: 0 -400px
+
+.editor_button_bulletedlist .editor_icon
+  background-position: 0 -416px
+
+.editor_button_link .editor_icon
+  background-position: 0 -528px
+
+.editor_button_unlink .editor_icon
+  background-position: 0 -544px

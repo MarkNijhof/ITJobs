@@ -2,12 +2,8 @@
 $(document).ready(function(){  
 	
     $(window).scroll(function () {  
-		var scrollTop = 148;
-		var topSpaceTop = '2px'
-	    if ($('.headerInnerBox').css('position') != 'absolute') {
-			scrollTop = 47;
-			topSpaceTop = '99px'
-		}
+		var scrollTop = 118;
+		var topSpaceTop = '12px'
 
 		if ($(window).scrollTop() > scrollTop) {
 			$('.toolBar').css('position', 'fixed');
