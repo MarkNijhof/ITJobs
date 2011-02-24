@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
-gem 'json', '1.4.6'
 
 gem "haml", '3.0.25'
 gem "haml-rails", '0.3.4'
@@ -14,6 +13,7 @@ gem "rest-client", '1.6.1'
 # gem "bson_ext", '1.1.5'
 
 gem 'linkedin', '0.1.7'
+gem 'ckeditor', '3.4.2.pre'
 
 group :test, :development do
   gem "rails3-generators"

@@ -1,79 +1,61 @@
-# require 'growl'
+# adapted from http://github.com/rspec/rspec-rails/blob/master/specs.watchr
 
-ENV["WATCHR"] = "1"
-$spec_cmd = "rspec --colour --format nested"
+# Run me with:
+#
+#   $ watchr specs.watchr
 
-def growl(message)
-  # if message.match(/\s0\s(errors|failures)/)
-  #   title = 'Watchr: All tests passed'
-  #   image = File.join(File.expand_path(File.dirname(__FILE__)), '.watchr_images', 'pass.png')
-  # else
-  #   title = 'Watchr: Tests are failing'
-  #   image = File.join(File.expand_path(File.dirname(__FILE__)), '.watchr_images', 'pass.png')
-  # end
-  # Growl.notify message, :icon => image, :title => title
+# --------------------------------------------------
+# Convenience Methods
+# --------------------------------------------------
+def all_spec_files
+  Dir['spec/**/*_spec.rb']
 end
 
-def run(cmd)
-  system('clear')
-  puts(cmd)
-  system(cmd)
+def run_spec_matching(thing_to_match)
+  matches = all_spec_files.grep(/#{thing_to_match}/i)
+  if matches.empty?
+    puts "Sorry, thanks for playing, but there were no matches for #{thing_to_match}"
+  else
+    run matches.join(' ')
+  end
 end
 
-def run_spec(spec)
-  result = run "#{$spec_cmd} #{spec}"
-  growl result.split("\n").last rescue nil
+def run(files_to_run)
+  puts("Running: #{files_to_run}")
+  system("rspec -c #{files_to_run}")
+  no_int_for_you
 end
 
 def run_all_specs
-  result = run "#{$spec_cmd} spec/"
-  growl result.split("\n").last rescue nil
+  run(all_spec_files.join(' '))
 end
 
-def related_specs(path)
-  Dir['spec/**/*.rb'].select { |file| file =~ /#{File.basename(path).split(".").first}_spec.rb/ }
+# --------------------------------------------------
+# Watchr Rules
+# --------------------------------------------------
+watch('^spec/(.*)_spec\.rb')    { |m| run_spec_matching(m[1]) }
+watch('^app/(.*)\.rb')          { |m| run_spec_matching(m[1]) }
+watch('^app/(.*)\.haml')        { |m| run_spec_matching(m[1]) }
+watch('^lib/(.*)\.rb')          { |m| run_spec_matching(m[1]) }
+watch('^spec/spec_helper\.rb')  { run_all_specs }
+watch('^spec/support/.*\.rb')   { run_all_specs }
+
+# --------------------------------------------------
+# Signal Handling
+# --------------------------------------------------
+
+def no_int_for_you
+  @sent_an_int = nil
 end
 
-def run_all_features
-  run "cucumber"
-end
-
-def run_feature(feature)
-  run "cucumber #{feature}"
-end
-
-def run_suite
-  run_all_specs
-  run_all_features
-end
-
-watch('spec/spec_helper\.rb') { run_all_specs }
-watch('spec/support/.*') { run_all_specs }
-watch('spec/.*_spec\.rb') { |m| run_spec m[0] }
-watch('app/.*\.rb') { |m| related_specs(m[0]).map {|tf| run_spec tf } }
-watch('lib/.*\.rb') { |m| related_specs(m[0]).map {|tf| run_spec tf } }
-watch('features/support/.*') { |m| run_all_features }
-watch('features/.*\.feature') { |m| run_feature m[0] }
-
-# Ctrl-\
-Signal.trap 'QUIT' do
-  puts " --- Running all specs ---\n\n"
-  run_all_specs
-end
-
-@interrupted = false
-
-# Ctrl-C
 Signal.trap 'INT' do
-  if @interrupted then
-    @wants_to_quit = true
-    abort("\n")
+  if @sent_an_int then
+    puts "   A second INT?  Ok, I get the message.  Shutting down now."
+    exit
   else
-    puts "Interrupt a second time to quit"
-    @interrupted = true
+    puts "   Did you just send me an INT? Ugh.  I'll quit for real if you do it again."
+    @sent_an_int = true
     Kernel.sleep 1.5
-    # raise Interrupt, nil # let the run loop catch it
-    @interrupted = false
-    run_suite
+    run_all_specs
   end
 end

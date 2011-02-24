@@ -1,16 +1,16 @@
 
-$(document).ready(function(){  
-	
-    $(window).scroll(function () {  
+$(document).ready(function(){
+
+	$(window).scroll(function () {
 		var scrollTop = 118;
 		var topSpaceTop = '12px'
 
 		if ($(window).scrollTop() > scrollTop) {
 			$('.toolBar').css('position', 'fixed');
-			$('.toolBar').css('top', topSpaceTop);			
+			$('.toolBar').css('top', topSpaceTop);
 		} else {
 			$('.toolBar').css('position', 'absolute');
-			$('.toolBar').css('top', '');			
+			$('.toolBar').css('top', '');
 		}
-    });  
+	});
 });

@@ -1,8 +1,8 @@
-# require 'user'
-# require 'authenticationprovider'
+require 'user'
+require 'authenticationprovider'
 # 
-# module Authentication::UserHelper
-#   class UserManager
+module Authentication::UserHelper
+  class UserManager
 #     
 #     def get_create_or_merge_user user_information
 # 
@@ -93,5 +93,5 @@
 #       authentication_provider
 #     end
 # 
-#   end
-# end
+  end
+end
