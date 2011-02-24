@@ -1583,32 +1583,11 @@ body {
 }
 
 /* line 1, ../../../app/stylesheets/partials/_footer.sass */
-#footer {
-  width: 960px;
-  height: 100px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-image: url("/images/layout/footer/footer-bottom.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-}
-/* line 9, ../../../app/stylesheets/partials/_footer.sass */
-#footer .footerTop {
-  z-index: 10;
-  width: 960px;
-  height: 12px;
-  background-image: url("/images/layout/footer/footer-top.png");
-  background-repeat: no-repeat;
-  background-position: center top;
-}
-/* line 16, ../../../app/stylesheets/partials/_footer.sass */
-#footer .footerContent {
-  margin: 0px 20px 10px 20px;
-}
-
-/* line 19, ../../../app/stylesheets/partials/_footer.sass */
 #copyright {
+  position: relative;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 /* line 1, ../../../app/stylesheets/partials/_content.sass */
