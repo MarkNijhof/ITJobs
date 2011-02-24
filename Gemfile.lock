@@ -158,6 +158,7 @@ DEPENDENCIES
   haml (= 3.0.25)
   haml-rails (= 0.3.4)
   heroku (= 1.15.0)
+  json (= 1.4.6)
   linkedin (= 0.1.7)
   rails (= 3.0.3)
   rails3-generators
