@@ -11,12 +11,14 @@
       #logo
 
 :javascript
-  $(document).ready(function(){  
+  document.observe("dom:loaded", function() {
     setInterval(function(){
-      if ($('#add-button-link').text() == 'add a job') {
-        $('#add-button-link').text('$100/month');
+      if ($('add-button-link').innerHTML == 'add a job') {
+        $('add-button-link').update();
+        $('add-button-link').insert('$100/month');
       } else {
-        $('#add-button-link').text('add a job');
+        $('add-button-link').update();
+        $('add-button-link').insert('add a job');
       }
     }, 10000);
   });
