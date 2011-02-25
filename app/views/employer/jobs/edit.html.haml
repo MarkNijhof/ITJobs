@@ -22,6 +22,10 @@
   %a.button.h2{:href => "#"}
     %span
 
+  .wide_button.update_button
+    Save
+
+
 
 %form{:method=>"post", :id=>"new_employer_job", :action=>"/employer/jobs", :'accept-charset'=>"UTF-8"}
   %input{:type=>"hidden", :value=>"✓", :name=>"utf8"}
@@ -82,7 +86,7 @@
     .partial-box.width-1-4
       .padding.sidebar-menu
 
-        .button
+        .wide_button
           Publish
 
         %br

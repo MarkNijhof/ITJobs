@@ -945,7 +945,7 @@ body {
 }
 
 /* line 1, ../../../app/stylesheets/partials/_buttons.sass */
-.button {
+.wide_button {
   position: relative;
   width: 156px;
   height: 40px;
@@ -962,14 +962,14 @@ body {
 }
 
 /* line 15, ../../../app/stylesheets/partials/_buttons.sass */
-.button:hover {
+.wide_button:hover {
   background-position: 0px -50px;
   color: #7dbb42;
   cursor: pointer;
 }
 
 /* line 19, ../../../app/stylesheets/partials/_buttons.sass */
-.button-disabled {
+.wide_button-disabled {
   position: relative;
   width: 156px;
   height: 40px;
@@ -1027,7 +1027,7 @@ body {
   background-position: 0px -210px;
 }
 
-/* line 5, ../../../app/stylesheets/partials/_editor.sass */
+/* line 2, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1048,7 +1048,14 @@ body {
   z-index: 500;
   height: 44px;
 }
-/* line 28, ../../../app/stylesheets/partials/_editor.sass */
+/* line 24, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .update_button {
+  margin-top: 3px;
+  margin-right: 55px;
+  float: right;
+  display: block;
+}
+/* line 31, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .button {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1069,7 +1076,7 @@ body {
   width: 22px;
   color: transparent;
 }
-/* line 49, ../../../app/stylesheets/partials/_editor.sass */
+/* line 52, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .button span {
   background-image: url("/images/layout/editor/icons.png");
   background-position: 100px;
@@ -1088,7 +1095,7 @@ body {
   overflow: hidden;
   float: left;
 }
-/* line 66, ../../../app/stylesheets/partials/_editor.sass */
+/* line 69, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .button span:hover,
 .editor_toolbar .button span:focus,
 .editor_toolbar .button span:active {
@@ -1096,35 +1103,35 @@ body {
   filter: alpha(opacity=70);
   opacity: 0.7;
 }
-/* line 74, ../../../app/stylesheets/partials/_editor.sass */
+/* line 77, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .bold span {
   background-position: 0 -304px;
 }
-/* line 78, ../../../app/stylesheets/partials/_editor.sass */
+/* line 81, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .italic span {
   background-position: 0 -320px;
 }
-/* line 82, ../../../app/stylesheets/partials/_editor.sass */
+/* line 85, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .underline span {
   background-position: 0 -336px;
 }
-/* line 86, ../../../app/stylesheets/partials/_editor.sass */
+/* line 89, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .strikethrough span {
   background-position: 0 -352px;
 }
-/* line 90, ../../../app/stylesheets/partials/_editor.sass */
+/* line 93, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .numberedlist span {
   background-position: 0 -400px;
 }
-/* line 94, ../../../app/stylesheets/partials/_editor.sass */
+/* line 97, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .bullets span {
   background-position: 0 -416px;
 }
-/* line 98, ../../../app/stylesheets/partials/_editor.sass */
+/* line 101, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .h1 span {
   background-position: 0 -1296px;
 }
-/* line 102, ../../../app/stylesheets/partials/_editor.sass */
+/* line 105, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .h2 span {
   background-position: 0 -1312px;
 }
