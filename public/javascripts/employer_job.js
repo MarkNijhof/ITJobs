@@ -2,8 +2,8 @@
 $(document).ready(function(){
 
 	$(window).scroll(function () {
-		var scrollTop = 118;
-		var topSpaceTop = '12px'
+		var scrollTop = 116;
+		var topSpaceTop = '14px'
 
 		if ($(window).scrollTop() > scrollTop) {
 			$('.editor_toolbar').css('position', 'fixed');
