@@ -1,7 +1,7 @@
 %h1 Manage your job postings
 
 
-#drafts_jobs.partial-3-4-box
+#drafts_jobs.partial-box.width-3-4
   %h2 
     Your drafts
 
@@ -20,7 +20,7 @@
         %td= link_to 'Edit', :controller => :'employer/jobs', :action => :edit, :id => employer_job.id
 
 
-.partial-1-4-box
+.partial-box.width-1-4
   .padding.sidebar-menu
 
     %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
@@ -40,7 +40,7 @@
 
 - if @employer_jobs.select{ |item| item.published }.count > 0
 
-  #latest_jobs.partial-3-4-box
+  #latest_jobs.partial-box.width-3-4
     %h2 
       Your published job postings
 

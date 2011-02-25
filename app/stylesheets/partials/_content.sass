@@ -16,7 +16,7 @@
   position: relative
   overflow: hidden
 
-  .partial-1-4-box
+  .partial-box
     -moz-border-radius: 5px
     -webkit-border-radius: 5px
     border-radius: 5px
@@ -25,47 +25,22 @@
       style: solid
       color: $lightgray
     background-image: url("/images/layout/content/transparant-background.png")
+    float: left
+    margin: 0px 10px 5px 0px
+  .group-box
+    float: left
+    margin: 15px 10px 5px 5px
+    padding: 0px
+  .width-1-4
     width: 220px
-    float: left
-    margin: 15px 10px 5px 5px
-  .partial-2-4-box
-    -moz-border-radius: 5px
-    -webkit-border-radius: 5px
-    border-radius: 5px
-    border:
-      width: 1px
-      style: solid
-      color: $lightgray
-    background-image: url("/images/layout/content/transparant-background.png")
+  .width-2-4
     width: 457px
-    float: left
-    margin: 15px 10px 5px 5px
-  .partial-3-4-box
-    -moz-border-radius: 5px
-    -webkit-border-radius: 5px
-    border-radius: 5px
-    border:
-      width: 1px
-      style: solid
-      color: $lightgray
-    background-image: url("/images/layout/content/transparant-background.png")
+  .width-3-4
     width: 694px
-    float: left
-    margin: 15px 10px 5px 5px
-  .partial-4-4-box
-    -moz-border-radius: 5px
-    -webkit-border-radius: 5px
-    border-radius: 5px
+  .width-4-4
     width: 933px
-    float: left
-    margin: 15px 10px 5px 5px
-    border:
-      width: 1px
-      style: solid
-      color: $lightgray
-    background-image: url("/images/layout/content/transparant-background.png")
   .padding
-    padding: 5px
+    padding: 10px
   h1
     font-size: 20px
     font-weight: bold
@@ -86,11 +61,14 @@
     font-weight: normal
     color: $green
     margin: 10px
-  p
+  p,
+  .editor,
+  input,
+  textarea
     font-face: helvetica
     font-size: 16px
     color: $gray
-    margin: 20px 10px 10px 10px
+    margin: 5px 10px
     word-wrap: break-word
     text-align: justify
     a
@@ -99,9 +77,30 @@
     a:hover
       color: $gray
       text-decoration: none
-      cursor: pointer
-  
+      cursor: pointer  
+  textarea,
+  input,
+  .editor
+    width: 660px
+    margin:
+      top: 0px
+      right: 0px
+      bottom: 10px
+      left: 0px
+    padding: 4px
+    background-color: white
+    border:
+      style: solid
+      width: 1px
+      color: $gray
 
+  textarea:focus,
+  input:focus,
+  .editor:focus
+    outline: solid 2px $lightblue
+
+  .editor
+    min-height: 100px
 
   .left-of-h2
     position: relative
@@ -117,6 +116,9 @@
 
 .sidebar-label
   font-weight: bold
+  margin:
+    left: 2px
+    bottom: 3px
 
 .sidebar-text
 

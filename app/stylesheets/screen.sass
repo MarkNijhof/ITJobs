@@ -1,14 +1,14 @@
-@import "blueprint/reset"
-@import compass/utilities
+@import "compass/reset"
+@import "compass/utilities"
 
 @import "partials/base"
 
 @import "blueprint"
 
-@import "blueprint/scaffolding"
-@include blueprint
-
-@include blueprint-scaffolding
+@include blueprint-typography
+@include blueprint-utilities
+@include blueprint-debug
+@include blueprint-interaction
 
 body
   font-family: verdana
@@ -20,4 +20,4 @@ body
 @import "partials/content"
 @import "partials/common"
 @import "partials/buttons"
-@import "partials/ckeditor"
+@import "partials/editor"

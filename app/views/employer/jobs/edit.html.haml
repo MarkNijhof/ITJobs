@@ -1,67 +1,112 @@
 %h1 New job position
 
-= javascript_include_tag :ckeditor
-= javascript_include_tag 'employer_job.js'
+= javascript_include_tag 'employer_job.js', 'lib/jq-wysihat.js'
 
-.toolBar
-  #topSpace
-  .button
-    Save draft
+%div{:style=>"height: 35px"} &nbsp;
 
-#bottomSpace
+.editor_toolbar
+  %a.button.bold{:href => "#"}
+    %span
+  %a.button.italic{:href => "#"}
+    %span
+  %a.button.underline{:href => "#"}
+    %span
+  %a.button.strikethrough{:href => "#"}
+    %span
+  %a.button.numberedlist{:href => "#"}
+    %span
+  %a.button.bullets{:href => "#"}
+    %span
+  %a.button.h1{:href => "#"}
+    %span
+  %a.button.h2{:href => "#"}
+    %span
 
-%div{:style=>"height: 45px"} &nbsp;
 
 %form{:method=>"post", :id=>"new_employer_job", :action=>"/employer/jobs", :'accept-charset'=>"UTF-8"}
   %input{:type=>"hidden", :value=>"✓", :name=>"utf8"}
   %input{:type=>"hidden", :value=>"", :name=>"authenticity_token"}
 
-  .partial-3-4-box
-    .field
-      = ckeditor_textarea :employer_job, :text, :width=>'696px'
+  .group-box.width-3-4
+    .partial-box.width-3-4
+      %h2 
+        Tell us about the job
 
-  .partial-1-4-box
-    .padding.sidebar-menu
+      %p
+        Just add the complete job description down here, you may use the different formatting options provided to you. Note that you should provide at least one header as this will be used for the title. The header does not need to be the first thing in the job description.
+      
+      .padding
+        .sidebar-label Full job description (you may use the toolbar to format the text)
+        .field
+          %textarea#job_description
 
-      .button
-        Publish
+        .sidebar-label Keywords describing the job
+        .field
+          %input#job_keywords
 
-      %br
-      %br
-      %br
+    .partial-box.width-3-4
+      %h2 
+        Your company
+      
+      %p
+        We also like to know more about the company you are working for.
 
-      %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
-      = link_to 'preview', url_for(:controller => :'employer/jobs', :action => :edit), :class => :text
-      %br
+      .padding
+        .sidebar-label Your company name
+        .field
+          %input#company_name
 
-      %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
-      = link_to 'edit company profile', url_for(:controller => :'employer/jobs', :action => :edit), :class => :text
-      %br
+        .sidebar-label Your company website
+        .field
+          %input#company_website
 
-      %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
-      = link_to 'back', url_for(:controller => :'employer/jobs', :action => :index), :class => :text
+        .sidebar-label Your company description (you may use the toolbar to format the text)
+        .field
+          %textarea#company_description
+
+    .partial-box.width-3-4
+      %h2 
+        Your e-mail address
+        
+      %p
+        We will need your e-mail address so that we can send you an e-mail from where you can manage this and other job ads you register on this site. We will also be adding other authentication options later; like login with your LinkedIn or Twitter credentials.
+
+      .padding
+        .sidebar-label Your e-mail address
+        .field
+          %input#email_address
 
 
 
-.partial-1-4-box
-  .padding
-    .sidebar-label Company:
-    .sidebar-text Cre8ive Thought
-    %br
+  .group-box.width-1-4
+    .partial-box.width-1-4
+      .padding.sidebar-menu
 
-    .sidebar-label Website:
-    .sidebar-text www.cre8ivethought.com
-    %br
+        .button
+          Publish
 
-    .sidebar-label Description:
-    .sidebar-text Blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-    %br
+        %br
+        %br
+        %br
 
-    .sidebar-label Job title:
-    .sidebar-text multifunctional senior developer
-    %br
+        %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
+        = link_to 'preview', url_for(:controller => :'employer/jobs', :action => :edit), :class => :text
+        %br
 
-    .sidebar-label Job keywords:
-    .sidebar-text Developer, C#, .Net, Ruby
-    %br
+        %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
+        = link_to 'edit company profile', url_for(:controller => :'employer/jobs', :action => :edit), :class => :text
+        %br
+
+        %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
+        = link_to 'back', url_for(:controller => :'employer/jobs', :action => :index), :class => :text
+
+    .partial-box.width-1-4
+      .padding
+        .sidebar-label Job title:
+        .sidebar-text multifunctional senior developer
+        %br
+
+        .sidebar-label Job keywords:
+        .sidebar-text Developer, C#, .Net, Ruby
+        %br
 

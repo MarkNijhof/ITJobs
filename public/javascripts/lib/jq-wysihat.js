@@ -16,7 +16,7 @@ WysiHat.Editor = {
     var id = $textarea.attr('id') + '_editor';
     if ($editArea == $('#' + id)) { return $editArea; }
 
-    $editArea = $('<div id="' + id + '" class="editor_input_field" contentEditable="true"></div>');
+    $editArea = $('<div id="' + id + '" class="editor" contentEditable="true"></div>');
 
     $editArea.html(WysiHat.Formatting.getBrowserMarkupFrom($textarea.val()));
 

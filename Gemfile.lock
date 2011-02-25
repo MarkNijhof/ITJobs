@@ -42,8 +42,6 @@ GEM
     celerity (0.8.6)
     childprocess (0.1.6)
       ffi (~> 0.6.3)
-    ckeditor (3.4.2.pre)
-      mime-types (>= 1.16)
     compass (0.10.6)
       haml (>= 3.0.4)
     configuration (1.2.0)
@@ -155,7 +153,6 @@ PLATFORMS
 
 DEPENDENCIES
   capybara (= 0.4.0)
-  ckeditor (= 3.4.2.pre)
   compass (= 0.10.6)
   cucumber-rails (= 0.3.2)
   haml (= 3.0.25)

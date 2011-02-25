@@ -1,22 +1,22 @@
 
+.group-box.width-4-4
+  #latest_jobs.partial-box.width-4-4
+    .left-of-h2
+      %span.text employer?
+      %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
+      = link_to 'add a new job', url_for(:controller => :'employer/jobs', :action => :index), :class => "text"
 
-#latest_jobs.partial-4-4-box
-  .left-of-h2
-    %span.text employer?
-    %img{:src => "/images/layout/content/little-green-arrow.png", :alt => "", :style => "position: relative; margin: 0px 0px -2px 0px;"}
-    = link_to 'add a new job', url_for(:controller => :'employer/jobs', :action => :index), :class => "text"
+    %h2 
+      Latest listed jobs
 
-  %h2 
-    Latest listed jobs
-
-  %table
-    %tr
-      %th Title
-      %th Keywords
-      %th Published
-
-    - @jobs.select{ |item| item.published }.each do |employer_job|
+    %table
       %tr
-        %td= employer_job.title
-        %td= employer_job.keywords
-        %td= employer_job.published_date
+        %th Title
+        %th Keywords
+        %th Published
+
+      - @jobs.select{ |item| item.published }.each do |employer_job|
+        %tr
+          %td= employer_job.title
+          %td= employer_job.keywords
+          %td= employer_job.published_date

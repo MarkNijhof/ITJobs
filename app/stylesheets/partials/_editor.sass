@@ -1,0 +1,105 @@
+
+
+
+
+.editor_toolbar
+  -moz-border-radius: 5px
+  -webkit-border-radius: 5px
+  border-radius: 5px
+  background-color: $gray
+  border:
+    color: $lightgray
+    style: solid
+    width: 1px
+  display: block
+  /* IE Quirks: editor chrome overflow horizontally without an explicit width. */
+  _display: inline-block
+  padding:
+    top: 0px 
+    left: 10px
+  width: 920px
+  position: absolute
+  top: 40px
+  margin-left: 5px
+  z-index: 500
+  height: 44px
+  
+
+  .button
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    border-radius: 5px
+    background-image: url("/images/layout/editor/sprites.png")
+    _background-image: url("/images/layout/editor/sprites_ie6.png")
+    background-repeat: repeat-x
+    background-position: 0 -500px
+    float: left
+    padding: 2px
+    margin: 
+      top: 9px 
+      right: 2px
+      bottom: 0px
+      left: 1px
+    display: inline
+    overflow: hidden
+    height: 22px
+    width: 22px
+    color: transparent
+
+    span
+      background-image: url("/images/layout/editor/icons.png")
+      background-position: 100px
+      background-repeat: no-repeat
+      width: 16px
+      height: 16px
+      -moz-border-radius: 3px
+      -webkit-border-radius: 3px
+      border-radius: 3px
+      outline: none
+      padding: 0px
+      margin: 3px 2px
+      display: inline-block
+      cursor: default
+      cursor: default
+      overflow: hidden
+      float: left
+    span:hover,
+    span:focus,
+    span:active
+      background-color: #dff1ff
+      filter: alpha(opacity=70)
+      opacity: 0.70
+
+  .bold
+    span
+      background-position: 0 -304px
+
+  .italic
+    span
+      background-position: 0 -320px
+
+  .underline
+    span
+      background-position: 0 -336px
+
+  .strikethrough
+    span
+      background-position: 0 -352px
+
+  .numberedlist
+    span
+      background-position: 0 -400px
+
+  .bullets
+    span
+      background-position: 0 -416px
+
+  .h1
+    span
+      background-position: 0 -1296px
+
+  .h2
+    span
+      background-position: 0 -1312px
+
+  

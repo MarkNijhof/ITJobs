@@ -6,11 +6,46 @@ $(document).ready(function(){
 		var topSpaceTop = '12px'
 
 		if ($(window).scrollTop() > scrollTop) {
-			$('.toolBar').css('position', 'fixed');
-			$('.toolBar').css('top', topSpaceTop);
+			$('.editor_toolbar').css('position', 'fixed');
+			$('.editor_toolbar').css('top', topSpaceTop);
 		} else {
-			$('.toolBar').css('position', 'absolute');
-			$('.toolBar').css('top', '');
+			$('.editor_toolbar').css('position', 'absolute');
+			$('.editor_toolbar').css('top', '');
 		}
 	});
+
+	var editor = WysiHat.Editor.attach($('#job_description'));
+
+    var boldButton = $('.editor_toolbar .bold').first();
+    var italicButton = $('.editor_toolbar .italic').first();
+    var underlineButton = $('.editor_toolbar .underline').first();
+    var strikethroughButton = $('.editor_toolbar .strikethrough').first();
+    var numberedlistButton = $('.editor_toolbar .numberedlist').first();
+    var bulletsButton = $('.editor_toolbar .bullets').first();
+
+    boldButton.click(function(event) { editor.boldSelection(); return false; });
+    italicButton.click(function(event) { editor.italicSelection(); return false; });
+    underlineButton.click(function(event) { editor.underlineSelection(); return false; });
+    strikethroughButton.click(function(event) { editor.strikethroughSelection(); return false; });
+    numberedlistButton.click(function(event) { editor.toggleOrderedList(); return false; });
+    bulletsButton.click(function(event) { editor.toggleUnorderedList(); return false; });
+
+
+
+	// var toolbar = new WysiHat.Toolbar(editor);
+	// toolbar.initialize(editor);
+	// 
+	// toolbar.addButton({
+	// 	label: "",
+	// 	handler: function(editor) { return editor.toggleOrderedList(); }
+	// });
+	// 
+	// toolbar.addButton({
+	// 	label: "",
+	// 	handler: function(editor) { return editor.toggleUnorderedList(); }
+	// });	
+
+	
+//	$('#job_description').wysihat();
+//	$('#company_description').wysihat();
 });
