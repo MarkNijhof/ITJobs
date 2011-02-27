@@ -14,22 +14,27 @@
 %div{:style=>"height: 35px"} &nbsp;
 
 .editor_toolbar
-  %a.button.bold{:href => "#"}
-    %span
-  %a.button.italic{:href => "#"}
-    %span
-  %a.button.underline{:href => "#"}
-    %span
-  %a.button.strikethrough{:href => "#"}
-    %span
-  %a.button.numberedlist{:href => "#"}
-    %span
-  %a.button.bullets{:href => "#"}
-    %span
-  %a.button.h1{:href => "#"}
-    %span
-  %a.button.h2{:href => "#"}
-    %span
+  .editor_group
+    %a.button.bold{:href => "#"}
+      .icon
+    %a.button.italic{:href => "#"}
+      .icon
+    %a.button.underline{:href => "#"}
+      .icon
+    %a.button.strikethrough{:href => "#"}
+      .icon
+
+  .editor_group
+    %a.button.numberedlist{:href => "#"}
+      .icon
+    %a.button.bullets{:href => "#"}
+      .icon
+
+  .editor_group
+    %a.button.h1{:href => "#"}
+      .icon
+    %a.button.h2{:href => "#"}
+      .icon
 
   .wide_button.update_button
     Save

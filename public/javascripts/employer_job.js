@@ -1,7 +1,7 @@
 
 document.observe("dom:loaded", function() {
 	Event.observe(window, 'scroll', function() {
-		var scrollTop = 146;
+		var scrollTop = 144;
 		var topSpaceTop = '14px'
 
 		if (document.viewport.getScrollOffsets()[1] > scrollTop) {

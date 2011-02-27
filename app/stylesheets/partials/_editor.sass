@@ -14,9 +14,9 @@
   padding:
     top: 0px 
     left: 10px
-  width: 920px
+  width: 919px
   position: absolute
-  top: 70px
+  top: 68px
   margin-left: 5px
   z-index: 500
   height: 44px
@@ -27,8 +27,8 @@
       right: 55px
     float: right
     display: block
-    
-  .button
+
+  .editor_group
     -moz-border-radius: 5px
     -webkit-border-radius: 5px
     border-radius: 5px
@@ -36,73 +36,85 @@
     _background-image: url("/images/layout/editor/sprites_ie6.png")
     background-repeat: repeat-x
     background-position: 0 -500px
+    padding: 2px
+    margin:
+      top: 6px
+      right: 4px
+    height: 26px
+    float: left    
+    
+  .button
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    border-radius: 5px
     float: left
     padding: 2px
     margin: 
-      top: 9px 
+      top: 0px 
       right: 2px
       bottom: 0px
       left: 1px
     display: inline
-    overflow: hidden
     height: 22px
     width: 22px
     color: transparent
+    cursor: default
+  .button:hover,
+  .button:focus,
+  .button:active
+    background-color: #dff1ff
+    filter: alpha(opacity=70)
+    opacity: 0.70
+    cursor: default
 
-    span
-      background-image: url("/images/layout/editor/icons.png")
-      background-position: 100px
-      background-repeat: no-repeat
-      width: 16px
-      height: 16px
-      -moz-border-radius: 3px
-      -webkit-border-radius: 3px
-      border-radius: 3px
-      outline: none
-      padding: 0px
-      margin: 3px 2px
-      display: inline-block
-      cursor: default
-      cursor: default
-      overflow: hidden
-      float: left
-    span:hover,
-    span:focus,
-    span:active
-      background-color: #dff1ff
-      filter: alpha(opacity=70)
-      opacity: 0.70
+  .icon
+    background-image: url("/images/layout/editor/icons.png")
+    background-position: 100px
+    background-repeat: no-repeat
+    width: 16px
+    height: 16px
+    -moz-border-radius: 3px
+    -webkit-border-radius: 3px
+    border-radius: 3px
+    outline: none
+    padding: 0px
+    margin: 
+      top: 3px 
+      left: 2px
+    display: inline-block
+    cursor: default
+    float: left
 
   .bold
-    span
+    .icon
       background-position: 0 -304px
 
   .italic
-    span
+    .icon
       background-position: 0 -320px
 
   .underline
-    span
+    .icon
       background-position: 0 -336px
 
   .strikethrough
-    span
+    .icon
       background-position: 0 -352px
 
   .numberedlist
-    span
+    .icon
       background-position: 0 -400px
 
   .bullets
-    span
+    .icon
       background-position: 0 -416px
 
   .h1
-    span
+    .icon
       background-position: 0 -1296px
 
   .h2
-    span
+    .icon
       background-position: 0 -1312px
 
   

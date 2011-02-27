@@ -1041,9 +1041,9 @@ body {
   _display: inline-block;
   padding-top: 0px;
   padding-left: 10px;
-  width: 920px;
+  width: 919px;
   position: absolute;
-  top: 70px;
+  top: 68px;
   margin-left: 5px;
   z-index: 500;
   height: 44px;
@@ -1056,7 +1056,7 @@ body {
   display: block;
 }
 /* line 31, ../../../app/stylesheets/partials/_editor.sass */
-.editor_toolbar .button {
+.editor_toolbar .editor_group {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -1064,20 +1064,40 @@ body {
   _background-image: url("/images/layout/editor/sprites_ie6.png");
   background-repeat: repeat-x;
   background-position: 0 -500px;
+  padding: 2px;
+  margin-top: 6px;
+  margin-right: 4px;
+  height: 26px;
+  float: left;
+}
+/* line 46, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .button {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   float: left;
   padding: 2px;
-  margin-top: 9px;
+  margin-top: 0px;
   margin-right: 2px;
   margin-bottom: 0px;
   margin-left: 1px;
   display: inline;
-  overflow: hidden;
   height: 22px;
   width: 22px;
   color: transparent;
+  cursor: default;
 }
-/* line 52, ../../../app/stylesheets/partials/_editor.sass */
-.editor_toolbar .button span {
+/* line 62, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .button:hover,
+.editor_toolbar .button:focus,
+.editor_toolbar .button:active {
+  background-color: #dff1ff;
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+  cursor: default;
+}
+/* line 70, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .icon {
   background-image: url("/images/layout/editor/icons.png");
   background-position: 100px;
   background-repeat: no-repeat;
@@ -1088,50 +1108,41 @@ body {
   border-radius: 3px;
   outline: none;
   padding: 0px;
-  margin: 3px 2px;
+  margin-top: 3px;
+  margin-left: 2px;
   display: inline-block;
   cursor: default;
-  cursor: default;
-  overflow: hidden;
   float: left;
 }
-/* line 69, ../../../app/stylesheets/partials/_editor.sass */
-.editor_toolbar .button span:hover,
-.editor_toolbar .button span:focus,
-.editor_toolbar .button span:active {
-  background-color: #dff1ff;
-  filter: alpha(opacity=70);
-  opacity: 0.7;
-}
-/* line 77, ../../../app/stylesheets/partials/_editor.sass */
-.editor_toolbar .bold span {
+/* line 89, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .bold .icon {
   background-position: 0 -304px;
 }
-/* line 81, ../../../app/stylesheets/partials/_editor.sass */
-.editor_toolbar .italic span {
+/* line 93, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .italic .icon {
   background-position: 0 -320px;
 }
-/* line 85, ../../../app/stylesheets/partials/_editor.sass */
-.editor_toolbar .underline span {
+/* line 97, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .underline .icon {
   background-position: 0 -336px;
 }
-/* line 89, ../../../app/stylesheets/partials/_editor.sass */
-.editor_toolbar .strikethrough span {
+/* line 101, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .strikethrough .icon {
   background-position: 0 -352px;
 }
-/* line 93, ../../../app/stylesheets/partials/_editor.sass */
-.editor_toolbar .numberedlist span {
+/* line 105, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .numberedlist .icon {
   background-position: 0 -400px;
 }
-/* line 97, ../../../app/stylesheets/partials/_editor.sass */
-.editor_toolbar .bullets span {
+/* line 109, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .bullets .icon {
   background-position: 0 -416px;
 }
-/* line 101, ../../../app/stylesheets/partials/_editor.sass */
-.editor_toolbar .h1 span {
+/* line 113, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .h1 .icon {
   background-position: 0 -1296px;
 }
-/* line 105, ../../../app/stylesheets/partials/_editor.sass */
-.editor_toolbar .h2 span {
+/* line 117, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .h2 .icon {
   background-position: 0 -1312px;
 }
