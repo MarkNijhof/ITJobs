@@ -499,10 +499,10 @@ body {
 }
 /* line 56, ../../../app/stylesheets/partials/_header.sass */
 #header #add-button-link {
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   text-align: center;
-  margin-top: 8px;
+  margin-top: 10px;
   text-decoration: none;
 }
 
@@ -1043,7 +1043,7 @@ body {
   padding-left: 10px;
   width: 920px;
   position: absolute;
-  top: 40px;
+  top: 70px;
   margin-left: 5px;
   z-index: 500;
   height: 44px;

@@ -1,6 +1,15 @@
-%h1 New job position
 
 = javascript_include_tag 'employer_job.js', 'lib/wysihat.js'
+
+:javascript
+  document.observe("dom:loaded", function() {
+    $('add-button').hide();
+    $('job_description_editor').focus();
+  });
+
+%h1 New job position
+
+%p Adding a new job will cost $100 which will display your job for 30 days on ITJo.bs.
 
 %div{:style=>"height: 35px"} &nbsp;
 
@@ -44,7 +53,11 @@
         .field
           %textarea#job_description
 
-        .sidebar-label Keywords describing the job
+        .sidebar-label Keywords we found by analyzing the job description
+        .field
+          %input#job_found_keywords{:readonly => true}
+
+        .sidebar-label Additional keywords describing the job
         .field
           %input#job_keywords
 
@@ -67,6 +80,20 @@
         .sidebar-label Your company description (you may use the toolbar to format the text)
         .field
           %textarea#company_description
+
+
+    .partial-box.width-3-4
+      %h2 
+        Do you have a coupon?
+
+      %p
+        If you have received a coupon from one place or an other then now is the time to use it.
+
+      .padding
+        .sidebar-label Your coupon
+        .field
+          %input#coupon
+
 
     .partial-box.width-3-4
       %h2 
