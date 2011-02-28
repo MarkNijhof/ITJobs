@@ -4,7 +4,6 @@
 :javascript
   document.observe("dom:loaded", function() {
     $('add-button').hide();
-    $('job_description_editor').focus();
   });
 
 %h1 New job position
@@ -31,6 +30,8 @@
       .icon
 
   .editor_group
+    %a.button.p{:href => "#"}
+      .icon
     %a.button.h1{:href => "#"}
       .icon
     %a.button.h2{:href => "#"}

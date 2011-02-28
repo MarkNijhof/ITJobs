@@ -602,7 +602,6 @@ body {
 }
 /* line 64, ../../../app/stylesheets/partials/_content.sass */
 .content p,
-.content .editor,
 .content input,
 .content textarea {
   font-face: helvetica;
@@ -612,24 +611,23 @@ body {
   word-wrap: break-word;
   text-align: justify;
 }
-/* line 74, ../../../app/stylesheets/partials/_content.sass */
+/* line 73, ../../../app/stylesheets/partials/_content.sass */
 .content p a,
-.content .editor a,
 .content input a,
 .content textarea a {
   color: #5c5d5e;
   text-decoration: underline;
 }
-/* line 77, ../../../app/stylesheets/partials/_content.sass */
+/* line 76, ../../../app/stylesheets/partials/_content.sass */
 .content p a:hover,
-.content .editor a:hover,
 .content input a:hover,
 .content textarea a:hover {
   color: #5c5d5e;
   text-decoration: none;
   cursor: pointer;
 }
-/* line 81, ../../../app/stylesheets/partials/_content.sass */
+/* line 80, ../../../app/stylesheets/partials/_content.sass */
+.content .editor,
 .content textarea,
 .content input,
 .content .editor {
@@ -654,61 +652,81 @@ body {
 .content .editor {
   min-height: 100px;
 }
+
 /* line 105, ../../../app/stylesheets/partials/_content.sass */
-.content .left-of-h2 {
+#job_description_editor {
+  font-face: helvetica;
+  font-size: 16px;
+  color: #5c5d5e;
+  word-wrap: break-word;
+  text-align: justify;
+}
+/* line 111, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor a {
+  color: #5c5d5e;
+  text-decoration: underline;
+}
+/* line 114, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor a:hover {
+  color: #5c5d5e;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 120, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor .left-of-h2 {
   position: relative;
   top: 10px;
   float: right;
 }
-/* line 109, ../../../app/stylesheets/partials/_content.sass */
-.content .left-of-h2 a {
+/* line 124, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor .left-of-h2 a {
   color: #5c5d5e;
   text-decoration: none;
 }
-/* line 112, ../../../app/stylesheets/partials/_content.sass */
-.content .left-of-h2 a:hover {
+/* line 127, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor .left-of-h2 a:hover {
   color: #5c5d5e;
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* line 117, ../../../app/stylesheets/partials/_content.sass */
+/* line 132, ../../../app/stylesheets/partials/_content.sass */
 .sidebar-label {
   font-weight: bold;
   margin-left: 2px;
   margin-bottom: 3px;
 }
 
-/* line 126, ../../../app/stylesheets/partials/_content.sass */
+/* line 141, ../../../app/stylesheets/partials/_content.sass */
 .sidebar-menu a {
   color: #5c5d5e;
   text-decoration: none;
 }
-/* line 129, ../../../app/stylesheets/partials/_content.sass */
+/* line 144, ../../../app/stylesheets/partials/_content.sass */
 .sidebar-menu a:hover {
   color: #5c5d5e;
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* line 135, ../../../app/stylesheets/partials/_content.sass */
+/* line 150, ../../../app/stylesheets/partials/_content.sass */
 #editorToolBar {
   position: absolute;
   top: 138px;
   left: 300px;
 }
 
-/* line 140, ../../../app/stylesheets/partials/_content.sass */
+/* line 155, ../../../app/stylesheets/partials/_content.sass */
 .nicEdit-selected {
   border: 0px none !important;
 }
 
-/* line 143, ../../../app/stylesheets/partials/_content.sass */
+/* line 158, ../../../app/stylesheets/partials/_content.sass */
 .nicEdit-panel {
   border: 0px none !important;
 }
 
-/* line 146, ../../../app/stylesheets/partials/_content.sass */
+/* line 161, ../../../app/stylesheets/partials/_content.sass */
 .form_box {
   padding: 0px 0px 0px 20px;
 }
@@ -810,7 +828,6 @@ body {
 }
 /* line 64, ../../../app/stylesheets/partials/_content.sass */
 .content p,
-.content .editor,
 .content input,
 .content textarea {
   font-face: helvetica;
@@ -820,24 +837,23 @@ body {
   word-wrap: break-word;
   text-align: justify;
 }
-/* line 74, ../../../app/stylesheets/partials/_content.sass */
+/* line 73, ../../../app/stylesheets/partials/_content.sass */
 .content p a,
-.content .editor a,
 .content input a,
 .content textarea a {
   color: #5c5d5e;
   text-decoration: underline;
 }
-/* line 77, ../../../app/stylesheets/partials/_content.sass */
+/* line 76, ../../../app/stylesheets/partials/_content.sass */
 .content p a:hover,
-.content .editor a:hover,
 .content input a:hover,
 .content textarea a:hover {
   color: #5c5d5e;
   text-decoration: none;
   cursor: pointer;
 }
-/* line 81, ../../../app/stylesheets/partials/_content.sass */
+/* line 80, ../../../app/stylesheets/partials/_content.sass */
+.content .editor,
 .content textarea,
 .content input,
 .content .editor {
@@ -862,61 +878,81 @@ body {
 .content .editor {
   min-height: 100px;
 }
+
 /* line 105, ../../../app/stylesheets/partials/_content.sass */
-.content .left-of-h2 {
+#job_description_editor {
+  font-face: helvetica;
+  font-size: 16px;
+  color: #5c5d5e;
+  word-wrap: break-word;
+  text-align: justify;
+}
+/* line 111, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor a {
+  color: #5c5d5e;
+  text-decoration: underline;
+}
+/* line 114, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor a:hover {
+  color: #5c5d5e;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 120, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor .left-of-h2 {
   position: relative;
   top: 10px;
   float: right;
 }
-/* line 109, ../../../app/stylesheets/partials/_content.sass */
-.content .left-of-h2 a {
+/* line 124, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor .left-of-h2 a {
   color: #5c5d5e;
   text-decoration: none;
 }
-/* line 112, ../../../app/stylesheets/partials/_content.sass */
-.content .left-of-h2 a:hover {
+/* line 127, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor .left-of-h2 a:hover {
   color: #5c5d5e;
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* line 117, ../../../app/stylesheets/partials/_content.sass */
+/* line 132, ../../../app/stylesheets/partials/_content.sass */
 .sidebar-label {
   font-weight: bold;
   margin-left: 2px;
   margin-bottom: 3px;
 }
 
-/* line 126, ../../../app/stylesheets/partials/_content.sass */
+/* line 141, ../../../app/stylesheets/partials/_content.sass */
 .sidebar-menu a {
   color: #5c5d5e;
   text-decoration: none;
 }
-/* line 129, ../../../app/stylesheets/partials/_content.sass */
+/* line 144, ../../../app/stylesheets/partials/_content.sass */
 .sidebar-menu a:hover {
   color: #5c5d5e;
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* line 135, ../../../app/stylesheets/partials/_content.sass */
+/* line 150, ../../../app/stylesheets/partials/_content.sass */
 #editorToolBar {
   position: absolute;
   top: 138px;
   left: 300px;
 }
 
-/* line 140, ../../../app/stylesheets/partials/_content.sass */
+/* line 155, ../../../app/stylesheets/partials/_content.sass */
 .nicEdit-selected {
   border: 0px none !important;
 }
 
-/* line 143, ../../../app/stylesheets/partials/_content.sass */
+/* line 158, ../../../app/stylesheets/partials/_content.sass */
 .nicEdit-panel {
   border: 0px none !important;
 }
 
-/* line 146, ../../../app/stylesheets/partials/_content.sass */
+/* line 161, ../../../app/stylesheets/partials/_content.sass */
 .form_box {
   padding: 0px 0px 0px 20px;
 }
@@ -1115,34 +1151,42 @@ body {
   float: left;
 }
 /* line 89, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .remove_formatting .icon {
+  background-position: 0 -288px;
+}
+/* line 93, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .bold .icon {
   background-position: 0 -304px;
 }
-/* line 93, ../../../app/stylesheets/partials/_editor.sass */
+/* line 97, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .italic .icon {
   background-position: 0 -320px;
 }
-/* line 97, ../../../app/stylesheets/partials/_editor.sass */
+/* line 101, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .underline .icon {
   background-position: 0 -336px;
 }
-/* line 101, ../../../app/stylesheets/partials/_editor.sass */
+/* line 105, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .strikethrough .icon {
   background-position: 0 -352px;
 }
-/* line 105, ../../../app/stylesheets/partials/_editor.sass */
+/* line 109, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .numberedlist .icon {
   background-position: 0 -400px;
 }
-/* line 109, ../../../app/stylesheets/partials/_editor.sass */
+/* line 113, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .bullets .icon {
   background-position: 0 -416px;
 }
-/* line 113, ../../../app/stylesheets/partials/_editor.sass */
+/* line 117, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .h1 .icon {
   background-position: 0 -1296px;
 }
-/* line 117, ../../../app/stylesheets/partials/_editor.sass */
+/* line 121, ../../../app/stylesheets/partials/_editor.sass */
 .editor_toolbar .h2 .icon {
   background-position: 0 -1312px;
+}
+/* line 125, ../../../app/stylesheets/partials/_editor.sass */
+.editor_toolbar .p .icon {
+  background-position: 0 -1344px;
 }

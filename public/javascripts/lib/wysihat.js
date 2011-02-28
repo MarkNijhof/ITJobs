@@ -27,8 +27,7 @@ WysiHat.Editor = {
 
     textarea.insert({before: editArea});
     textarea.hide();
-
-
+    
     return editArea;
   }
 };
@@ -629,6 +628,62 @@ document.on("dom:loaded", function() {
 });
 
 WysiHat.Commands = (function(window) {
+  function pSelection() {
+	  var element = window.getSelection().getNode();
+	  if (element == '[object HTMLParagraphElement]') {
+	    replace_element_with_text_node();
+	    return;
+	  }
+    this.execCommand('formatblock', false, '<p>');
+  }	
+
+  function h1Selection() {
+    headingSelection(this, 'h1');
+  }	
+
+  function h2Selection() {
+    headingSelection(this, 'h2');
+  }	
+
+  function h3Selection() {
+    headingSelection(this, 'h3');
+  }	
+
+  function h4Selection() {
+    headingSelection(this, 'h4');
+  }	
+
+  function h5Selection() {
+    headingSelection(this, 'h5');
+  }	
+
+  function h6Selection() {
+    headingSelection(this, 'h6');
+  }	
+  
+  function headingSelection(_this, heading) {
+	  var element = window.getSelection().getNode();
+	  if (element == '[object HTMLHeadingElement]' && element.tagName.toLowerCase() == heading) {
+	    replace_element_with_text_node();
+	    return;
+	  }
+    _this.execCommand('formatblock', false, '<'+ heading +'>');
+  }
+
+  function replace_element_with_text_node() {
+	  var element = window.getSelection().getNode();
+	  var parent = element.parentNode;
+    var newElement = document.createDocumentFragment();
+//alert(element.childNodes[1]);
+    for (i = 0; i <= element.childNodes.length; i++) {
+//      parent.insertBefore(element.childNodes[i], element);
+      
+      newElement.appendChild(element.childNodes[i]);
+    }
+//  	  parent.removeChild(element);
+	  parent.replaceChild(newElement, element);
+  }
+	
   function boldSelection() {
     this.execCommand('bold', false, null);
   }
@@ -812,7 +867,7 @@ WysiHat.Commands = (function(window) {
     }
   }
 
-  function execCommand(command, ui, value) {
+  function execCommand(command, ui, value, element) {
     var handler = this.commands.get(command);
     if (handler) {
       handler.bind(this)(value);
@@ -823,6 +878,9 @@ WysiHat.Commands = (function(window) {
     }
 
     document.activeElement.fire("field:change");
+    if (navigator.userAgent.match( / Gecko\/(\d+)/ )[1] ) {
+      this.focus();
+    }
   }
 
   function queryCommandState(state) {
@@ -847,38 +905,45 @@ WysiHat.Commands = (function(window) {
   }
 
   return {
-     boldSelection:            boldSelection,
-     boldSelected:             boldSelected,
-     underlineSelection:       underlineSelection,
-     underlineSelected:        underlineSelected,
-     italicSelection:          italicSelection,
-     italicSelected:           italicSelected,
-     strikethroughSelection:   strikethroughSelection,
-     indentSelection:          indentSelection,
-     outdentSelection:         outdentSelection,
-     toggleIndentation:        toggleIndentation,
-     indentSelected:           indentSelected,
-     fontSelection:            fontSelection,
-     fontSizeSelection:        fontSizeSelection,
-     colorSelection:           colorSelection,
-     backgroundColorSelection: backgroundColorSelection,
-     alignSelection:           alignSelection,
-     alignSelected:            alignSelected,
-     linkSelection:            linkSelection,
-     unlinkSelection:          unlinkSelection,
-     linkSelected:             linkSelected,
-     formatblockSelection:     formatblockSelection,
-     toggleOrderedList:        toggleOrderedList,
-     insertOrderedList:        insertOrderedList,
-     orderedListSelected:      orderedListSelected,
-     toggleUnorderedList:      toggleUnorderedList,
-     insertUnorderedList:      insertUnorderedList,
-     unorderedListSelected:    unorderedListSelected,
-     insertImage:              insertImage,
-     insertHTML:               insertHTML,
-     execCommand:              execCommand,
-     queryCommandState:        queryCommandState,
-     getSelectedStyles:        getSelectedStyles,
+     pSelection:                pSelection,
+     h1Selection:               h1Selection,
+     h2Selection:               h2Selection,
+     h3Selection:               h3Selection,
+     h4Selection:               h4Selection,
+     h5Selection:               h5Selection,
+     h6Selection:               h6Selection,
+     boldSelection:             boldSelection,
+     boldSelected:              boldSelected,
+     underlineSelection:        underlineSelection,
+     underlineSelected:         underlineSelected,
+     italicSelection:           italicSelection,
+     italicSelected:            italicSelected,
+     strikethroughSelection:    strikethroughSelection,
+     indentSelection:           indentSelection,
+     outdentSelection:          outdentSelection,
+     toggleIndentation:         toggleIndentation,
+     indentSelected:            indentSelected,
+     fontSelection:             fontSelection,
+     fontSizeSelection:         fontSizeSelection,
+     colorSelection:            colorSelection,
+     backgroundColorSelection:  backgroundColorSelection,
+     alignSelection:            alignSelection,
+     alignSelected:             alignSelected,
+     linkSelection:             linkSelection,
+     unlinkSelection:           unlinkSelection,
+     linkSelected:              linkSelected,
+     formatblockSelection:      formatblockSelection,
+     toggleOrderedList:         toggleOrderedList,
+     insertOrderedList:         insertOrderedList,
+     orderedListSelected:       orderedListSelected,
+     toggleUnorderedList:       toggleUnorderedList,
+     insertUnorderedList:       insertUnorderedList,
+     unorderedListSelected:     unorderedListSelected,
+     insertImage:               insertImage,
+     insertHTML:                insertHTML,
+     execCommand:               execCommand,
+     queryCommandState:         queryCommandState,
+     getSelectedStyles:         getSelectedStyles,
 
     commands: $H({}),
 
