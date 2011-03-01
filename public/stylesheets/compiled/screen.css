@@ -654,79 +654,85 @@ body {
 }
 
 /* line 105, ../../../app/stylesheets/partials/_content.sass */
-#job_description_editor {
+#job_description_editor,
+#company_description_editor {
   font-face: helvetica;
   font-size: 16px;
   color: #5c5d5e;
   word-wrap: break-word;
   text-align: justify;
 }
-/* line 111, ../../../app/stylesheets/partials/_content.sass */
-#job_description_editor a {
+/* line 112, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor a,
+#company_description_editor a {
   color: #5c5d5e;
   text-decoration: underline;
 }
-/* line 114, ../../../app/stylesheets/partials/_content.sass */
-#job_description_editor a:hover {
+/* line 115, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor a:hover,
+#company_description_editor a:hover {
   color: #5c5d5e;
   text-decoration: none;
   cursor: pointer;
 }
-/* line 120, ../../../app/stylesheets/partials/_content.sass */
-#job_description_editor .left-of-h2 {
+/* line 121, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor .left-of-h2,
+#company_description_editor .left-of-h2 {
   position: relative;
   top: 10px;
   float: right;
 }
-/* line 124, ../../../app/stylesheets/partials/_content.sass */
-#job_description_editor .left-of-h2 a {
+/* line 125, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor .left-of-h2 a,
+#company_description_editor .left-of-h2 a {
   color: #5c5d5e;
   text-decoration: none;
 }
-/* line 127, ../../../app/stylesheets/partials/_content.sass */
-#job_description_editor .left-of-h2 a:hover {
+/* line 128, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor .left-of-h2 a:hover,
+#company_description_editor .left-of-h2 a:hover {
   color: #5c5d5e;
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* line 132, ../../../app/stylesheets/partials/_content.sass */
+/* line 133, ../../../app/stylesheets/partials/_content.sass */
 .sidebar-label {
   font-weight: bold;
   margin-left: 2px;
   margin-bottom: 3px;
 }
 
-/* line 141, ../../../app/stylesheets/partials/_content.sass */
+/* line 142, ../../../app/stylesheets/partials/_content.sass */
 .sidebar-menu a {
   color: #5c5d5e;
   text-decoration: none;
 }
-/* line 144, ../../../app/stylesheets/partials/_content.sass */
+/* line 145, ../../../app/stylesheets/partials/_content.sass */
 .sidebar-menu a:hover {
   color: #5c5d5e;
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* line 150, ../../../app/stylesheets/partials/_content.sass */
+/* line 151, ../../../app/stylesheets/partials/_content.sass */
 #editorToolBar {
   position: absolute;
   top: 138px;
   left: 300px;
 }
 
-/* line 155, ../../../app/stylesheets/partials/_content.sass */
+/* line 156, ../../../app/stylesheets/partials/_content.sass */
 .nicEdit-selected {
   border: 0px none !important;
 }
 
-/* line 158, ../../../app/stylesheets/partials/_content.sass */
+/* line 159, ../../../app/stylesheets/partials/_content.sass */
 .nicEdit-panel {
   border: 0px none !important;
 }
 
-/* line 161, ../../../app/stylesheets/partials/_content.sass */
+/* line 162, ../../../app/stylesheets/partials/_content.sass */
 .form_box {
   padding: 0px 0px 0px 20px;
 }
@@ -880,79 +886,85 @@ body {
 }
 
 /* line 105, ../../../app/stylesheets/partials/_content.sass */
-#job_description_editor {
+#job_description_editor,
+#company_description_editor {
   font-face: helvetica;
   font-size: 16px;
   color: #5c5d5e;
   word-wrap: break-word;
   text-align: justify;
 }
-/* line 111, ../../../app/stylesheets/partials/_content.sass */
-#job_description_editor a {
+/* line 112, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor a,
+#company_description_editor a {
   color: #5c5d5e;
   text-decoration: underline;
 }
-/* line 114, ../../../app/stylesheets/partials/_content.sass */
-#job_description_editor a:hover {
+/* line 115, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor a:hover,
+#company_description_editor a:hover {
   color: #5c5d5e;
   text-decoration: none;
   cursor: pointer;
 }
-/* line 120, ../../../app/stylesheets/partials/_content.sass */
-#job_description_editor .left-of-h2 {
+/* line 121, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor .left-of-h2,
+#company_description_editor .left-of-h2 {
   position: relative;
   top: 10px;
   float: right;
 }
-/* line 124, ../../../app/stylesheets/partials/_content.sass */
-#job_description_editor .left-of-h2 a {
+/* line 125, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor .left-of-h2 a,
+#company_description_editor .left-of-h2 a {
   color: #5c5d5e;
   text-decoration: none;
 }
-/* line 127, ../../../app/stylesheets/partials/_content.sass */
-#job_description_editor .left-of-h2 a:hover {
+/* line 128, ../../../app/stylesheets/partials/_content.sass */
+#job_description_editor .left-of-h2 a:hover,
+#company_description_editor .left-of-h2 a:hover {
   color: #5c5d5e;
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* line 132, ../../../app/stylesheets/partials/_content.sass */
+/* line 133, ../../../app/stylesheets/partials/_content.sass */
 .sidebar-label {
   font-weight: bold;
   margin-left: 2px;
   margin-bottom: 3px;
 }
 
-/* line 141, ../../../app/stylesheets/partials/_content.sass */
+/* line 142, ../../../app/stylesheets/partials/_content.sass */
 .sidebar-menu a {
   color: #5c5d5e;
   text-decoration: none;
 }
-/* line 144, ../../../app/stylesheets/partials/_content.sass */
+/* line 145, ../../../app/stylesheets/partials/_content.sass */
 .sidebar-menu a:hover {
   color: #5c5d5e;
   text-decoration: underline;
   cursor: pointer;
 }
 
-/* line 150, ../../../app/stylesheets/partials/_content.sass */
+/* line 151, ../../../app/stylesheets/partials/_content.sass */
 #editorToolBar {
   position: absolute;
   top: 138px;
   left: 300px;
 }
 
-/* line 155, ../../../app/stylesheets/partials/_content.sass */
+/* line 156, ../../../app/stylesheets/partials/_content.sass */
 .nicEdit-selected {
   border: 0px none !important;
 }
 
-/* line 158, ../../../app/stylesheets/partials/_content.sass */
+/* line 159, ../../../app/stylesheets/partials/_content.sass */
 .nicEdit-panel {
   border: 0px none !important;
 }
 
-/* line 161, ../../../app/stylesheets/partials/_content.sass */
+/* line 162, ../../../app/stylesheets/partials/_content.sass */
 .form_box {
   padding: 0px 0px 0px 20px;
 }

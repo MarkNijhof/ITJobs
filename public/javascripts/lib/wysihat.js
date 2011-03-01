@@ -22,7 +22,7 @@ WysiHat.Editor = {
     });
 
     editArea.update(WysiHat.Formatting.getBrowserMarkupFrom(textarea.value));
-
+    
     Object.extend(editArea, WysiHat.Commands);
 
     textarea.insert({before: editArea});
@@ -878,7 +878,8 @@ WysiHat.Commands = (function(window) {
     }
 
     document.activeElement.fire("field:change");
-    if (navigator.userAgent.match( / Gecko\/(\d+)/ )[1] ) {
+
+    if (Prototype.Browser.Gecko) {
       this.focus();
     }
   }

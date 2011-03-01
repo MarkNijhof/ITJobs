@@ -82,12 +82,13 @@ document.observe("dom:loaded", function() {
 		}
 	});
 	
-	var isEditor1Focussed = true;
-//	Event.observe('job_description', 'focus', function() { isEditor1Focussed = true; });
-//	Event.observe('company_description', 'focus', function() { isEditor1Focussed = false; });
+	var isEditor1Focussed = false;
 		
 	var editor1 = WysiHat.Editor.attach('job_description');
-//	var editor2 = WysiHat.Editor.attach('company_description');
+	var editor2 = WysiHat.Editor.attach('company_description');
+
+	Event.observe('job_description_editor', 'focus', function() { isEditor1Focussed = true; });
+	Event.observe('company_description_editor', 'focus', function() { isEditor1Focussed = false; });
 
   var boldButton = $$('.editor_toolbar .bold').first();
   var italicButton = $$('.editor_toolbar .italic').first();
@@ -102,14 +103,14 @@ document.observe("dom:loaded", function() {
   
 
 	boldButton.on('click', function(event)             { if (isEditor1Focussed) { editor1.boldSelection();             } else { editor2.boldSelection(); } Event.stop(event); });
-	italicButton.on('click', function(event)           { if (isEditor1Focussed) { editor1.italicSelection();           } else { editor2.italicSelection(); } Event.stop(event); return false; });
-	underlineButton.on('click', function(event)        { if (isEditor1Focussed) { editor1.underlineSelection();        } else { editor2.underlineSelection(); } Event.stop(event); return false; });
-	strikethroughButton.on('click', function(event)    { if (isEditor1Focussed) { editor1.strikethroughSelection();    } else { editor2.strikethroughSelection(); } Event.stop(event); return false; });
-	numberedlistButton.on('click', function(event)     { if (isEditor1Focussed) { editor1.toggleOrderedList();         } else { editor2.toggleOrderedList(); } Event.stop(event); return false; });
-	bulletsButton.on('click', function(event)          { if (isEditor1Focussed) { editor1.toggleUnorderedList();       } else { editor2.toggleUnorderedList(); } Event.stop(event); return false; });
+	italicButton.on('click', function(event)           { if (isEditor1Focussed) { editor1.italicSelection();           } else { editor2.italicSelection(); } Event.stop(event); });
+	underlineButton.on('click', function(event)        { if (isEditor1Focussed) { editor1.underlineSelection();        } else { editor2.underlineSelection(); } Event.stop(event); });
+	strikethroughButton.on('click', function(event)    { if (isEditor1Focussed) { editor1.strikethroughSelection();    } else { editor2.strikethroughSelection(); } Event.stop(event); });
+	numberedlistButton.on('click', function(event)     { if (isEditor1Focussed) { editor1.toggleOrderedList();         } else { editor2.toggleOrderedList(); } Event.stop(event); });
+	bulletsButton.on('click', function(event)          { if (isEditor1Focussed) { editor1.toggleUnorderedList();       } else { editor2.toggleUnorderedList(); } Event.stop(event); });
 
-	pButton.on('click', function(event)                { Event.stop(event); if (isEditor1Focussed) { editor1.pSelection();                } else { editor2.pSelection(); } return false;});
-	h1Button.on('click', function(event)               { if (isEditor1Focussed) { editor1.h1Selection();               } else { editor2.h1Selection(); } Event.stop(event); return false; });
-	h2Button.on('click', function(event)               { if (isEditor1Focussed) { editor1.h2Selection();               } else { editor2.h2Selection(); } Event.stop(event); return false; });
+	pButton.on('click', function(event)                { if (isEditor1Focussed) { editor1.pSelection();                } else { editor2.pSelection(); } Event.stop(event); });
+	h1Button.on('click', function(event)               { if (isEditor1Focussed) { editor1.h1Selection();               } else { editor2.h1Selection(); } Event.stop(event); });
+	h2Button.on('click', function(event)               { if (isEditor1Focussed) { editor1.h2Selection();               } else { editor2.h2Selection(); } Event.stop(event); });
 
 });
