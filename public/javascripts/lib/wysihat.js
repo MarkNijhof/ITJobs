@@ -629,11 +629,13 @@ document.on("dom:loaded", function() {
 
 WysiHat.Commands = (function(window) {
   function pSelection() {
-	  var element = window.getSelection().getNode();
-	  if (element == '[object HTMLParagraphElement]') {
-	    replace_element_with_text_node();
-	    return;
-	  }
+    
+    var node = get_node_or_parent_if(function(element) { return element == '[object HTMLParagraphElement]'; });
+    if (node !== undefined) {
+      remove_outer_node(this, node);
+      return;
+    }
+    
     this.execCommand('formatblock', false, '<p>');
   }	
 
@@ -662,28 +664,115 @@ WysiHat.Commands = (function(window) {
   }	
   
   function headingSelection(_this, heading) {
-	  var element = window.getSelection().getNode();
-	  if (element == '[object HTMLHeadingElement]' && element.tagName.toLowerCase() == heading) {
-	    replace_element_with_text_node();
-	    return;
-	  }
+    var node = get_node_or_parent_if(function(element) { return element == '[object HTMLHeadingElement]' && element.tagName.toLowerCase() == heading; });
+    if (node !== undefined) {
+      var savedRange = saveSelection();
+      remove_outer_node(_this, node);
+      restoreSelection(_this, savedRange);
+      return;
+    }
+    
     _this.execCommand('formatblock', false, '<'+ heading +'>');
   }
-
-  function replace_element_with_text_node() {
+  
+  function get_node_or_parent_if(selector) {
 	  var element = window.getSelection().getNode();
-	  var parent = element.parentNode;
-    var newElement = document.createDocumentFragment();
-//alert(element.childNodes[1]);
-    for (i = 0; i <= element.childNodes.length; i++) {
-//      parent.insertBefore(element.childNodes[i], element);
-      
-      newElement.appendChild(element.childNodes[i]);
+
+    if (selector(element)) {
+      return element;
     }
-//  	  parent.removeChild(element);
-	  parent.replaceChild(newElement, element);
+    
+    if (selector(element.parentNode)) {
+      return element.parentNode;
+    }
   }
-	
+
+  function remove_outer_node(_this, selectedNode) {
+    var selection, range, node, parent;
+
+    selection  = window.getSelection();
+    node       = selection.getNode();
+    parent     = selectedNode.parentNode;
+    range      = selection.getRangeAt(0);
+    
+    range.selectNodeContents(selectedNode);
+    content    = range.cloneContents();
+    
+    parent.replaceChild(content, selectedNode);
+    _this.focus();
+  }
+  
+  
+  function saveSelection()
+  {
+      if(window.getSelection)//non IE Browsers
+      {
+          return window.getSelection().getRangeAt(0);
+      }
+      else if(document.selection)//IE
+      { 
+          return document.selection.createRange();  
+      } 
+  }
+
+  function restoreSelection(editor, savedRange)
+  {
+      isInFocus = true;
+      editor.focus();
+      if (savedRange != null) {
+          if (window.getSelection)//non IE and there is already a selection
+          {
+              var s = window.getSelection();
+              if (s.rangeCount > 0) 
+                  s.removeAllRanges();
+              s.addRange(savedRange);
+          }
+          else 
+              if (document.createRange)//non IE and no selection
+              {
+                  window.getSelection().addRange(savedRange);
+              }
+              else 
+                  if (document.selection)//IE
+                  {
+                      savedRange.select();
+                  }
+      }
+  }
+  
+  
+  
+  function getCaretPos(oField)
+  {
+    var iCaretPos = 0;
+    if (Prototype.Browser.IE)
+    {
+      var oSel = document.selection.createRange();
+      oSel.moveStart ('character', -oField.value.length);
+      iCaretPos = oSel.text.length;
+    }else{
+      oField.focus();
+      iCaretPos = oField.selectionEnd;
+    }
+    return iCaretPos;
+  }
+  
+  function setCaretPos(oField, iCaretPos)
+  {
+    if (Prototype.Browser.IE)
+    {
+      var oSel = document.selection.createRange ();
+      oSel.moveStart ('character', -oField.value.length);
+      oSel.moveStart ('character', iCaretPos);
+      oSel.moveEnd ('character', 0);
+      oSel.select ();
+    } else {
+      oField.selectionStart = iCaretPos;
+      oField.selectionEnd = iCaretPos;
+      oField.focus();
+    }
+  }
+
   function boldSelection() {
     this.execCommand('bold', false, null);
   }
