@@ -1,6 +1,0 @@
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-itjobs-test['$cmd'].find({:getnonce=>1}, {}).limit(-1)
-itjobs-test['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"550f39dfaee3fbfe", "key"=>"ca484c552a54b234d60f4c3879105070"}, {}).limit(-1)
-admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
-itjobs-test['$cmd'].find({:getnonce=>1}, {}).limit(-1)
-itjobs-test['$cmd'].find({"authenticate"=>1, "user"=>"itjo.bs", "nonce"=>"33dafb0eb03b916c", "key"=>"dfa0b9c5c756e63f20bab4e240b2ec97"}, {}).limit(-1)
