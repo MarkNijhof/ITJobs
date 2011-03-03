@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :redirect_from_www
     
   def redirect_from_www
-    return unless ENV['production']
+    return unless ENV['RACK_ENV'] == 'production'
     
     redirect_to "https://www.#{request.host_with_port}#{request.path_info}" and return if /^itjo/.match(request.host)
     
