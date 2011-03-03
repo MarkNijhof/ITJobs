@@ -51,7 +51,6 @@ module ITJobs
       g.template_engine :haml
       g.test_framework  :rspec
     end
-    raise Rack::Request.new(ENV).host
-    config.middleware.use Rack::SslEnforcer if Rails.env.production? && /^www/.match(Rack::Request.host)
+    config.middleware.use Rack::SslEnforcer, :only_hosts => 'www.itjo.bs' if Rails.env.production?
   end
 end
