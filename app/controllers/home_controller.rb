@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
   def index
-    File.read(File.join('public', 'index.html'))
-
+    render :file => 'public/index.html.template', :layout => false
   end
 
 end
