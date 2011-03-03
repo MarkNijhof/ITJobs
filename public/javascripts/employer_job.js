@@ -3,6 +3,7 @@ var isEditor1Focussed = false;
 
 document.observe("dom:loaded", function() {
 	setup_toolbar_position_script();
+	setup_sidebar_position_script();
 	setup_wysihat_editors();
 });
 
@@ -18,6 +19,25 @@ function setup_toolbar_position_script() {
 			});
 		} else {
 			$$('div.editor_toolbar')[0].setStyle({
+				position: 'absolute',
+				top: ''
+			});
+		}
+	});
+}
+
+function setup_sidebar_position_script() {
+	Event.observe(window, 'scroll', function() {
+		var scrollTop = 118;
+		var topSpaceTop = '90px'
+
+		if (document.viewport.getScrollOffsets()[1] > scrollTop) {
+			$('side-bar').setStyle({
+				position: 'fixed',
+				top: topSpaceTop
+			});
+		} else {
+			$('side-bar').setStyle({
 				position: 'absolute',
 				top: ''
 			});
