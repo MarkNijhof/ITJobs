@@ -1,70 +1,12 @@
 
-/**
-* Event.simulate(@element, eventName[, options]) -> Element
-*
-* - @element: element to fire event on
-* - eventName: name of event to fire (only MouseEvents and HTMLEvents interfaces are supported)
-* - options: optional object to fine-tune event properties - pointerX, pointerY, ctrlKey, etc.
-*
-* $('foo').simulate('click'); // => fires "click" event on an element with id=foo
-*
-**/
-(function(){
-  
-  var eventMatchers = {
-    'HTMLEvents': /^(?:load|unload|abort|error|select|change|submit|reset|focus|blur|resize|scroll)$/,
-    'MouseEvents': /^(?:click|mouse(?:down|up|over|move|out))$/
-  }
-  var defaultOptions = {
-    pointerX: 0,
-    pointerY: 0,
-    button: 0,
-    ctrlKey: false,
-    altKey: false,
-    shiftKey: false,
-    metaKey: false,
-    bubbles: true,
-    cancelable: true
-  }
-  
-  Event.simulate = function(element, eventName) {
-    var options = Object.extend(defaultOptions, arguments[2] || { });
-    var oEvent, eventType = null;
-    
-    element = $(element);
-    
-    for (var name in eventMatchers) {
-      if (eventMatchers[name].test(eventName)) { eventType = name; break; }
-    }
-
-    if (!eventType)
-      throw new SyntaxError('Only HTMLEvents and MouseEvents interfaces are supported');
-
-    if (document.createEvent) {
-      oEvent = document.createEvent(eventType);
-      if (eventType == 'HTMLEvents') {
-        oEvent.initEvent(eventName, options.bubbles, options.cancelable);
-      }
-      else {
-        oEvent.initMouseEvent(eventName, options.bubbles, options.cancelable, document.defaultView,
-          options.button, options.pointerX, options.pointerY, options.pointerX, options.pointerY,
-          options.ctrlKey, options.altKey, options.shiftKey, options.metaKey, options.button, element);
-      }
-      element.dispatchEvent(oEvent);
-    }
-    else {
-      options.clientX = options.pointerX;
-      options.clientY = options.pointerY;
-      oEvent = Object.extend(document.createEventObject(), options);
-      element.fireEvent('on' + eventName, oEvent);
-    }
-    return element;
-  }
-  
-  Element.addMethods({ simulate: Event.simulate });
-})()
+var isEditor1Focussed = false;
 
 document.observe("dom:loaded", function() {
+	setup_toolbar_position_script();
+	setup_wysihat_editors();
+});
+
+function setup_toolbar_position_script() {
 	Event.observe(window, 'scroll', function() {
 		var scrollTop = 144;
 		var topSpaceTop = '14px'
@@ -81,11 +23,13 @@ document.observe("dom:loaded", function() {
 			});
 		}
 	});
-	
-	var isEditor1Focussed = false;
-		
+}
+
+function setup_wysihat_editors() {
 	var editor1 = WysiHat.Editor.attach('job_description');
 	var editor2 = WysiHat.Editor.attach('company_description');
+
+  editor1.on('field:change', function(event) { extract_title_from_description(); });
 
 	Event.observe('job_description_editor', 'focus', function() { isEditor1Focussed = true; });
 	Event.observe('company_description_editor', 'focus', function() { isEditor1Focussed = false; });
@@ -100,7 +44,6 @@ document.observe("dom:loaded", function() {
   var pButton = $$('.editor_toolbar .p').first();
   var h1Button = $$('.editor_toolbar .h1').first();
   var h2Button = $$('.editor_toolbar .h2').first();
-  
 
 	boldButton.on('click', function(event)             { if (isEditor1Focussed) { editor1.boldSelection();             } else { editor2.boldSelection(); } Event.stop(event); });
 	italicButton.on('click', function(event)           { if (isEditor1Focussed) { editor1.italicSelection();           } else { editor2.italicSelection(); } Event.stop(event); });
@@ -112,5 +55,15 @@ document.observe("dom:loaded", function() {
 	pButton.on('click', function(event)                { if (isEditor1Focussed) { editor1.pSelection();                } else { editor2.pSelection(); } Event.stop(event); });
 	h1Button.on('click', function(event)               { if (isEditor1Focussed) { editor1.h1Selection();               } else { editor2.h1Selection(); } Event.stop(event); });
 	h2Button.on('click', function(event)               { if (isEditor1Focussed) { editor1.h2Selection();               } else { editor2.h2Selection(); } Event.stop(event); });
+}
 
-});
+function extract_title_from_description() {
+  var h1_tags = $('job_description_editor').select('h1');
+  if (h1_tags.length != 0) {
+    $('job_title_preview').update();
+    $('job_title_preview').insert(h1_tags[0].innerHTML.stripTags());
+  } else {
+    $('job_title_preview').update();
+    $('job_title_preview').insert('<i>title not found, please format the job title with the H1 tag</i>');
+  }
+}

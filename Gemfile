@@ -9,6 +9,8 @@ gem "haml-rails", '0.3.4'
 gem "compass", '0.10.6'
 gem "rest-client", '1.6.1'
 
+gem 'rack-ssl-enforcer', '0.2.1'
+
 # gem "mongo_mapper", '0.8.6'
 # gem "mongo_ext", '0.19.3'
 # gem "bson_ext", '1.1.5'

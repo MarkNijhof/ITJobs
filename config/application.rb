@@ -51,5 +51,7 @@ module ITJobs
       g.template_engine :haml
       g.test_framework  :rspec
     end
+    
+    config.middleware.use Rack::SslEnforcer if Rails.env.production?
   end
 end

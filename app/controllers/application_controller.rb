@@ -5,11 +5,14 @@ class ApplicationController < ActionController::Base
   before_filter :retrieve_current_loggedin_user
     
   def redirect_from_www
-    return unless ENV['production']
+    host = request.host
     
-    redirect_to "https://www.#{request.host_with_port}#{request.path_info}" and return if /^itjo/.match(request.host)
+    return if /^www/.match(host)
+    return if /^test/.match(host)
+    return if /^staging/.match(host)
+    return if /^local/.match(host)
     
-    redirect_to "https://#{request.host_with_port}#{request.path_info}" and return if /^www/.match(request.host) && request.scheme == 'http'
+    redirect_to "https://www.#{request.host_with_port}#{request.path_info}"
   end
 
   def retrieve_current_loggedin_user
