@@ -44,7 +44,6 @@ module ITJobs
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
     
-    config.middleware.use Rack::SslEnforcer if Rails.env.production?
-    
+    config.middleware.use Rack::SslEnforcer, :only_hosts => 'www.itjo.bs', :strict => true if Rails.env.production?    
   end
 end
