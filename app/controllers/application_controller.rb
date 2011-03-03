@@ -1,11 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :redirect_from_www
+  before_filter :redirect_to_www
     
-  def redirect_from_www
-    # return unless Rails.env.production?
+  def redirect_to_www    
+    host = request.host
     
-    redirect_to "https://www.#{request.host_with_port}#{request.path_info}" and return unless /^www/.match(request.host)
+    return if /^www/.match(host)
+    
+    redirect_to "https://www.#{request.host_with_port}#{request.path_info}"
   end
 end
