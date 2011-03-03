@@ -11,6 +11,8 @@ gem "mongo_mapper", '0.8.6'
 gem "mongo_ext", '0.19.3'
 gem "bson_ext", '1.1.5'
 
+gem 'rack-ssl-enforcer', '0.2.1'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
