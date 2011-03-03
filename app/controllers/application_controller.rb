@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def redirect_to_www    
     host = request.host
     
-    return if /^www/.match(host)
+    raise 'what' if /^www/.match(host)
     
     redirect_to "https://www.#{request.host_with_port}#{request.path_info}"
   end
