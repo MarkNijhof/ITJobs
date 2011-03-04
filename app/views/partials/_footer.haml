@@ -2,7 +2,7 @@
 #copyright.grayText
   ITJo.bs &copy; 2011 cre8ive thought
 
-- if ::Rails.env == :production # Analytics
+- if ::Rails.env.production? # Analytics
   :javascript
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-116586-11']);

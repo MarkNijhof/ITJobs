@@ -5,6 +5,7 @@ document.observe("dom:loaded", function() {
 	setup_toolbar_position_script();
 	setup_sidebar_position_script();
 	setup_wysihat_editors();
+	setup_monitoring_for_text_changes();
 });
 
 function setup_toolbar_position_script() {
@@ -49,7 +50,8 @@ function setup_wysihat_editors() {
 	var editor1 = WysiHat.Editor.attach('job_description');
 	var editor2 = WysiHat.Editor.attach('company_description');
 
-  editor1.on('field:change', function(event) { extract_title_from_description(); });
+  editor1.on('field:change', function(event) { extract_title_from_description(); prepare_to_save_changes(); });
+  editor2.on('field:change', function(event) { prepare_to_save_changes(); });
 
 	Event.observe('job_description_editor', 'focus', function() { isEditor1Focussed = true; });
 	Event.observe('company_description_editor', 'focus', function() { isEditor1Focussed = false; });
@@ -81,9 +83,44 @@ function extract_title_from_description() {
   var h1_tags = $('job_description_editor').select('h1');
   if (h1_tags.length != 0) {
     $('job_title_preview').update();
-    $('job_title_preview').insert(h1_tags[0].innerHTML.stripTags());
+    var job_title = h1_tags[0].innerHTML.stripTags();
+    $('job_title_preview').insert(job_title);
+    $('job_title').value = job_title;
   } else {
     $('job_title_preview').update();
     $('job_title_preview').insert('<i>title not found, please format the job title with the H1 tag</i>');
+    $('job_title').value = '';
+  }
+}
+
+function setup_monitoring_for_text_changes() {
+  $('email_address').on('keyup', function(event) { prepare_to_save_changes(); });
+
+  $('job_additional_keywords').on('keyup', function(event) { prepare_to_save_changes(); });
+
+  $('company_name').on('keyup', function(event) { prepare_to_save_changes(); });
+  $('company_website').on('keyup', function(event) { prepare_to_save_changes(); });
+
+  $('coupon_code').on('keyup', function(event) { prepare_to_save_changes(); });
+}
+
+var timeout;
+
+function prepare_to_save_changes() {
+  clearTimeout(timeout);
+  timeout = setTimeout(function() { save_changes(); }, 2500);
+}
+
+function save_changes() {
+  if ($('email_address').value != '') {
+    var job = {
+      email_address: $('email_address').value,
+      job_description: $('job_description_editor').innerHTML,
+      job_additional_keywords: $('job_additional_keywords').value,
+      company_name: $('company_name').value,
+      company_website: $('company_website').value,
+      company_description: $('company_description_editor').innerHTML,
+      coupon_code: $('coupon_code').value
+    };
   }
 }

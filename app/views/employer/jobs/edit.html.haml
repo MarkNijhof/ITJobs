@@ -43,10 +43,25 @@
 
 
 %form{:method=>"post", :id=>"new_employer_job", :action=>"/employer/jobs", :'accept-charset'=>"UTF-8"}
-  %input{:type=>"hidden", :value=>"✓", :name=>"utf8"}
-  %input{:type=>"hidden", :value=>"", :name=>"authenticity_token"}
+  %input#utf8{:type=>"hidden", :value=>"✓", :name=>"utf8"}
+  %input#authenticity_token{:type=>"hidden", :value=>"", :name=>"authenticity_token"}
+  %input#job_title{:type=>"hidden", :value=>"", :name=>"job_title"}
+  %input#user_id{:type=>"hidden", :value=>"", :name=>"user_id"}
 
   .group-box.width-3-4
+
+    .partial-box.width-3-4
+      %h2 
+        Your e-mail address
+
+      %p
+        We will need your e-mail address to send you an e-mail containing a special link which you can use to manage this and other job ads that you have registered on this website. As soon as you provide us with your e-mail address we will also be able to auto save your changes.
+
+      .padding
+        .sidebar-label My e-mail address is:
+        .field
+          %input#email_address
+
     .partial-box.width-3-4
       %h2 
         Tell us about the job
@@ -55,35 +70,41 @@
         Just add the complete job description down here, you may use the different formatting options provided to you. Note that you should provide at least one header as this will be used for the title. The header does not need to be the first thing in the job description.
       
       .padding
-        .sidebar-label Full job description (you may use the toolbar to format the text)
+        .sidebar-label 
+          The job description is
+          %i (you may use the toolbar to format the text)
+          \:
         .field
           %textarea#job_description
 
-        .sidebar-label Keywords we found by analyzing the job description
+        .sidebar-label Keywords we found by analyzing your job description:
         .field
-          %input#job_found_keywords{:readonly => true}
+          %input#job_found_keywords{:disabled => true}
 
-        .sidebar-label Additional keywords describing the job
+        .sidebar-label I have these additional keywords describing the job:
         .field
-          %input#job_keywords
+          %input#job_additional_keywords
 
     .partial-box.width-3-4
       %h2 
         Your company
       
       %p
-        We also like to know more about the company you are working for.
+        We also like to know more about the company that has this job position available. 
 
       .padding
-        .sidebar-label Your company name
+        .sidebar-label The company name is:
         .field
           %input#company_name
 
-        .sidebar-label Your company website
+        .sidebar-label The company website is:
         .field
           %input#company_website
 
-        .sidebar-label Your company description (you may use the toolbar to format the text)
+        .sidebar-label 
+          The company description is 
+          %i (you may use the toolbar to format the text)
+          \:
         .field
           %textarea#company_description
 
@@ -93,26 +114,12 @@
         Do you have a coupon?
 
       %p
-        If you have received a coupon from one place or an other then now is the time to use it.
+        If you have a coupon then now is the time to use it.
 
       .padding
-        .sidebar-label Your coupon
+        .sidebar-label My coupon code is:
         .field
-          %input#coupon
-
-
-    .partial-box.width-3-4
-      %h2 
-        Your e-mail address
-        
-      %p
-        We will need your e-mail address so that we can send you an e-mail from where you can manage this and other job ads you register on this site. We will also be adding other authentication options later; like login with your LinkedIn or Twitter credentials.
-
-      .padding
-        .sidebar-label Your e-mail address
-        .field
-          %input#email_address
-
+          %input#coupon_code
 
 
   .group-box.width-1-4
@@ -121,7 +128,7 @@
         .padding.sidebar-menu
 
           .wide_button
-            Publish
+            Order
 
           %br
           %br
