@@ -17,7 +17,7 @@ module NeoRest
     
     def remove node
       node = node.neo_id if node.respond_to?('neo_id')
-      RestClient.delete( "#{$base_url}/index/node/#{index_name}/#{key}/#{URI.escape(value)}/#{node}" )
+      RestClient.delete( "#{$neo_base_url}/index/node/#{index_name}/#{key}/#{URI.escape(value)}/#{node}" )
     end
 
     def get_nodes
@@ -27,7 +27,7 @@ module NeoRest
     class << self
     
       def get_nodes index_name, key, value
-        nodes_json = JSON.parse( RestClient.get( "#{$base_url}/index/node/#{index_name}/#{key}/#{URI.escape(value)}", :accept => :json ) )
+        nodes_json = JSON.parse( RestClient.get( "#{$neo_base_url}/index/node/#{index_name}/#{key}/#{URI.escape(value)}", :accept => :json ) )
         nodes = []
         nodes_json.each { | node | nodes << NeoRest::Node.new( node ) }
         return nodes unless block_given?

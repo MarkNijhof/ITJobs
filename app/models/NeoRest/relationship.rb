@@ -35,7 +35,7 @@ module NeoRest
         end
       end
             
-      RestClient.put( "#{$base_url}/relationship/#{neo_id}/properties", @table.to_json, :content_type => :json, :accept => :json )
+      RestClient.put( "#{$neo_base_url}/relationship/#{neo_id}/properties", @table.to_json, :content_type => :json, :accept => :json )
     end
     
     def delete
@@ -45,7 +45,7 @@ module NeoRest
     class << self
     
       def load relationship_id
-        RestClient.get( "#{$base_url}/relationship/#{relationship_id}", :accept => :json ){ |response, request, result, &block|
+        RestClient.get( "#{$neo_base_url}/relationship/#{relationship_id}", :accept => :json ){ |response, request, result, &block|
           case response.code
             when 200
               NeoRest::Node.new( JSON.parse( response ) )
@@ -58,7 +58,7 @@ module NeoRest
       end
       
       def delete relationship_id
-        RestClient.delete( "#{$base_url}/relationship/#{relationship_id}" )
+        RestClient.delete( "#{$neo_base_url}/relationship/#{relationship_id}" )
       end
     
     end

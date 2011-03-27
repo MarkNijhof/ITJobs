@@ -4,6 +4,8 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rake'
 
+# include RSpec::Matchers
+
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
@@ -19,11 +21,14 @@ RSpec.configure do |config|
   config.mock_with :rspec
   
   config.before(:each, :neo4j => true) do
-    puts "Neo4j Before Filter"
-   sh "~/neo4j-server/bin/neo4j stop"
-    sh "rm -rf ~/neo4j-server/data/graph.db"
-    sh "~/neo4j-server/bin/neo4j start"
-    sleep 2
+    NeoRest::TestHelper.clean_the_whole_database 'yeah_delete_it_all'
+    
+    
+    # puts "Neo4j Before Filter"
+    # sh "~/neo4j-server/bin/neo4j stop"
+    # sh "rm -rf ~/neo4j-server/data/graph.db"
+    # sh "~/neo4j-server/bin/neo4j start"
+    # sleep 2
     
 #    neo = Neography::Rest.new 
 #    nodes = neo.get_nodes()
