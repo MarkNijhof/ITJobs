@@ -24,7 +24,6 @@ group :test, :development do
 
   gem "watchr"
   gem "rspec-rails", '2.3.1'
-  gem "cucumber-rails", '0.3.2'
   gem "capybara", '0.4.0'
   gem "relevance-rcov", '0.9.2.1'
 end

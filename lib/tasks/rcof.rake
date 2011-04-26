@@ -3,15 +3,15 @@
 # Save this as rcov.rake in lib/tasks and use rcov:all =>
 # to get accurate spec/feature coverage data
 
-require 'cucumber/rake/task'
+# require 'cucumber/rake/task'
 require 'rspec/core/rake_task'
 
 namespace :rcov do
-  Cucumber::Rake::Task.new(:cucumber) do |t|
-    t.rcov = true
-    t.rcov_opts = %w{--rails --exclude osx\/objc,gems\/,spec\/,features\/ --aggregate coverage.data}
-    t.rcov_opts << %[-o "coverage"]
-  end
+  # Cucumber::Rake::Task.new(:cucumber) do |t|
+  #   t.rcov = true
+  #   t.rcov_opts = %w{--rails --exclude osx\/objc,gems\/,spec\/,features\/ --aggregate coverage.data}
+  #   t.rcov_opts << %[-o "coverage"]
+  # end
   
   Spec::Rake::SpecTask.new(:rspec) do |t|
     t.spec_opts = ['--options', "\"#{::Rails.root.to_s}/spec/spec.opts\""]
@@ -25,7 +25,7 @@ namespace :rcov do
   desc "Run both specs and features to generate aggregated coverage"
   task :all do |t|
     rm "coverage.data" if File.exist?("coverage.data")
-    Rake::Task["rcov:cucumber"].invoke
+    # Rake::Task["rcov:cucumber"].invoke
     Rake::Task["rcov:rspec"].invoke
   end
 end

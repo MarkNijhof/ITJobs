@@ -22,21 +22,6 @@ RSpec.configure do |config|
   
   config.before(:each, :neo4j => true) do
     NeoRest::TestHelper.clean_the_whole_database 'yeah_delete_it_all'
-    
-    
-    # puts "Neo4j Before Filter"
-    # sh "~/neo4j-server/bin/neo4j stop"
-    # sh "rm -rf ~/neo4j-server/data/graph.db"
-    # sh "~/neo4j-server/bin/neo4j start"
-    # sleep 2
-    
-#    neo = Neography::Rest.new 
-#    nodes = neo.get_nodes()
-#    nodes.each do |node| 
-#      relations = neo.get_node_relationships node
-#      relations.each { |relation| neo.delete_relationship relation }
-#      neo.delete_node node
-#    end
   end
 end
 
