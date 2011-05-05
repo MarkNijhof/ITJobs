@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   # before_filter :redirect_to_www
   #   
-  # def redirect_to_www    
+  # def redirect_to_www
   #   host = request.host
   #   
   #   return if /^www/.match(host)
